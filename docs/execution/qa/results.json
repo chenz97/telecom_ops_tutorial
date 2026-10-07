@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "Offline page opens with 24 chapters and 38 answer blocks",
+    "Search filters text, reports no matches, and restores all chapters",
+    "Completion survives reload, and reset clears saved progress",
+    "Font preference applies and survives reload",
+    "Practice answers expand",
+    "Chapter navigation restores a target hidden by search",
+    "Print mode includes filtered chapters and all answers, and hides reading controls",
+    "No page-level horizontal overflow at 390px",
+    "No page-level horizontal overflow at 760px",
+    "No page-level horizontal overflow at 1024px",
+    "No page-level horizontal overflow at 1440px",
+    "Mobile directory expands, navigates, then collapses",
+    "Expanded protocol tables, numerical analysis and cases render at desktop, mobile and print widths",
+    "No browser JavaScript errors",
+    "Reading, search and completion work when browser storage is unavailable",
+    "Malformed saved progress recovers to a readable course",
+    "Without JavaScript, all chapters, navigation and answer disclosure remain readable"
+  ],
+  "browser_errors": []
+}

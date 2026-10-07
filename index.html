@@ -1,0 +1,2385 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="面向计算机专业读者的运营商网络运维全流程课程，从通信基础到业务路径、网络交付、服务保障与退网。">
+<meta name="color-scheme" content="light"><title>运营商网络运维全流程教程</title>
+<link rel="stylesheet" href="assets/style.css"><script defer src="assets/app.js"></script><script defer src="assets/annotations.js"></script></head>
+<body><a class="skip-link" href="#main">跳到课程正文</a>
+<div class="site-shell"><aside class="sidebar" aria-label="课程目录与学习工具">
+<a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">N</span><span>网络运维课堂<small>从基础到完整流程</small></span></a>
+<div class="tools js-tools"><label for="search">搜索章节与正文</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="例如：光纤、开通、回退" maxlength="80" autocomplete="off"><button id="clear-search" type="button" aria-label="清空搜索" title="清空搜索" hidden>×</button></div><p class="search-status" id="search-status" role="status" aria-live="polite">24 个章节 · 可离线阅读</p></div>
+<div class="progress-panel js-tools"><div><span>学习进度</span><strong id="progress-label">0 / 24</strong></div><progress id="progress" max="24" value="0" aria-label="已完成章节"></progress><p id="storage-note">进度保存在当前浏览器</p></div>
+<details class="course-menu" open><summary>课程目录 <span aria-hidden="true">⌄</span></summary><nav id="toc" aria-label="章节目录"><div class="toc-group"><p>开始学习</p><a class="toc-link" href="#chapter-00" data-chapter="chapter-00"><span class="toc-number">00</span><span>学习地图：沿着一次服务看懂网络</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>一 · 通信基础</p><a class="toc-link" href="#chapter-01" data-chapter="chapter-01"><span class="toc-number">01</span><span>通信的起点：信息怎样从一端到达另一端</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-02" data-chapter="chapter-02"><span class="toc-number">02</span><span>网络质量：速度、时延与可靠性怎样影响体验</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-03" data-chapter="chapter-03"><span class="toc-number">03</span><span>网络全景：从用户到服务的一张地图</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>二 · 业务与网络</p><a class="toc-link" href="#chapter-04" data-chapter="chapter-04"><span class="toc-number">04</span><span>家庭宽带：从电脑到互联网的完整旅程</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-05" data-chapter="chapter-05"><span class="toc-number">05</span><span>移动网络：手机怎样接入、移动和上网</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-06" data-chapter="chapter-06"><span class="toc-number">06</span><span>语音、专线与内容服务：不同业务怎样使用网络</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-07" data-chapter="chapter-07"><span class="toc-number">07</span><span>承载网络与机房：所有业务共同依赖的基础</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>三 · 投入运行</p><a class="toc-link" href="#chapter-08" data-chapter="chapter-08"><span class="toc-number">08</span><span>运维组织与系统：谁在什么环节负责</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-09" data-chapter="chapter-09"><span class="toc-number">09</span><span>需求与规划：把服务目标转换成网络能力</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-10" data-chapter="chapter-10"><span class="toc-number">10</span><span>建设、验收与开通：从设备可用到客户可用</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-11" data-chapter="chapter-11"><span class="toc-number">11</span><span>资源与配置：让记录与实际运行保持一致</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>四 · 保障运行</p><a class="toc-link" href="#chapter-12" data-chapter="chapter-12"><span class="toc-number">12</span><span>监控与值守：怎样从海量信息中发现需要处理的事</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-13" data-chapter="chapter-13"><span class="toc-number">13</span><span>事件与故障：恢复服务并交接后续任务</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-14" data-chapter="chapter-14"><span class="toc-number">14</span><span>问题管理与复盘：让同类事件更少发生</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-15" data-chapter="chapter-15"><span class="toc-number">15</span><span>变更与发布：怎样在提供服务的同时调整网络</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>五 · 长期维护</p><a class="toc-link" href="#chapter-16" data-chapter="chapter-16"><span class="toc-number">16</span><span>性能与容量：怎样让网络适应持续增长</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-17" data-chapter="chapter-17"><span class="toc-number">17</span><span>客户投诉与服务质量：把用户语言转为可处理的问题</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-18" data-chapter="chapter-18"><span class="toc-number">18</span><span>安全与权限：让网络可控、工作可追溯</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-19" data-chapter="chapter-19"><span class="toc-number">19</span><span>现场维护、应急与容灾：当正常保障条件受到破坏</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-20" data-chapter="chapter-20"><span class="toc-number">20</span><span>迁移、退网与持续改进：怎样完成生命周期的最后一段</span><span class="toc-check" aria-hidden="true"></span></a></div><div class="toc-group"><p>六 · 案例与复习</p><a class="toc-link" href="#chapter-21" data-chapter="chapter-21"><span class="toc-number">21</span><span>综合案例：把服务、网络与流程连接起来</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-22" data-chapter="chapter-22"><span class="toc-number">22</span><span>术语索引与流程速查</span><span class="toc-check" aria-hidden="true"></span></a><a class="toc-link" href="#chapter-23" data-chapter="chapter-23"><span class="toc-number">23</span><span>参考资料：带着问题继续学习</span><span class="toc-check" aria-hidden="true"></span></a></div></nav></details>
+<div class="sidebar-bottom"><a href="course/tutorial.md" download>下载 Markdown 正文 ↗</a><button id="reset-progress" class="text-button js-tools" type="button">清除学习进度</button></div>
+</aside><main id="main" tabindex="-1">
+<header class="hero" id="top"><div class="eyebrow">通信基础 · 网络架构 · 服务保障</div><h1>运营商网络运维<br>全流程教程</h1><p>沿用户的数据路径解释通信机制，再跟随一项服务完成规划、交付与长期维护，学习怎样定位故障、选择措施并验证结果。</p><div class="hero-meta"><span>面向计算机专业读者</span><span>24 个章节</span><span>4 个综合案例</span></div><a class="start-link" href="#chapter-00">开始学习 <span aria-hidden="true">→</span></a><div class="hero-network" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></header>
+<div class="reading-toolbar js-tools"><span>选中正文可划线、强调或添加注释</span><div><label for="font-size">正文大小</label><select id="font-size"><option value="standard">标准</option><option value="large">较大</option><option value="larger">大字</option></select><button id="open-annotations" type="button">我的标注 <span id="annotation-count">0</span></button><button id="print" type="button">打印 / 保存 PDF</button></div></div>
+<p id="annotation-status" class="annotation-status js-tools" role="status" aria-live="polite">标注保存在当前浏览器，可导出备份</p>
+<div class="path-cards"><a href="#chapter-01"><small>01—03</small><strong>解释通信机制</strong><span>用指标与计算判断质量</span></a><a href="#chapter-04"><small>04—07</small><strong>追踪业务路径</strong><span>按接入与转发阶段定位</span></a><a href="#chapter-08"><small>08—20</small><strong>掌握运维流程</strong><span>从规划到运行与退网</span></a><a href="#chapter-21"><small>21—23</small><strong>案例与知识复习</strong><span>用完整案例练习判断</span></a></div>
+<div id="no-results" role="status" hidden><h2>没有找到匹配章节</h2><p>可以缩短关键词，或清空搜索后查看完整目录。</p><button id="restore" type="button">查看全部章节</button></div>
+<div class="chapters"><section class="chapter" id="chapter-00" aria-labelledby="heading-00" data-number="00">
+<div class="chapter-kicker">CHAPTER 00</div><h2 id="heading-00">学习地图：沿着一次服务看懂网络</h2>
+<div class="prose"><blockquote>
+<p>学习目标：根据自己的学习任务选择章节，并把用户现象对应到服务、网络资源和运维工作。</p>
+</blockquote>
+<h3>应用背后的那条连接由谁维持</h3>
+<p>你负责一个视频应用，用户反映每天晚上播放卡顿。服务端日志显示响应数据按预期发出，手机侧测量却发现，数据有时连续到达，有时需要等待较久。要判断等待发生在哪里，需要把服务器处理时间与网络传输时间分别测量，并查明连接用户与服务器的路径。</p>
+<p>这条连接经过手机附近的无线设备，也经过城市里的光缆、网络节点和远端出口。运营商把这些设施组织起来，让大量用户能够接入并交换数据。用户不断移动，流量随时变化，设备也会故障，因此连接需要持续维护。运营商网络运维的工作，就是让服务从建成、交付到日常使用始终有相应的保障。</p>
+<p>本课程沿着这条连接展开。我们先解释数据怎样传递，以及传递过程怎样影响体验；再走一遍宽带、移动和企业服务的路径；最后跟随一项服务，看它怎样经过规划、开通、运行调整和退出。读完后，你应当能够把用户现象放回网络路径，说明需要什么证据，以及怎样组织处理和验证。</p>
+<h3>顺着三个问题学习</h3>
+<p>第一个问题是“数据怎样到达另一端”。你需要先理解信号、分组和转发，才有依据解释时延与丢包。01—03 章完成这部分基础，并给出一张用于定位问题的网络地图。</p>
+<p>第二个问题是“不同服务怎样使用这张网络”。家庭宽带的接入位置比较固定，手机需要在移动中维持连接，电话和专线又有各自的业务状态。04—07 章沿这些差异展开，最后回到它们共用的线路与机房。</p>
+<p>第三个问题是“怎样让服务长期可用”。建成网络后，要记录资源、发现异常、恢复服务并实施调整。08—20 章逐步解释这些工作怎样衔接。21 章将知识放进完整案例，22—23 章帮助复习和继续学习。</p>
+<p>如果按顺序学习，可以分为以下六次。用时包含思考练习的时间，可按自己的进度调整。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>学习单元</th>
+<th>章节</th>
+<th>学完后应能回答的问题</th>
+<th>建议用时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通信基础</td>
+<td>01—03</td>
+<td>数据为什么能到达目的地，质量问题可能发生在哪里？</td>
+<td>80—110 分钟</td>
+</tr>
+<tr>
+<td>业务路径</td>
+<td>04—07</td>
+<td>用户怎样上线，不同服务需要哪些额外条件？</td>
+<td>100—140 分钟</td>
+</tr>
+<tr>
+<td>投入运行</td>
+<td>08—11</td>
+<td>怎样把客户需求变成可用服务，并留下可信记录？</td>
+<td>80—110 分钟</td>
+</tr>
+<tr>
+<td>保障运行</td>
+<td>12—15</td>
+<td>怎样发现、恢复和治理异常，再实施必要调整？</td>
+<td>90—120 分钟</td>
+</tr>
+<tr>
+<td>长期维护</td>
+<td>16—20</td>
+<td>增长、投诉和设施变化怎样推动下一轮工作？</td>
+<td>100—140 分钟</td>
+</tr>
+<tr>
+<td>综合练习</td>
+<td>21—23</td>
+<td>能否独立解释一项服务的完整处理过程？</td>
+<td>90—120 分钟</td>
+</tr>
+</tbody>
+</table></div>
+<p>顺序学习时，先用自己的语言回答章末问题，再展开参考答案；遇到算例，先统一单位，再解释结果对判断的影响。若无法说明一个动作为什么有效，就回到相应机制重读。按工作问题查阅时，可以搜索“上线失败”或“回退”，再沿章间引用补齐前置知识。</p>
+<h3>把服务、资源与工作联系起来</h3>
+<p class="key-point"><strong>运维判断要把用户使用的服务、承载服务的资源和改变资源的工作流程联系起来。</strong></p>
+<p>以视频卡顿为例，视频服务决定要保障的播放体验，无线和承载资源决定数据能否及时到达，故障处理或容量管理则把定位结果落实为恢复和扩容。沿这三者的关系，才能从“视频缓慢”走到具体瓶颈、责任团队和验证方法。后续每次遇到新的设备或流程，都可以据此确定它在整件事中的位置。</p>
+<p>一项服务的生命周期可以画成下面这条路径。课程中的青岚市及其服务案例为虚构教学场景，数值用于练习推理与计算。</p>
+<div class="flow" role="img" aria-label="网络生命周期：需求与规划，建设与验收，业务开通，运行与维护，调整与升级，迁移与退网。"><span>需求与规划</span><b>→</b><span>建设与验收</span><b>→</b><span>业务开通</span><b>→</b><span>运行与维护</span><b>→</b><span>调整与升级</span><b>→</b><span>迁移与退网</span></div>
+<p>客户需求决定需要建设什么；验收确认网络具备相应能力；开通把能力交给具体客户使用。此后，故障推动恢复与改进，业务增长推动升级。当服务转到新资源上，旧资源就可以有序退出。运行数据又会改变下一轮规划，所以这条路径会不断循环。要理解循环中的判断，先从数据的第一次传递开始。</p>
+<h3>理解检查</h3>
+<p>为什么一名网络运维人员既要看设备状态，也要了解客户正在使用什么服务？</p>
+<details><summary>查看参考答案</summary><p>需要把设备异常与客户服务对应起来，才能确定影响、优先级和恢复目标。</p><ol><li>资源关系说明受损光缆连接哪些设备、承载哪些服务；同一故障可能同时影响家庭宽带和医院专线。</li><li>处理顺序按服务重要性与实际影响确定；恢复后分别验证宽带访问和医院业务，确认客户能够重新使用。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-00" aria-pressed="false">标记本章已学完</button><nav aria-label="00 章前后导航"><a href="#chapter-01" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-01" aria-labelledby="heading-01" data-number="01">
+<div class="chapter-kicker">CHAPTER 01</div><h2 id="heading-01">通信的起点：信息怎样从一端到达另一端</h2>
+<div class="prose"><blockquote>
+<p>学习目标：沿一次照片上传，解释物理信号、分组转发和可靠交付怎样配合。</p>
+</blockquote>
+<h3>数据怎样离开手机</h3>
+<p>你在手机上选择一张照片并点击上传。程序读到的是一串二进制数据，而手机与基站之间没有连接线。要把这些数据送出去，手机必须让无线电波发生有规则的变化；基站识别这些变化，才能恢复出相应数据。</p>
+<p>这里，照片表达的内容是<strong>信息</strong>，承载数据的物理变化是<strong>信号</strong>，无线电波传播的环境是<strong>介质</strong>。换成有线连接时，设备可以利用铜线中的电变化或光纤中的光信号完成同样的任务。照片沿途经过多种介质，每一段都有适合它的发送与接收设备，因此一段光纤损伤也会影响最终的上传。</p>
+<p>接收方之所以能恢复数据，是因为双方约定了物理变化怎样表示数据。在一个约定时间间隔内发送的信号单元称为<strong>符号</strong>；把数据映射为载波的幅度、相位或频率变化，称为<strong>调制</strong>。例如，选择四种可区分的相位状态，可以让一个符号表示两比特，因为两比特共有 00、01、10 和 11 四种组合。</p>
+<p>传播中的衰减、噪声和干扰会使不同状态难以区分。<strong>接收条件变差时，系统可以减少每个符号携带的比特数，拉大状态之间的差异，并用冗余编码帮助纠错</strong>。代价是同样的时间与频率资源能够携带的有效数据减少。后面看到光功率和无线质量指标时，就可以据此解释：接收质量下降为什么会使速率降低，甚至中断连接。</p>
+<h3>一张照片为什么拆成多个分组</h3>
+<p>一条网络链路通常同时服务许多用户。如果一张大照片从头到尾独占链路，其他用户的小请求就要等待。把数据拆成较小的<strong>分组</strong>，也称数据包，设备就可以在发送一部分照片后处理其他用户的数据。<strong>分组让多方轮流使用同一链路，减小大文件对其他请求的连续占用。</strong></p>
+<p>拆分以后又产生一个问题：设备怎样知道每一小块应该送到哪里？于是，分组除了内容，还要带有用于处理和交付的信息。双方约定这些信息的格式及处理方法，就形成了<strong>协议</strong>。<strong>互联网协议</strong>（IP，Internet Protocol）用地址标明网络层的来源和目的地，沿途设备据此逐段转发。</p>
+<p>例如，发往网站的照片分组先交给相邻网络设备，再由后续设备选出下一段路径。这种“收到分组，再交给下一段”的方式，使不同地点的链路可以接成一条端到端路径。分组结构和 IP 的分层关系可继续阅读 <a href="https://www.rfc-editor.org/rfc/rfc791.html">RFC 791 第 2 章</a>。</p>
+<h3>同一份数据为什么需要不同的地址</h3>
+<p>仅有网站的 IP 地址，还不能完成全部交付。发送端需要知道把数据交给哪个程序，当前链路也需要知道先交给哪个相邻设备。这些问题发生在不同范围，因此由不同层次的规则处理。</p>
+<p>以电脑上传照片为例，应用先把内容交给传输层。传输层加入端口号等信息，让目标主机知道交给哪个进程；网络层加入源、目的 IP 地址；链路层再加入当前这一段所需的信息。逐层添加处理信息称为<strong>封装</strong>。接收端按相反顺序识别这些信息，将内容交给应用。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>层次</th>
+<th>在上传过程中解决的问题</th>
+<th>典型信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用层</td>
+<td>用户在执行什么操作？</td>
+<td>照片上传请求与文件内容</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>交给哪个进程，怎样组织交付？</td>
+<td>端口号、数据顺序与连接信息</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>送往哪个主机或网络？</td>
+<td>源 IP 地址、目的 IP 地址</td>
+</tr>
+<tr>
+<td>链路层与物理层</td>
+<td>这一段先交给谁，怎样实际发送？</td>
+<td>链路地址、帧与物理信号</td>
+</tr>
+</tbody>
+</table></div>
+<p>在以太网中，链路层把数据组织为<strong>帧</strong>，用媒体访问控制地址，即 <strong>MAC 地址</strong>，标识链路层交付对象。交换设备根据这类地址选择端口。跨越不同 IP 网络时，路由器则根据目的 IP 地址选择下一跳，即接下来接收分组的相邻节点。它取出 IP 分组，再用下一段链路的格式封装。链路层也常称为二层，网络层常称为三层。</p>
+<p>IP 路由使用<strong>路由前缀</strong>表达可到达的地址范围。你可以先把前缀理解为一组具有相同起始位的 IP 地址；第 07 章会用具体地址解释匹配过程。</p>
+<p class="key-point"><strong>IP 地址用于判断最终去向，链路层地址用于当前链路上的交付。</strong></p>
+<p>路由器每转发一跳，就按下一段链路重新封装，选择该段的接收设备。因此，排查跨网络访问时，需要同时核对目标 IP 的路由和下一跳的链路交付；两种地址分别参与端到端路径与逐段运输。</p>
+<p>一段链路能够承载的网络层分组最大长度称为<strong>最大传输单元</strong>（MTU，Maximum Transmission Unit）。常见以太网接口的 IP MTU 为 1,500 字节，计入 IP 头部及其载荷。增加隧道等外层封装时，新头部也会占用下层链路的空间，内部可用长度随之减少。</p>
+<p><strong>路径上能够通过的长度取决于沿途最小 MTU</strong>。大分组需要按协议规则分片或由发送端调整大小；如果必要反馈受阻，连接就可能在小请求正常、上传大文件时停顿。排查时比较不同长度的分组，读取各段 MTU 和封装开销，再检查发送端是否收到调整大小所需的反馈。第 04 章会用 PPPoE 计算一个具体边界。</p>
+<h3>网络转发以后，谁确认照片完整</h3>
+<p>逐段转发会受到链路故障和拥塞影响，两端还需要组织完整的数据交付。<strong>传输控制协议</strong>（TCP，Transmission Control Protocol）为数据编号，让接收方按顺序还原字节流；<strong>接收方返回确认，发送方据此判断接收进展，并重传判断为丢失的数据</strong>。因此，即使部分分组丢失，文件仍有机会完整到达。<a href="https://www.rfc-editor.org/rfc/rfc9293.html">TCP 机制 RFC 9293，第 3.4、3.8 节</a>。</p>
+<p>等待确认又会影响速度。TCP 允许同时存在一定数量的尚未确认数据，这一规模受接收窗口与拥塞控制约束，可以用有效的<strong>发送窗口</strong>描述。窗口较小或确认返回较慢时，发送端就可能等待；丢包增加后，还可能因重传和拥塞控制降低速度。下一章会计算这怎样影响文件吞吐量。</p>
+<p>有些应用更关注及时处理每份数据，使用<strong>用户数据报协议</strong>（UDP，User Datagram Protocol）交付数据报，并由应用安排自身所需的恢复和实时处理。例如，连续声音中的一小段已经错过播放时间，后续处理就要结合及时性要求。这也为第 06 章理解电话媒体提供了基础。</p>
+<h3>共享链路怎样产生排队</h3>
+<p>现在回到拆分照片的原因：多个用户共享链路。它们的分组可以交替发送，但链路每秒能发送的总量有限。到达得更快时，设备就把暂时发不出去的分组放入缓存，形成<strong>队列</strong>；缓存放不下时，则出现丢弃。</p>
+<p>用 Mbit 表示百万比特。考虑一条容量为 100 Mbit/s、起初队列为空的链路，连续两秒均匀收到 120 Mbit/s 流量。输入速率超过输出速率时，积压按两者之差增长：</p>
+<blockquote>
+<p>积压量 =（输入速率 − 输出速率）× 持续时间</p>
+<p>代入：<code>(120 − 100) Mbit/s × 2 s = 40 Mbit</code></p>
+<p>队尾等待时间约为：<code>40 Mbit ÷ 100 Mbit/s = 0.4 s</code></p>
+</blockquote>
+<p>这意味着，缓存足够时，最后到达的分组需要等待约 400 毫秒才能轮到发送，实时交互会明显变慢。随后输入降到 80 Mbit/s，链路每秒消化 20 Mbit 积压，清空时间为 <code>40 ÷ (100 − 80) = 2 秒</code>。</p>
+<p class="key-point"><strong>输入持续超过输出能力时，缓存只能暂存积压；增加缓存会允许更长的排队等待。</strong></p>
+<p>若缓存只能容纳 30 Mbit，突发末尾的积压需求比缓存多 10 Mbit，这部分数据会被丢弃。把缓存增至 40 Mbit，可以容纳本次突发，但队尾分组仍要等待约 400 毫秒。决定扩容或调整流量时，需要同时观察丢包与时延：缓存解决暂时存放问题，链路容量和输入速率决定积压能否消退。</p>
+<p>你可以用计算机中的任务队列理解这一过程：分组是工作项，链路是处理通道，路由器把工作项交给合适的下一节点。照片能够上传，依赖信号识别、逐段转发与两端协议共同工作；上传变慢，则需要把各环节的等待和限制分开观察。下一章用质量指标描述这些结果。</p>
+<h3>理解检查</h3>
+<p>一个应用可以正常启动，但上传文件总是失败。通信基础知识提示你检查哪些类别的问题？</p>
+<details><summary>查看参考答案</summary><p>先找出上传失败的阶段，再选择对应检查，避免直接重启沿途设备。</p><ol><li>观察终端是否向目标发出请求，核对地址、端口与实际路径；若请求没有离开本机，调查应用和本地连接。</li><li>请求已发送时，沿路径比较连通性、分组大小和丢包；小数据正常、大内容失败时，核对 MTU 与封装。</li><li>若目标已经收到完整内容却返回应用错误，转查服务处理。网络与应用记录按同一次上传关联。</li></ol></details>
+<details><summary>计算练习：链路容量为 200 Mbit/s，起初队列为空，连续三秒均匀到达 250 Mbit/s 流量。缓存足够时积压多少，输入降到 150 Mbit/s 后多久清空？</summary><p>积压为 150 Mbit，输入降低后需要三秒清空。</p><ol><li>积压量 =（输入速率 − 输出速率）× 时间。<br>代入：(250 − 200) Mbit/s × 3 s = 150 Mbit，即 18.75 MB。</li><li>清空时间 = 积压量 ÷（输出速率 − 新输入速率）。<br>代入：150 Mbit ÷ (200 − 150) Mbit/s = 3 s。</li><li>突发结束后队列仍需三秒消化；判断体验恢复时间时，要包含这一阶段。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-01" aria-pressed="false">标记本章已学完</button><nav aria-label="01 章前后导航"><a href="#chapter-00" class="chapter-prev">← 上一章</a><a href="#chapter-02" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-02" aria-labelledby="heading-02" data-number="02">
+<div class="chapter-kicker">CHAPTER 02</div><h2 id="heading-02">网络质量：速度、时延与可靠性怎样影响体验</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把下载缓慢、响应等待和通话断续对应到质量指标，并说明怎样测量和解释结果。</p>
+</blockquote>
+<h3>先确定用户正在经历什么</h3>
+<p>同一用户可能下载文件很快，视频会议却经常断续。下载主要关心一份文件多久传完，会议则需要小块声音持续及时地到达。上一章已经看到，链路能发送多少数据、分组等多久、有没有丢失，是不同的问题。<strong>描述“网络质量”时，需要先确定当前体验依赖哪种交付结果。</strong></p>
+<p>例如，下载一个 100 MB 文件，实际每秒得到 10 MB，约需十秒。这里的实际传输速率称为<strong>吞吐量</strong>；链路或服务能够提供的传输能力称为<strong>带宽</strong>。一条有较大带宽的路径，在排队、重传或发送端供给不足时，实际吞吐量也会降低。</p>
+<p>比较套餐速率与下载软件之前，还要统一单位。bit 是比特，byte 是字节，一字节包含八比特。本课程使用十进制单位，M 表示百万，G 表示十亿。因此，100 Mbit/s 换算为每秒 12.5 MB；文件有效内容的速率还要结合协议开销和整条路径观察。单位统一后，才能判断测量值与目标相差多少。</p>
+<h3>把时延拆成可以计算的部分</h3>
+<p>文件传得快，还要看请求是否及时返回。一个分组从发出到到达经历的时间称为<strong>时延</strong>。沿第 01 章的转发过程看，它需要排队等待、放上链路、在介质中传播，再由下一设备处理。对一段链路及其相关节点，可以分解为：</p>
+<blockquote>
+<p>总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</p>
+</blockquote>
+<p><strong>发送时延</strong>是把整个分组放上链路所需的时间，取决于分组长度与链路速率。按一个 1,500 字节分组计算：</p>
+<blockquote>
+<p>发送时延 = 分组长度 × 8 ÷ 链路速率</p>
+<p>100 Mbit/s：<code>1,500 × 8 ÷ 100,000,000 = 0.00012 s = 120 微秒</code></p>
+<p>1 Gbit/s：<code>1,500 × 8 ÷ 1,000,000,000 = 12 微秒</code></p>
+</blockquote>
+<p>提高速率直接缩短这一部分等待；实际发送再计入链路头部与间隔占用。</p>
+<p><strong>传播时延</strong>取决于距离和信号传播速度。光在常见通信光纤中的传播速度约为每秒 200,000 千米，具体值随折射率变化。若光纤路由长 1,000 千米：</p>
+<blockquote>
+<p>传播时延 = 路由长度 ÷ 传播速度</p>
+<p>代入：<code>1,000 km ÷ 200,000 km/s = 0.005 s = 5 ms</code></p>
+</blockquote>
+<p class="key-point"><strong>提高链路速率直接缩短发送时延；降低传播时延需要缩短路径距离。</strong></p>
+<p>这段光纤单向传播约需 5 毫秒，往返传播约需 10 毫秒。速率升级后，信号仍要走同样的距离；缩短光纤路由或把服务部署到更近的位置，才能降低这一部分等待。整条路径还要累计各节点的处理与排队时间，所以应先找出占主导的时延分量，再选择措施。</p>
+<p>这就给出了一个分析方向：同一路径晚间比白天明显变慢，可以检查队列是否随负载增长；一条路径长期比另一条慢，则可以比较距离和绕行。具体请求还会等待域名查询、连接建立和服务器处理，调查时把这些阶段分别记录，才能找到等待发生的位置。</p>
+<h3>连续通话为什么怕抖动和丢包</h3>
+<p>不同分组经历的排队时间会变化，时延的变化程度称为<strong>抖动</strong>。会议声音按时间连续生成，接收端需要整理先后不一的到达数据。如果等待过长或到达变化较大，就会影响连续播放。</p>
+<p>还有一些分组在约定等待时间内没有收到，其比例称为<strong>丢包率</strong>。文件传输可以通过重传补齐内容，但重传增加等待；实时声音则需要结合播放时间处理缺口。因此，<strong>调查会议断续，应当查看会议发生时两个方向的时延、抖动和丢包，并观察丢失是否连续发生。</strong></p>
+<p>下面将常见指标与使用场景放在一起。测量时可以先从右栏找到用户现象，再选需要观察的指标。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>描述什么</th>
+<th>主要对应的体验</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>带宽</td>
+<td>链路或服务的传输能力</td>
+<td>能承载多大规模的需求</td>
+</tr>
+<tr>
+<td>吞吐量</td>
+<td>观察区间内的实际传输速率</td>
+<td>文件传完需要多久</td>
+</tr>
+<tr>
+<td>时延</td>
+<td>数据交付经历的时间</td>
+<td>点击或交互要等多久</td>
+</tr>
+<tr>
+<td>抖动</td>
+<td>不同分组的时延变化</td>
+<td>连续声音和画面是否平顺</td>
+</tr>
+<tr>
+<td>丢包率</td>
+<td>规定条件下未收到的分组比例</td>
+<td>重传、声音缺口及画面异常</td>
+</tr>
+<tr>
+<td>可用性</td>
+<td>约定范围内服务正常的时间比例</td>
+<td>服务能持续使用多久</td>
+</tr>
+</tbody>
+</table></div>
+<h3>大文件为什么也受往返时延影响</h3>
+<p>TCP 传输要接收确认，因此还需要看<strong>往返时延</strong>（RTT，Round-Trip Time）：数据发出后，相应响应返回所需的时间。它包含两个方向的路径；<strong>单向时延</strong>观察其中一个方向。</p>
+<p>发送端持续有数据可发、有效发送窗口保持 1 MB、RTT 为 100 毫秒时，可以估算窗口形成的速率上限：</p>
+<blockquote>
+<p>窗口限制下的速率 ≈ 有效发送窗口 × 8 ÷ RTT</p>
+<p>代入：<code>1 MB × 8 ÷ 0.1 s = 80 Mbit/s</code></p>
+</blockquote>
+<p class="key-point"><strong>长距离传输达到目标速率，需要让足够多的数据在等待确认期间继续前进。</strong></p>
+<p>本例要从 80 Mbit/s 提高到 1 Gbit/s，就需要扩大能够同时在途的有效数据量。目标速率与 RTT 的乘积称为<strong>带宽时延积</strong>（BDP，Bandwidth-Delay Product），据此计算目标速率所需的在途数据量：</p>
+<blockquote>
+<p>所需在途数据量 ≈ 目标速率 × RTT ÷ 8</p>
+<p>代入：<code>1,000 Mbit/s × 0.1 s ÷ 8 = 12.5 MB</code></p>
+</blockquote>
+<p>因此，调查长距离下载时，先检查有效窗口是否足以容纳约 12.5 MB 在途数据，再结合重传、拥塞控制和两端处理能力定位。<strong>窗口不足时，单纯提高链路速率仍会留下等待确认的瓶颈。</strong></p>
+<h3>怎样让测量真正对应问题</h3>
+<p class="key-point"><strong>测量端点、方向与时段必须对应用户正在经历的问题，结果才能用于定位和验收。</strong></p>
+<p>假设报告显示全市平均吞吐量基本正常，但一个小区每晚投诉很多。全市结果混合了不同地点和时段，调查就需要把那个小区的晚间样本单独取出。只有保留投诉对应的地点和时段，才能看到全市平均值掩盖的局部变化。</p>
+<p>同样，比较两个时延结果时，需要记录测量端点、分组大小和时段。<strong>95 分位时延</strong>表示约 95% 的样本不超过该值，用于观察较慢请求的表现。例如，平均时延为 20 毫秒、95 分位为 180 毫秒时，应继续调查等待较长的样本集中在哪些时段和路径。</p>
+<p>丢包测量还要规定等待时间。若一分钟发送 1,000 个测试分组，其中 990 个在规定时间内到达：</p>
+<blockquote>
+<p>丢包率 = 未按时收到的分组数 ÷ 发送分组数 × 100%</p>
+<p>代入：<code>(1,000 − 990) ÷ 1,000 × 100% = 1%</code></p>
+</blockquote>
+<p>这 1% 对应本次端点、发送方式和等待条件；比较前后结果时，应保持这些条件一致。IETF 的 <a href="https://www.rfc-editor.org/rfc/rfc7679.html">单向时延 RFC 7679</a> 和 <a href="https://www.rfc-editor.org/rfc/rfc7680.html">单向丢包 RFC 7680</a> 提供了相应测量定义。</p>
+<p>当客户购买有明确质量承诺的服务时，双方会用<strong>服务等级协议</strong>（SLA，Service Level Agreement）约定服务范围、质量和责任。交接点是双方划定责任与测试范围的位置，例如客户路由器连接运营商的接口。运维在这些端点按约定周期测量，才能核对承诺是否达到。</p>
+<p><strong>可用性</strong>按统计周期中服务正常的时间比例计算。以完整计入中断时间的 30 天周期为例：</p>
+<blockquote>
+<p>允许中断时间 = 统计周期 ×（1 − 可用性目标）</p>
+<p>99.9% 目标：<code>30 × 24 × 60 × 0.001 = 43.2 分钟</code></p>
+<p>99.99% 目标：<code>30 × 24 × 60 × 0.0001 = 4.32 分钟</code></p>
+</blockquote>
+<p><strong>两项可用性目标允许的中断时长相差十倍，规划的备用方式和恢复时限也需要相应调整</strong>。是否计入计划维护、从哪个时点开始计算中断，都写入测量口径，日常事件时间线按同一口径记录。接下来的问题就是：这些交接点在哪里，一项服务途中有哪些环节？下一章据此建立网络地图。</p>
+<h3>理解检查</h3>
+<p>某用户的测速结果很好，但视频会议仍然断续。还应该关注哪些证据？</p>
+<details><summary>查看参考答案</summary><p>优先测量会议发生时两个方向的时延、抖动和丢包，再用对照测试划分终端、Wi-Fi 与后续路径。</p><ol><li>使用同一会议目标和时段，比较有线与 Wi-Fi；改用有线后改善，就优先调查家庭无线。</li><li>有线仍断续时，关联上传队列、连续丢包及会议服务响应。测速的目标、方向和连接数量也要记录，才能解释它与会议结果的差异。</li></ol></details>
+<details><summary>计算练习：一个 1,500 字节分组通过 10 Mbit/s 链路需要多少发送时间？升级到 100 Mbit/s 后，哪些时延直接变化？</summary><p>发送时延从 1.2 毫秒降到 0.12 毫秒；相同距离下的传播时延保持原量级。</p><ol><li>发送时延 = 分组长度 × 8 ÷ 链路速率。<br>原链路：1,500 × 8 ÷ 10,000,000 = 0.0012 s = 1.2 ms。<br>升级后：1,500 × 8 ÷ 100,000,000 = 0.00012 s = 0.12 ms。</li><li>本题按分组长度计算。升级直接缩短发送时间，排队则随新负载变化，处理时间由设备与协议过程决定。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-02" aria-pressed="false">标记本章已学完</button><nav aria-label="02 章前后导航"><a href="#chapter-01" class="chapter-prev">← 上一章</a><a href="#chapter-03" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-03" aria-labelledby="heading-03" data-number="03">
+<div class="chapter-kicker">CHAPTER 03</div><h2 id="heading-03">网络全景：从用户到服务的一张地图</h2>
+<div class="prose"><blockquote>
+<p>学习目标：画出从用户到服务的主要路径，并把功能分工与物理依赖联系起来。</p>
+</blockquote>
+<h3>先给一份数据画出路径</h3>
+<p>用户在手机上打开一个网站，数据先从手机到基站，再经过城市与区域间的网络，到达负责用户数据转发的移动核心网功能，最后通过互联网互联到达网站。上一章的质量测量就发生在这条路径上；要判断哪一段异常，先需要知道各段承担什么任务。</p>
+<div class="flow" role="img" aria-label="移动上网路径：手机经基站与接入网进入承载网，再经移动核心网用户面和互联网互联到达网站。"><span>手机</span><b>→</b><span>基站／接入网</span><b>→</b><span>承载网</span><b>→</b><span>移动核心网用户面</span><b>→</b><span>互联网互联</span><b>→</b><span>网站</span></div>
+<p>基站所在的<strong>接入网</strong>解决用户怎样进入网络，后面的<strong>承载网</strong>负责在地点和节点之间运输信息。家庭宽带也有这样的分工，只是入口换成光纤等接入设施。这些名字先帮助我们区分“从用户到网络”与“在网络节点之间运输”两个范围。</p>
+<p>数据能够沿路径传递，还依赖身份和连接管理。运营商要确认用户是否有权使用服务，为连接建立相应状态，并落实转发策略。移动网络由专门的<strong>核心网</strong>承担这些职责；家庭宽带则由宽带网关及相关接入控制系统处理。后两章会分别沿实际上线过程解释它们。</p>
+<p>一项服务还依赖相应的业务与支撑能力。域名解析帮助应用查找目标，语音平台组织呼叫，内容平台提供网站或视频数据；客户、订单和账务系统则支撑交付与经营。这些功能根据服务需要参与通信，下面把它们与接入、承载和控制职责放在一起。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>功能范围</th>
+<th>解决的问题</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接入</td>
+<td>用户怎样进入网络？</td>
+<td>手机连接基站，家庭连接光接入设备</td>
+</tr>
+<tr>
+<td>承载</td>
+<td>节点之间怎样运输数据？</td>
+<td>基站回传、城市之间的运输路径</td>
+</tr>
+<tr>
+<td>核心及接入控制</td>
+<td>谁能使用，连接和策略怎样建立？</td>
+<td>移动注册、宽带用户上线</td>
+</tr>
+<tr>
+<td>业务与支撑</td>
+<td>用户要使用什么服务，怎样交付与经营？</td>
+<td>语音、域名解析、客户与订单平台</td>
+</tr>
+</tbody>
+</table></div>
+<h3>建立连接与传递数据怎样配合</h3>
+<p>手机已经开始播放视频，网络中保存着这条连接对应的转发规则。此时，处理新连接的功能发生异常，已有视频可能继续播放，新用户却无法开始。要解释这种差异，需要把建立状态与使用状态分开观察。</p>
+<p>负责注册、建立连接和选择路径的职责称为<strong>控制面</strong>；使用已建立规则传递网页或视频数据的职责称为<strong>用户面</strong>，也称数据面。读取状态、保存配置和升级软件则属于<strong>管理面</strong>。这三类职责可以位于不同设备，也可以在同一设备中实现。</p>
+<p>用熟悉的软件系统理解，控制面像协调任务的服务，用户面像实际处理业务数据的工作进程，管理面像部署与观测工具。协调服务暂时无法创建任务时，工作进程中已有任务可能继续完成；部署工具失联时，应用也可能仍在提供服务。网络中的类似现象，就需要按对应职责检查。</p>
+<p class="key-point"><strong>连接验证沿三个检查点推进：控制请求成功、转发规则实际安装、双向业务数据通过。</strong></p>
+<p>控制请求成功而规则安装失败时，连接记录与实际交付能力就会分离，所以必须读取实际规则并测试数据。管理访问和客户数据又可能使用不同路径，因此两者分别验证。后续开通和故障处理会沿这些依赖设置检查点。</p>
+<p>例如，移动会话记录已为手机分配地址，用户面设备却缺少送回手机的规则。此时先比较会话记录与用户面表项，再观察请求和返回的分组计数。若请求到达网站、返回到达用户面却没有继续送向基站，调查就集中到返回方向的规则及隧道。第 05 章会具体解释这些功能。</p>
+<h3>一条业务连接怎样依赖多层资源</h3>
+<p>数据路径说明分组经过哪里，维护人员还要知道这些路径依靠什么存在。例如，医院的两个地点在业务视图中是一条专线；实际实现可能经过多台设备和多条光缆。一处光缆损伤究竟影响哪些客户，需要把业务和底层资源连接起来。</p>
+<p>可以从上往下画三个资源层次：<strong>业务层</strong>记录客户使用的连接及质量目标；<strong>逻辑层</strong>记录地址、隔离规则与转发路径；<strong>物理层</strong>记录设备、光缆与供电。医院服务 S-101 使用逻辑路径 L-101，L-101 经过设备 R-A 与 R-B 的端口，它们之间的连接又使用光缆段 F-17。这些“依赖于”的关系组成一张<strong>依赖图</strong>。<a href="https://www.rfc-editor.org/rfc/rfc8345.html">网络拓扑模型 RFC 8345</a> 提供了表达网络层次及支持关系的模型。</p>
+<p class="key-point"><strong>主备路径的独立性，要沿依赖图核查到光缆、管道和供电等共同资源。</strong></p>
+<p>从 S-101 向底层查询，可以找到迁移服务时必须安排的资源；从 F-17 向上查询，可以找到光缆异常时受影响的服务。如果备用逻辑路径 L-102 也使用 F-17，一处损伤就可能同时破坏主备连接。继续关联管道和供电，才能判断两条路径能承受哪些共同故障，并决定需要分离哪些资源。</p>
+<p>到这里，我们有了两种互补的观察方法：沿通信过程检查控制与数据状态，沿依赖关系检查服务所需资源。接下来先走一遍家庭宽带，将这张地图落到家中电脑能够正常打开网站的具体条件上。</p>
+<h3>理解检查</h3>
+<p>同一机房的设备同时失联，为什么不能分别把每台设备都当成一个独立故障处理？</p>
+<details><summary>查看参考答案</summary><p>先调查这些设备的共同依赖，再分配各设备的检查任务。</p><ol><li>比较失联时点，查询共同供电、上联光缆和管理网络；同一时刻同一区域异常，优先验证共同资源。</li><li>共同资源恢复后，逐项验证受影响服务。仍失败的设备保留为独立调查对象，避免遗漏同时发生的局部问题。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-03" aria-pressed="false">标记本章已学完</button><nav aria-label="03 章前后导航"><a href="#chapter-02" class="chapter-prev">← 上一章</a><a href="#chapter-04" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-04" aria-labelledby="heading-04" data-number="04">
+<div class="chapter-kicker">CHAPTER 04</div><h2 id="heading-04">家庭宽带：从电脑到互联网的完整旅程</h2>
+<div class="prose"><blockquote>
+<p>学习目标：沿一次网站访问，解释家庭连接、光接入、用户上线与应用访问的依赖关系。</p>
+</blockquote>
+<h3>从家中电脑开始走一遍</h3>
+<p>电脑已经连接 Wi-Fi，却打不开网站。第 03 章的网络地图提示我们，Wi-Fi 只是路径的入口。现在沿电脑发出的请求往外走，看看访问网站还需要哪些条件。</p>
+<p>电脑通过网线或 Wi-Fi 连接家庭路由器，由它把去往外部的数据交给运营商。连接运营商光纤的设备称为<strong>光网络终端</strong>（ONT，Optical Network Terminal），家中常称“光猫”。有些设备把光猫、路由和 Wi-Fi 功能集成在一起。无论外观有几台设备，这些功能都要分别完成。</p>
+<p>下面先画出数据的大致去向。<strong>分光器</strong>把局端光路分成多条支路，<strong>光线路终端</strong>（OLT，Optical Line Terminal）位于运营商局端，连接用户的 ONT。它们属于光接入，后面的汇聚网络负责运输，宽带网关处理用户接入和策略，再往后是互联网出口与网站。</p>
+<div class="flow" role="img" aria-label="家庭宽带路径：电脑经家庭路由与光猫进入分光器和 OLT，再经汇聚网络、宽带网关与互联网出口到达网站。"><span>电脑</span><b>→</b><span>家庭路由／ONT</span><b>→</b><span>分光器</span><b>→</b><span>OLT</span><b>→</b><span>汇聚网络</span><b>→</b><span>宽带网关</span><b>→</b><span>互联网出口</span><b>→</b><span>网站</span></div>
+<p class="key-point"><strong>家庭宽带访问按光接入、用户上线、名称查询和实际访问逐阶段验证。</strong></p>
+<p>光接入提供到局端的连接，用户上线落实身份、地址与策略，名称查询找到目标，实际访问再确认双向交付和应用响应。每一阶段依赖前面已完成的能力，下面按这个顺序检查。</p>
+<h3>PON 怎样让多户共享一段光纤</h3>
+<p>把光纤铺到用户家中的方式称为<strong>光纤到户</strong>，简称 FTTH。常见实现采用<strong>无源光网络</strong>，简称 PON，其中 <strong>GPON</strong> 是吉比特无源光网络。运营商局端的 OLT 通过一段主干光纤和分光器连接多个家庭的 ONT。分光器把光路分成多条支路，这类光学分配部件无需现场供电，因此称为“无源”。<a href="https://www.itu.int/rec/T-REC-G.984.1/en">GPON 总体特性 G.984.1</a> 描述其总体架构与特性。</p>
+<p>这让多个家庭共用主干光路，也让两个方向需要不同的协调。下行由 OLT 发送，光信号分到各支路，ONT 按逻辑标识接收自己的业务；上行由多个 ONT 向同一光路发送，需要安排时隙，避免同时发送产生冲突。OLT 先通过测距计算各 ONT 的传输差异，让远近终端的信号都在指定时隙到达局端；再根据上行队列需求分配发送机会。这种按需求调整上行容量的过程称为<strong>动态带宽分配</strong>（DBA，Dynamic Bandwidth Allocation）。<a href="https://www.itu.int/rec/T-REC-G.984.3/en">GPON 传输汇聚规范 G.984.3</a>。</p>
+<p>因此，两种上传困难要分开调查：一户入户光纤损伤时，先看该支路；<strong>多户晚间同时上传、光链路都正常时，则检查共享上行资源</strong>。影响范围和发生时间，帮助我们在物理异常与资源竞争之间选择检查方向。</p>
+<h3>光信号能否到达接收端</h3>
+<p>共享结构还会分配光能，加上光纤与连接处的损耗，接收端需要有足够信号来识别数据。第 01 章讲过的信号条件，在这里可以用<strong>光功率预算</strong>计算。</p>
+<p><strong>dBm</strong> 表示相对 1 毫瓦的功率水平，<strong>dB</strong> 表示功率的比例变化。例如，0 dBm 为 1 毫瓦，−20 dBm 为 0.01 毫瓦；损耗增加约 3 dB，剩余光功率约减半。分光比越大，每条支路分得的光能越少：理想 1∶32 分光的损耗为 <code>10 × log₁₀(32) ≈ 15.05 dB</code>，实际还要计入分光器自身的附加损耗。</p>
+<p>本例选用的器件发射功率为 +3 dBm，光纤损耗为 4 dB，1∶32 分光器损耗为 17 dB，连接与熔接总损耗为 2 dB：</p>
+<blockquote>
+<p>预计接收功率 = 发射功率 − 光纤损耗 − 分光损耗 − 连接损耗</p>
+<p>代入：<code>+3 − 4 − 17 − 2 = −20 dBm</code></p>
+</blockquote>
+<p>本例接收模块的规格范围为 −27 至 −8 dBm，因此到较弱端的余量为 <code>−20 − (−27) = 7 dB</code>。设计用这部分余量容纳老化、接头增加和维修变化；到较强端也要核对，防止功率过大造成接收过载。<strong>验收时将实测功率与器件规格及设计预算同时比较。</strong></p>
+<p><strong>若原来 −20 dBm 的用户变成 −26 dBm，就已消耗 6 dB 余量，应调查新增损耗</strong>。多户在同一时段下降，检查共同光路和分光器；只有一户下降，优先检查入户光纤及连接器。这样，光功率既能判断是否接近接收边界，也能按影响范围指导定位。</p>
+<h3>PPPoE 上线：从物理连通到用户会话</h3>
+<p>光路正常后，还要让运营商知道这条连接属于谁、可以使用什么服务。负责宽带用户接入与策略的设备称为<strong>宽带网络网关</strong>（BNG，Broadband Network Gateway）。家庭侧的路由功能向它发起上线，BNG 再协同身份与授权系统核查用户。<a href="https://www.broadband-forum.org/pdfs/tr-101-2-0-0.pdf">宽带汇聚与 BNG 架构 TR-101</a>。</p>
+<p>这里采用<strong>以太网上的点到点协议</strong>（PPPoE，Point-to-Point Protocol over Ethernet）解释上线。家庭网关先发现接入服务器并取得会话标识，再通过<strong>点到点协议</strong> PPP 协商链路、完成用户认证和网络参数协商。会话将用户身份与后续转发关联起来。<a href="https://www.rfc-editor.org/rfc/rfc2516.html">PPPoE RFC 2516</a>。</p>
+<p class="key-point"><strong>上线失败时，从最后成功的协议阶段继续检查，并区分明确拒绝与没有响应。</strong></p>
+<p>下面四种发现消息，以及随后的 PPP 协商和认证，给出了逐阶段定位的入口。收到拒绝说明请求已被处理，应读取拒绝原因；没有响应则要检查请求是否送达、服务器是否处理以及返回路径是否可用。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>交互与通过标准</th>
+<th>失败后优先检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发现服务器</td>
+<td>家庭网关发送 PADI，收到服务器的 PADO</td>
+<td>接入链路、业务映射与服务器响应</td>
+</tr>
+<tr>
+<td>建立 PPPoE 会话</td>
+<td>网关发送 PADR，收到带有效会话标识的 PADS</td>
+<td>所选服务器、服务名称与会话资源</td>
+</tr>
+<tr>
+<td>PPP 协商和认证</td>
+<td>链路协商完成，认证通过</td>
+<td>协商参数、认证拒绝原因或超时</td>
+</tr>
+<tr>
+<td>网络参数与转发</td>
+<td>地址协商完成，BNG 安装用户策略</td>
+<td>地址资源、策略与实际双向转发</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>认证、授权与计量</strong>合称 <strong>AAA</strong>（Authentication, Authorization and Accounting）：认证核验身份，授权决定可用服务，计量记录使用情况。BNG 可以通过 <strong>RADIUS</strong>（Remote Authentication Dial-In User Service，远程用户拨号认证服务）查询认证系统。收到 Access-Reject 时核对凭据与签约状态；未收到响应时，则沿请求、服务器处理和返回路径检查。<a href="https://www.rfc-editor.org/rfc/rfc2865.html">RADIUS RFC 2865</a>。</p>
+<p>封装还会改变第 01 章的 MTU。采用 RFC 2516 的基础封装、以太网载荷上限为 1,500 字节时：</p>
+<blockquote>
+<p>可用 IP MTU = 以太网载荷上限 − PPPoE 头部 − PPP 协议标识</p>
+<p>代入：<code>1,500 − 6 − 2 = 1,492 字节</code></p>
+</blockquote>
+<p>因此，排查大文件停顿时，需要核对 PPPoE 接口的实际 MTU，以及端到端大小调整机制是否有效；<strong>小分组测试通过后，继续测试接近该边界的分组。</strong></p>
+<p>另一类方式是 <strong>IPoE</strong>，即基于以太网的 IP 接入。它可以结合接入线路和设备标识识别用户，再落实地址与策略。IPv4 使用 32 位地址，可用动态主机配置协议 <strong>DHCP</strong> 分配参数：客户端发送 DHCPDISCOVER，服务器通过 DHCPOFFER 提供地址方案；客户端发送 DHCPREQUEST，服务器用 DHCPACK 确认<strong>地址租约</strong>，即地址的有效使用期。<a href="https://www.rfc-editor.org/rfc/rfc2131.html">DHCP RFC 2131</a>。调查时按实际方式选择会话、身份或地址分配记录，最终都要确认用户与转发规则一致。</p>
+<h3>上线成功后，浏览器怎样打开网站</h3>
+<p>电脑通常先从家庭路由器获得局域网地址。例如，电脑是 192.168.1.10，路由器是 192.168.1.1。即使运营商侧尚未上线，家中设备仍可能互相通信。当电脑发现网站地址属于外部网络时，就把分组交给<strong>默认网关</strong>，即没有更具体路径时使用的转发入口，再由它经运营商侧连接发送。</p>
+<p>浏览器输入的是名称，还需要<strong>域名系统</strong> DNS 查询对应地址。得到地址以后，浏览器才能发起到目标的连接并交换应用数据。调查因此依次确认局域网地址、运营商侧上线、DNS 查询结果和网站响应。前一步正常，就沿下一阶段继续检查；出现失败，则读取该阶段的请求与返回。<a href="https://www.rfc-editor.org/rfc/rfc1034.html">DNS 概念与设施 RFC 1034</a>。</p>
+<p>使用 IPv4 时，家庭网关还可能执行<strong>网络地址转换</strong> NAT，把内部地址与端口映射为外部地址与端口，并保存供返回数据使用的状态。运营商也可能部署运营商级转换 CGN。<strong>新连接失败而已有连接仍正常时，就可以进一步观察映射或端口资源</strong>。IPv6 使用 128 位地址，部署中则分别验证它的地址分配、路由和访问策略。</p>
+<p>下面把整次访问的检查点汇总起来。沿着已完成的阶段继续前进，比从所有设备中同时寻找异常更容易建立证据。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>检查点</th>
+<th>正常结果说明什么</th>
+<th>下一步检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>家庭连接</td>
+<td>电脑能够与家中网关通信</td>
+<td>光接入与运营商侧上线</td>
+</tr>
+<tr>
+<td>光接入</td>
+<td>ONT 与 OLT 的接入可用</td>
+<td>用户识别、认证和服务配置</td>
+</tr>
+<tr>
+<td>用户上线</td>
+<td>身份、地址和策略已有对应状态</td>
+<td>DNS 查询和目标连接</td>
+</tr>
+<tr>
+<td>DNS 查询</td>
+<td>已取得目标地址</td>
+<td>到目标的双向路径与应用响应</td>
+</tr>
+<tr>
+<td>实际访问</td>
+<td>当前目标可以使用</td>
+<td>同时核对质量和其他受影响对象</td>
+</tr>
+</tbody>
+</table></div>
+<p>回到本章开头，Wi-Fi 已连接时打不开网站，我们现在可以说明后续每一项检查为什么需要出现。手机上网也要经过接入、身份与数据路径，只是接入位置会变化。下一章看网络怎样持续追踪这种变化。</p>
+<h3>理解检查</h3>
+<p>同一个分光器下的多户家庭同时无法上网，而邻近分支正常。你会怎样组织第一次检查？</p>
+<details><summary>查看参考答案</summary><p>优先检查同分光器分支的共同光路，同时用其他分支作为对照。</p><ol><li>从 OLT 读取受影响 ONT 的在线状态与光功率，比较异常开始时间；多个终端同时光功率下降，现场检查共同连接和分光器。</li><li>若光接入正常，转查共享业务映射和上线响应。修复后抽查多户的认证、地址与实际网站访问。</li></ol></details>
+<details><summary>判断练习：光链路正常，已收到带会话标识的 PADS，随后认证明确拒绝。现场人员建议更换入户光纤，你是否同意？</summary><p>不同意。应先核对认证拒绝原因、用户凭据和签约状态。</p><ol><li>PADS 表明 PPPoE 发现及会话标识分配已经完成，认证系统也已返回拒绝，调查应沿这一明确失败阶段展开。</li><li>关联近期订单与账号变动，修正后重新上线并验证实际访问。更换光纤会占用现场时间，且无法纠正当前认证拒绝。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-04" aria-pressed="false">标记本章已学完</button><nav aria-label="04 章前后导航"><a href="#chapter-03" class="chapter-prev">← 上一章</a><a href="#chapter-05" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-05" aria-labelledby="heading-05" data-number="05">
+<div class="chapter-kicker">CHAPTER 05</div><h2 id="heading-05">移动网络：手机怎样接入、移动和上网</h2>
+<div class="prose"><blockquote>
+<p>学习目标：沿手机开始上网并移动的过程，解释无线接入、注册、数据会话与切换怎样配合。</p>
+</blockquote>
+<h3>固定线路变成无线连接后，多了什么问题</h3>
+<p>家庭宽带的入户线路固定，网络可以把服务与这条线路关联。手机走出家门后，位置不断变化，信号条件和共享用户数量也在变化。网络既要认出用户，还要知道当前怎样把数据送到他。因此，移动上网需要同时安排无线资源、身份与位置、用户数据路径。</p>
+<p>手机首先连接<strong>基站</strong>，即提供无线接入的设备及配套设施。基站按不同方向或频段提供服务，形成多个<strong>小区</strong>；小区是一个无线服务范围及其对应的配置单位。基站再通过<strong>回传</strong>连接后续网络，把控制信息和用户数据送往核心网。回传通常使用承载网络，所以手机附近有信号时，后面的运输仍需可用。</p>
+<h3>无线资源怎样变成手机的数据速率</h3>
+<p>多个手机共用一定范围的无线资源。<strong>频率</strong>描述无线电波变化的快慢，<strong>频段</strong>是一段频率范围。基站在可用频率和时间上为手机分配发送机会，称为<strong>调度</strong>。用户多了，每人可能分到更少；接收条件变差，每份资源能可靠携带的数据也可能减少。</p>
+<p>这里可以把第 01 章的信号识别具体化。<strong>参考信号接收功率</strong> RSRP 观察特定参考信号的接收水平；<strong>信号与干扰加噪声比</strong> SINR 比较所需信号与干扰、噪声的比例。干扰增强时，即使 RSRP 较高，SINR 仍会降低，接收方更难区分信号状态。网络随之降低调制编码效率或增加重传，同样数量的有效数据就需要更多无线资源。<a href="https://www.etsi.org/deliver/etsi_ts/138200_138299/138215/18.04.00_60/ts_138215v180400p.pdf">无线测量 TS 38.215 第 5 章</a>。</p>
+<p class="key-point"><strong>移动用户的速率取决于分到多少无线资源，以及每份资源能有效携带多少数据。</strong></p>
+<p>用户增多会减少每人分到的发送机会，干扰增强则会降低每份资源的调制编码效率。因此，楼内持续慢时比较遮挡和干扰；同地点仅忙时慢时比较无线资源占用与回传负载。把资源份额和传输效率分别观察，才能区分覆盖、无线竞争和后续运输问题。</p>
+<h3>从接入到注册：网络先认出用户</h3>
+<p>手机开机后，寻找能够使用的无线网络并建立初步连接。随后，网络利用<strong>用户身份模块</strong> SIM 中的凭据确认身份；SIM 可以是卡片，也可以采用嵌入式 eSIM。身份验证还要结合签约条件，决定用户可以获得哪些服务。<strong>注册</strong>在此基础上建立接入与可达状态，让网络能够管理这个用户。</p>
+<p>4G 的核心网称为<strong>演进分组核心网</strong> EPC，5G 的核心网称为 <strong>5G 核心网</strong>（5GC）。两者都处理身份、连接和数据路径，具体职责划分不同。下面用 5G <strong>独立组网</strong> SA 解释一次过程，它使用 5G 核心网；常见的<strong>非独立组网</strong> NSA 则结合 4G 网络与 5G 无线能力提供服务。</p>
+<p>在 SA 中，注册消息经基站交给<strong>接入与移动性管理功能</strong> AMF。AMF 协同身份验证和用户数据功能，完成凭据核验，并维护用户的接入与可达状态。核验凭据的过程也称<strong>鉴权</strong>，用于判断用户是否掌握与签约身份相符的秘密信息。AMF 的名字由此对应到明确任务：先让网络知道是谁接入，以及怎样联系他。<a href="https://www.etsi.org/deliver/etsi_ts/123500_123599/123501/18.09.00_60/ts_123501v180900p.pdf">5G 系统架构 TS 23.501，第 4、6 章</a>。</p>
+<h3>数据会话怎样把手机接到互联网</h3>
+<p>注册以后，手机还需要一条通往指定数据网络的连接。例如，一部手机请求访问互联网，网络为它安排地址、数据路径和使用策略；浏览器与视频应用的多个连接都可以通过这项网络连接传输。这项有状态的连接称为 <strong>PDU 会话</strong>，即协议数据单元会话。</p>
+<p>处理请求的是<strong>会话管理功能</strong> SMF。它协调地址与策略，选择<strong>用户面功能</strong> UPF，并安排相关转发规则。UPF 的任务是把用户数据转向互联网或企业网络。于是，AMF 处理接入与移动状态，SMF 安排会话，UPF 按规则处理实际数据，分别承担第 03 章讲过的控制与用户面职责。<a href="https://www.etsi.org/deliver/etsi_ts/123500_123599/123502/18.09.00_60/ts_123502v180900p.pdf">5G 注册与会话过程 TS 23.502，第 4.2、4.3 节</a>。</p>
+<p>基站到 UPF 之间经过承载网络，中间路由器需要知道送到哪个端点，端点又要识别属于哪个会话。为此，用户分组装入带有外层地址与标识的分组，到终点再取出内部数据，这种方式称为<strong>隧道</strong>。常用协议 GTP-U 是 GPRS 隧道协议的用户面部分；GPRS 即通用分组无线业务，名称沿用早期技术来源。</p>
+<p>网络保存手机地址、隧道标识和转发规则之间的对应关系。承载设备根据外层地址运输数据，UPF 再按会话规则处理内部数据。例如，某手机向网站发出请求，UPF 要把它送往出口；网站返回时，又要按对应规则送回该手机的无线接入。双向规则与路径都落实，应用才能使用。</p>
+<p>下面按已经发生的过程设置三个验证点。它们也将在核心网升级案例中用于区分已有和新增用户的状态。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>验证点</th>
+<th>需要确认的事实</th>
+<th>失败时沿哪个范围检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注册</td>
+<td>用户接入与身份核验完成</td>
+<td>无线接入、AMF 及身份依赖</td>
+</tr>
+<tr>
+<td>会话建立</td>
+<td>地址、策略及用户面安排完成</td>
+<td>SMF、地址资源及规则协调</td>
+</tr>
+<tr>
+<td>双向数据</td>
+<td>请求能到目标，返回能到手机</td>
+<td>基站至 UPF 隧道、UPF 规则及出口</td>
+</tr>
+</tbody>
+</table></div>
+<p class="key-point"><strong>已有会话使用已安装的转发规则，新会话依赖新的控制处理；两类用户要分别验证。</strong></p>
+<p>已有视频正常、新用户会话失败时，优先沿新建请求检查 SMF、地址资源与规则协调，并继续抽测既有数据。会话建立返回成功但收不到数据时，则读取基站与 UPF 的实际规则并测试两个方向。这样的验证才能覆盖控制处理和实际交付，避免遗漏只影响新增用户的异常。</p>
+<h3>手机移动后，数据怎样找到新的基站</h3>
+<p>开始传输时，手机位于小区 A；走到另一处后，小区 B 更适合服务。网络要把连接从 A 转到 B，这称为<strong>切换</strong>。手机报告无线测量，网络准备目标资源，安排手机接入 B，再更新后续数据路径，使数据送往新的基站。</p>
+<p>切换因此包含无线与后续路径两部分。目标无线条件好，但资源准备失败，连接无法转移；无线连接已经转移，隧道端点却没有更新，数据也可能中断。调查移动途中异常时，要把源小区、目标小区和路径更新结果连到同一时间线上。静止测试先验证各小区独立提供服务的能力；沿同一路线移动测试，再验证目标准备和路径更新。<strong>若只在经过 A、B 边界时中断，就集中核对该次切换的测量、准备和执行记录。</strong></p>
+<p>手机暂时不传输数据时，网络可以只记录较粗的位置区域，需要联系它时在相应区域发出通知，称为<strong>寻呼</strong>。区域较大，位置更新较少，一次寻呼则覆盖更多小区。这种取舍让位置管理同时影响控制负载和业务可达性。</p>
+<p>如果用户通过其他运营商网络使用服务，则称为<strong>漫游</strong>，身份和业务路径需要访问网络与归属网络共同协调。无论用户移动到哪里，分析都从接入、身份、会话到双向数据展开。下一章继续看电话与企业服务在这些连接之上还需要建立什么状态。</p>
+<h3>理解检查</h3>
+<p>一批用户能保持已有上网连接，但新开机用户注册失败。这种现象提示你关注什么？</p>
+<details><summary>查看参考答案</summary><p>优先检查新增注册的控制过程与身份依赖，并用同区域正常用户作对照。</p><ol><li>按无线连接、AMF 请求、鉴权与签约查询寻找最后成功的阶段；比较失败用户是否共用同一功能实例或用户数据。</li><li>已有上网连接使用已安装转发规则。恢复验证要重新开机注册，再建立会话并传输双向数据，覆盖本次失败过程。</li></ol></details>
+<details><summary>判断练习：5G 注册和会话返回成功，但网站收不到完整请求或手机收不到返回。你会从哪些边界划分问题？</summary><p>从基站、UPF 和互联网出口划分双向数据路径，核对会话记录与实际转发规则。</p><ol><li>确认请求在哪个边界最后被看到；在基站与 UPF 比较隧道标识和分组计数，在 UPF 与出口比较目标流量。</li><li>请求到达目标时再沿返回方向检查。比较正常用户，并用小分组与大分组测试区分持续转发问题和 MTU 问题。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-05" aria-pressed="false">标记本章已学完</button><nav aria-label="05 章前后导航"><a href="#chapter-04" class="chapter-prev">← 上一章</a><a href="#chapter-06" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-06" aria-labelledby="heading-06" data-number="06">
+<div class="chapter-kicker">CHAPTER 06</div><h2 id="heading-06">语音、专线与内容服务：不同业务怎样使用网络</h2>
+<div class="prose"><blockquote>
+<p>学习目标：解释电话、企业连接和内容分发在底层数据连接之上需要什么，并据此设计验证。</p>
+</blockquote>
+<h3>连接建好以后，业务还要做什么</h3>
+<p>前两章让家庭设备和手机具备了传递数据的能力。同一手机可以正常浏览网页，却无法打电话；企业两个站点都已接入，却未必能互访。这些现象提示我们，底层连接之上还有业务自己的规则。下面依次看电话怎样找到对方并传递声音，专线怎样组织客户路由，视频怎样选择内容来源。</p>
+<h3>从拨号到双向声音</h3>
+<p>拨号之后，网络先找到被叫、检查服务条件并组织接通。这些协调信息称为<strong>信令</strong>；接通后传输的声音或视频内容称为<strong>媒体</strong>。它们承担的任务不同，调查也需要对应到各自路径。</p>
+<p>现代运营商语音常使用<strong>IP 多媒体子系统</strong> IMS 组织会话。4G 的主要无线接入技术称为 LTE，即长期演进，通过它提供 IMS 语音称为 <strong>VoLTE</strong>；通过 5G 新无线接入提供 IMS 语音称为 <strong>VoNR</strong>。这些名称告诉我们采用哪种接入，呼叫本身仍要由语音系统组织。<a href="https://www.etsi.org/deliver/etsi_ts/123200_123299/123228/18.07.00_60/ts_123228v180700p.pdf">IMS 架构 TS 23.228</a>。</p>
+<p>手机在移动网络注册并取得相应数据连接后，还要向 IMS 登记语音身份和可联系的位置，完成 <strong>IMS 注册</strong>。语音平台据此核查服务条件，并知道呼叫应送往哪里。因此，调查能上网却无法拨号时，需要继续检查这项语音业务状态。</p>
+<p>以双方已经完成 IMS 注册为起点，呼叫常用<strong>会话初始协议</strong> SIP 交互。主叫发出 INVITE 请求，网络把它路由到被叫；被叫振铃时可以返回 180 Ringing，接听后返回 200 OK，主叫用 ACK 确认。结束时，一方发送 BYE，再释放呼叫状态。沿这些消息可以确定失败发生在查找、振铃还是接通阶段。<a href="https://www.rfc-editor.org/rfc/rfc3261.html">SIP RFC 3261，第 4、13 节</a>。</p>
+<p>接通还需要双方协商媒体地址、端口和编码方式。声音通常使用<strong>实时传输协议</strong> RTP，靠序号与时间戳组织播放，配合 <strong>RTCP</strong>，即实时传输控制协议，反馈接收质量。接收端用抖动缓冲整理到达时间不同的数据；缓冲增加时，能吸收更多变化，也增加播放等待。<a href="https://www.rfc-editor.org/rfc/rfc3550.html">RTP 与 RTCP RFC 3550</a>。</p>
+<p>以每个媒体分组携带 20 毫秒声音为例，一秒发送 <code>1,000 ÷ 20 = 50</code> 个分组。连续丢失三个，相当于缺少 <code>3 × 20 = 60</code> 毫秒声音。接收端的丢包补偿会影响实际听感，因此调查时同时记录连续缺失长度与媒体方向。</p>
+<p class="key-point"><strong>无法接通时检查注册和呼叫信令；接通后单向无声时检查协商出的媒体路径。</strong></p>
+<p>前者沿 IMS 注册与 SIP 消息寻找失败阶段，后者核对媒体地址、访问策略和两个方向的分组。恢复验证要完成拨通、接听与双向听音，分别确认呼叫状态和声音交付。</p>
+<p>电话还可能跨运营商或与较早的电路交换电话网互通。电路交换在通话期间为连接分配通道资源，与第 01 章的共享分组方式有不同状态。调查时因此记录主被叫所属网络和具体呼叫场景，验证覆盖实际互通边界。</p>
+<h3>企业连接怎样使用共享网络</h3>
+<p>青岚市一家医院要把院区连到数据中心。客户需要明确两端、传输能力和服务保障，还需要与其他企业的网络隔离。面向指定客户和端点提供的连接通常称为<strong>专线</strong>，可以采用不同技术实现。</p>
+<p>一种方式是在共享设施上组织<strong>虚拟专用网络</strong> VPN，把同一客户的地点连接起来，并将其路由与其他客户隔离。下面选择 BGP/MPLS IP VPN 解释：<strong>边界网关协议</strong> BGP 分发路由信息，<strong>多协议标签交换</strong> MPLS 用标签组织骨干转发。这样，医院数据可以共用运输设施，同时拥有独立的客户路由关系。<a href="https://www.rfc-editor.org/rfc/rfc4364.html">IP VPN 架构 RFC 4364</a>。</p>
+<p>客户边缘设备称为 <strong>CE</strong>，接入运营商边缘设备 <strong>PE</strong>，骨干内部的转发设备称为 <strong>P</strong>。医院把自己的路由交给 PE，PE 在医院专属的<strong>虚拟路由与转发表</strong> VRF 中保存。另一企业即使采用相同私有地址，也保存在另一张 VRF 表中，进入哪个客户端口就按对应客户的规则处理。</p>
+<p>例如，两家企业都使用私有地址范围 <code>10.20.0.0/16</code>。斜线后的 16 表示地址前 16 位确定，后 16 位组成这个范围内的地址。PE 之间分发路由时，<strong>路由区分符</strong> RD 让可能重复的前缀能够分别标识，<strong>路由目标</strong> RT 规定哪些 VRF 导入这些路由。新增医院站点时，先核对接入端口所属 VRF，再确认对端前缀是否按 RT 规则导入。<strong>RD 用于区分 VPN 路由，RT 用于控制导入，两项配置各有明确用途</strong>。<a href="https://www.rfc-editor.org/rfc/rfc4364.html">VPN 路由组织 RFC 4364，第 3、4 节</a>。</p>
+<p>数据进入骨干后，可以带两层标签：外层把分组送到目标 PE，内层帮助目标 PE 识别相应客户转发关系。P 设备主要处理运输标签，客户路由集中在 PE。第 07 章会沿一次逐跳转发继续解释标签处理。</p>
+<p>因此，<strong>院区本地正常、跨院区失败时，先查 CE 到 PE 的接入及客户 VRF 路由，再沿骨干运输检查到对端接入</strong>。交付时记录客户与运营商的交接点，把每次测试放在明确边界内。需要主备保障时，再向底层核查进线、管道和供电的共同依赖，才能知道备用能覆盖哪些故障。</p>
+<h3>视频请求怎样找到内容</h3>
+<p>网页和视频还依赖目标服务的部署位置。<strong>内容分发网络</strong> CDN 把内容缓存到多个节点，用户从选中的节点获取数据。名称解析与平台选择会改变实际来源，因而同一平台的两个用户也可能走不同路径。</p>
+<p>命中附近缓存时，请求可以减少远端运输；缓存未命中时，节点还要向内容源获取。<strong>调查“只有某平台缓慢”，先记录实际服务节点和路径，再比较其他目标</strong>。多个平台同时慢时，则沿它们的共用资源继续检查。内容团队和互联团队根据这些目标信息才能展开协作。</p>
+<p>运营商电视 <strong>IPTV</strong> 可以通过受管理的 IP 网络采用另一种分发方式。直播节目使用<strong>组播</strong>时，共同路径只运输一份内容，到分叉处再复制给多个接收者，减少重复运输。终端换台则需要加入新的节目组，网络相应更新成员与转发状态。</p>
+<p>于是，<strong>换台失败要看新节目加入过程，持续观看卡顿要看媒体交付</strong>。网页正常而电视异常时，则比较各自业务路径。我们已经看到，同一底层连接之上可以有多种状态与质量要求。下一章回到它们共用的承载设施，解释运输、备用和机房怎样支持这些服务。</p>
+<h3>理解检查</h3>
+<p>医院购买了两条专线。怎样解释“还需要核查物理路径”的作用？</p>
+<details><summary>查看参考答案</summary><p>物理核查用于确定两条专线能承受哪些共同故障。</p><ol><li>两条连接若共用进线光缆或管道，一次施工损伤即可同时中断。继续核查设备、机房和供电，登记共同依赖。</li><li>要求单条光缆故障后服务持续时，选择进线与相关运输路径独立的方案，再验证剩余容量和切换时间。</li></ol></details>
+<details><summary>判断练习：两家企业都使用 10.20.0.0/16，能否接入同一台 PE？新增站点无法访问原有站点时，怎样定位？</summary><p>可以。PE 在各客户独立的 VRF 中保存路由，并用 RD 和 RT 组织 VPN 路由。</p><ol><li>先核对新增站点接入端口所属 VRF，再查看是否导入原站点前缀，按 RT 规则调查缺失路由。</li><li>路由存在时继续检查下一跳、骨干运输和对端接入，最后测试两个方向。直接修改另一企业地址会增加客户改造成本，也无法修正错误的路由导入。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-06" aria-pressed="false">标记本章已学完</button><nav aria-label="06 章前后导航"><a href="#chapter-05" class="chapter-prev">← 上一章</a><a href="#chapter-07" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-07" aria-labelledby="heading-07" data-number="07">
+<div class="chapter-kicker">CHAPTER 07</div><h2 id="heading-07">承载网络与机房：所有业务共同依赖的基础</h2>
+<div class="prose"><blockquote>
+<p>学习目标：解释节点之间怎样形成并使用路径，以及备用、光传送和机房如何支撑业务。</p>
+</blockquote>
+<h3>从接入节点走向更大的网络</h3>
+<p>前面几章都画过类似路径：接入之后，流量进入承载网络。大量家庭和基站先在城市里汇集，再送往核心功能或其他地区。集中接入流量的部分称为<strong>汇聚网络</strong>，承担区域间主要运输的部分称为<strong>骨干网络</strong>；<strong>城域网</strong>则描述城市范围的网络组织，可以包含汇聚和核心节点。</p>
+<p>要把这幅图变成实际连接，可以先看两台路由器。路由器决定分组去向，但它们之间还需要真实传输能力。光传送设备和光纤提供这种节点间连接。<strong>波分复用</strong>在一条光纤上使用多个波长承载不同通道；<strong>光传送网</strong> OTN 组织光传送中的承载、管理和保护。IP 转发与光传送由此分别解决去向与物理运输问题。</p>
+<h3>路由表怎样形成，分组怎样按表转发</h3>
+<p>一台路由器需要知道哪些目的网络可达，才能选择下一段。网络内部可以使用<strong>开放最短路径优先协议</strong> OSPF 传播链路状态，节点据共同拓扑计算路径。<strong>路由表</strong>保存候选及选中路由，随后将实际转发所需结果安装到<strong>转发表</strong>中。<a href="https://www.rfc-editor.org/rfc/rfc2328.html">OSPF RFC 2328，第 2、16 章</a>。</p>
+<p>看一个具体选择：路由表同时有 <code>10.20.0.0/16 → 下一跳 A</code> 和 <code>10.20.1.0/24 → 下一跳 B</code>。/24 固定了更多起始位，描述的范围更小。发往 10.20.1.8 时，两条都匹配，设备按<strong>最长前缀匹配</strong>选更具体的 /24，并交给 B。这样的表项把“目的地址”转换为“下一步从哪里走”。</p>
+<p>第 06 章的 MPLS 则使用标签表完成运输：入口按业务和路径添加标签；中间节点根据入标签查找出接口、下一跳和出标签，完成标签交换；到出口后，按客户的转发关系交付数据。</p>
+<p class="key-point"><strong>客户 IP 路由决定业务去向，MPLS 标签组织骨干转发，光传送提供节点间连接。</strong></p>
+<p>调查专线不通时，客户前缀缺失就查 VPN 路由，标签转发异常就查骨干路径，节点间链路失效就查光传送。上层依赖下层提供能力，按层核对才能找到实际失效的位置。</p>
+<h3>到外部网络以后，谁决定去程和回程</h3>
+<p>本网络知道内部路径以后，还要知道怎样到达网站所在网络。独立管理的网络可用<strong>自治系统</strong> AS 及其编号标识，网络之间通过 BGP 交换可达前缀与路径属性，并在路径不可用时撤回路由。<a href="https://www.rfc-editor.org/rfc/rfc4271.html">BGP RFC 4271</a>。</p>
+<p>双方按约定直接交换相应流量，称为<strong>对等互联</strong>；一个网络向另一个提供更广的互联网可达性，称为<strong>互联网转接</strong>。这些互联关系拥有自己的容量与路由策略。例如，某网站通过两个互联口可达，运营商按内部策略选其中一个，对方又独立选择返回路径。</p>
+<p>因此，<strong>去程与回程可能不同</strong>。物理接口正常但目标不可达时，继续确认是否收到目标前缀、策略是否接受、下一跳是否可达，再分别检查方向流量。跨网络团队交换的是这些具体证据，才能定位各自负责的范围。</p>
+<h3>一条路径失效后，备用怎样接管</h3>
+<p>路由和转发表来自已知网络状态。路径改变以后，网络需要发现变化、通知相关节点、选择新路径并安装结果，这个过程称为<strong>收敛</strong>。使用备用路径恢复服务时，观察故障检测、转发调整及业务恢复分别用了多久。原路径的物理修复则另记录现场耗时与修复结果，随后再验证原有能力。这样，客户恢复时间与设施修复时间都能够准确追踪。</p>
+<p>本地端口失效会产生链路状态变化；远端路径失败而本地端口仍正常时，需要覆盖路径的检测。<strong>双向转发检测</strong> BFD 用周期性检测报文发现转发路径异常，并通知依赖这一状态的协议。<a href="https://www.rfc-editor.org/rfc/rfc5880.html">BFD RFC 5880</a>。检测之后，仍需确认备用路径可用以及新的状态已经安装。</p>
+<p><strong>保护</strong>通常提前准备备用资源，用于指定故障发生后的切换；<strong>恢复</strong>则可以重新选择或组织资源。无论哪种方式，最终都要让客户数据走上可用路径。验收时记录检测、路径调整和业务恢复的时间，就能解释哪一阶段决定了中断长度。</p>
+<p class="key-point"><strong>备用容量按故障后需要承接的总需求核算，切换测试同时验证业务质量。</strong></p>
+<p>两条各 10 Gbit/s 的路径平时承载总计 12 Gbit/s，一条失效后，剩下的 10 Gbit/s 面对 120% 的需求。若流量持续一秒，新增积压需求就是 <code>(12 − 10) × 1 = 2 Gbit</code>，即 250 MB；缓存耗尽后持续丢包。因此，备用设计要以故障后的总需求核算容量。验收时先验证路径切换，再在预计故障负载下测量质量，并用第 03 章的依赖图核对共同光缆、管道和供电。</p>
+<h3>设备之下还依赖哪些条件</h3>
+<p>即使传输与路由设计正确，设备仍需要电力和适当温度。机房用市电、蓄电池和发电设备安排供电，用制冷维持运行环境；对温度、水浸及供电的观测称为<strong>动力与环境监控</strong>，常简称动环监控。同机房设备同时异常时，先查这些共同条件，能够把多条告警连起来。</p>
+<p>无线网络还需要同步。某些网络在同一频段的不同时段发送和接收，称为<strong>时分双工</strong> TDD。相邻基站要协调时间，避免一个发送时强烈干扰另一个接收；频率同步也帮助双方保持一致。因此，数据链路可以传输时，仍要检查同步源、传递路径和时钟状态，才能解释特定无线质量异常。</p>
+<p>网络功能也可以作为软件运行在服务器和虚拟化平台上，称为<strong>网络功能虚拟化</strong> NFV。<a href="https://www.etsi.org/technologies/ict-infrastructure-operations/">ETSI 网络功能虚拟化资料</a> 介绍了这种分工。此时，会话功能还依赖宿主机计算、虚拟网络和状态存储。例如，控制请求变慢而物理链路正常时，检查实例 CPU 使用率、宿主机调度等待及依赖响应时间；<strong>只有同一宿主机上的实例异常时，优先调查该宿主机及其虚拟网络。</strong></p>
+<p>把网络功能实例关联到这些资源，就可以检查备用实例是否仍共用同一宿主机或存储。技术地图也因此延伸到机房与计算平台：服务依赖逻辑路径，路径依赖物理与软件设施。下一章开始把这些依赖交给实际团队维护，看看不同专业怎样共同完成一项任务。</p>
+<h3>理解检查</h3>
+<p>备用路径已经能转发流量，为什么还要检查业务质量和备用容量？</p>
+<details><summary>查看参考答案</summary><p>备用能够转发后，还要在故障负载下验证服务质量和剩余容量。</p><ol><li>两条各 10 Gbit/s 路径共承载 12 Gbit/s，一条失效后负载需求达到 120%，会持续积压和丢包。</li><li>按保障要求测试关键业务，再核对剩余路径的距离、质量与容量；容量不足时执行既定疏导或限流，并推进原路径修复。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-07" aria-pressed="false">标记本章已学完</button><nav aria-label="07 章前后导航"><a href="#chapter-06" class="chapter-prev">← 上一章</a><a href="#chapter-08" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-08" aria-labelledby="heading-08" data-number="08">
+<div class="chapter-kicker">CHAPTER 08</div><h2 id="heading-08">运维组织与系统：谁在什么环节负责</h2>
+<div class="prose"><blockquote>
+<p>学习目标：用服务标识找到责任团队与网络对象，并说明跨系统超时和任务交接怎样处理。</p>
+</blockquote>
+<h3>一条医院连接为什么需要多个团队</h3>
+<p>医院报告院区无法访问数据中心。第 06 章的路径告诉我们，问题可能在客户接入、VPN 路由或骨干运输；第 07 章又提示光缆和供电也会影响这些环节。因此，接到投诉的人需要先找到服务，再组织负责相应资源的人。</p>
+<p>客户服务人员记录服务标识、地点和现象，<strong>网络运行中心</strong> NOC 结合全局状态确认影响并协调事件，专业维护团队分别深入检查无线与传输，或 IP 承载与核心网等领域。需要测量或维修实物时，再由现场人员执行。规划建设团队负责新增能力，安全团队和产品支持人员则按任务参与。</p>
+<p class="key-point"><strong>跨专业任务由一个协调责任人维护统一事件，专业负责人承担本领域的技术判断与操作。</strong></p>
+<p>协调人确定处理顺序、组织升级并安排客户反馈，专业团队提交测试结果与行动建议。例如，决定备用切换时，协调人核对哪些服务优先恢复，承载团队核对路径与容量，业务团队安排验证。全局协调与专业责任相互衔接，才能让各团队的动作服务于同一恢复目标。</p>
+<p>交接至少交代三部分：当前受影响服务及已恢复对象；已完成测试、操作和实际路径；未完成任务、接收人及下次反馈时间。<strong>接收人核对能够访问记录并明确接手责任后，交接完成</strong>。下面继续看这些信息怎样跨系统传递。</p>
+<h3>从客户订单找到网络对象</h3>
+<p>客户系统知道医院购买了什么，网络系统知道配置在哪个端口。两者必须关联，才能把客户问题转成技术任务。支持客户、产品和账务的系统通常称为<strong>业务支撑系统</strong> BSS；支持网络资源、开通与保障的系统称为<strong>运营支撑系统</strong> OSS。</p>
+<p>以订单 O-101 为例，BSS 记录客户订购院区连接，服务记录 S-101 保存两端及质量约定，OSS 把它分解为接入与 VPN 任务，再绑定到设备和端口。设备作为管理对象称为<strong>网元</strong>，管理它的<strong>网管系统</strong>提供配置、状态和告警。工单则将任务对象、责任人与处理状态连接起来。</p>
+<p>因此，医院报障时，受理人员用 S-101 找到资源路径，专业人员再沿路径读取网元状态。原始观测包括事件记录即<strong>日志</strong>、数值观察即<strong>指标</strong>，以及主动发起的<strong>探测</strong>。把它们关联到服务和任务，就能还原谁在何时检查了什么。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>需要回答的问题</th>
+<th>使用的系统或资料</th>
+<th>与其他信息怎样关联</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户使用什么服务？</td>
+<td>客户与订单系统</td>
+<td>用服务标识找到端点与质量约定</td>
+</tr>
+<tr>
+<td>服务依赖什么？</td>
+<td>资源与拓扑系统</td>
+<td>用资源标识找到设备、路径和负责团队</td>
+</tr>
+<tr>
+<td>现在发生什么？</td>
+<td>网管与观测系统</td>
+<td>按对象和时间关联告警、日志与测试</td>
+</tr>
+<tr>
+<td>谁正在处理？</td>
+<td>工单与变更系统</td>
+<td>按任务标识找到执行、授权和验证结果</td>
+</tr>
+<tr>
+<td>已有经验能否使用？</td>
+<td>知识库</td>
+<td>对照原因与适用条件选择处理方法</td>
+</tr>
+</tbody>
+</table></div>
+<h3>系统协作怎样保持同一件事的状态</h3>
+<p>这些系统常通过接口或消息传递任务。假设任务 T-101 要在设备 R-A 上配置端口 P-A，接口超时后，调用方暂时不知道执行是否完成。它需要<strong>用 T-101 查询执行结果，并读取设备实际状态，才能决定继续验证还是重试。</strong></p>
+<p>任务标识和关联日志因此有实际用途：它们让系统和人员能够追踪同一项任务，判断重复请求对应的步骤是否已经执行。第 10 章会继续解释资源预留、重复执行和部分失败怎样处理；这里先建立整体关系，<strong>订单状态要由网络实际结果逐级确认。</strong></p>
+<p>自动化也是沿这条关系执行。修改速率前先确认服务与端口映射，再读取当前策略，比较目标后执行必要修改，最后读取结果并测试。对象不符时停止，部分完成时保存实际状态并进入异常处理。人工流程中的明确条件，由此可以成为程序判断，复杂判断则保留人员接管入口。</p>
+<h3>从一次任务回到完整分工</h3>
+<p>开通与故障只是日常工作的两条路径。为了检查维护职责是否完整，可以按任务归纳：故障管理发现并处理异常，配置管理维护运行规则；计量管理记录使用情况，性能管理分析能力与质量；安全管理控制访问和保护资源。这五类职能合称 <strong>FCAPS</strong>，分别对应 Fault 与 Configuration、Accounting 与 Performance，以及 Security。<a href="https://www.itu.int/rec/T-REC-M.3400/en">ITU-T M.3400 网络管理职能</a> 提供了这种分类。计量在这里关注资源和服务的使用记录，可支持计费及核对。</p>
+<p>如果要看客户需求怎样经过交付和保障，可以再按业务生命周期组织流程，<a href="https://www.tmforum.org/open-digital-architecture/process-framework-etom/">TM Forum eTOM 业务流程框架</a> 提供相应视角。实际学习时，先沿具体任务理解团队与系统，再用框架检查覆盖情况。下一章从新服务的第一步开始：客户需求怎样决定要建设什么能力。</p>
+<h3>理解检查</h3>
+<p>客户服务中心接到医院专线投诉后，直接把一句“网络不通”发给专业团队，会缺少哪些信息？</p>
+<details><summary>查看参考答案</summary><p>至少补齐服务定位、故障现象和接续处理三类信息。</p><ol><li>服务定位：服务标识、两端地点和交接接口，让专业团队找到具体 VPN 与资源路径。</li><li>故障现象：起始时间、失败操作、已有测试与近期变化，让团队设计正常和异常对照。</li><li>接续处理：客户联系人、协调人和下一次反馈时间，让技术处理与客户沟通同时推进。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-08" aria-pressed="false">标记本章已学完</button><nav aria-label="08 章前后导航"><a href="#chapter-07" class="chapter-prev">← 上一章</a><a href="#chapter-09" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-09" aria-labelledby="heading-09" data-number="09">
+<div class="chapter-kicker">CHAPTER 09</div><h2 id="heading-09">需求与规划：把服务目标转换成网络能力</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把用户需求转成覆盖、容量和故障保障方案，并确定建成后怎样验收。</p>
+</blockquote>
+<h3>新住宅片区需要建多大的网络</h3>
+<p>青岚市一个新住宅片区计划入住 800 户，首期已有 400 户订购宽带。业务团队提供用户规模，网络团队还要确定楼栋怎样接入、共享链路多大，以及故障后哪些服务需要继续使用。这就是<strong>规划</strong>：把服务目标转换成可建设、可验证的网络能力。</p>
+<p>先确认服务边界。需要覆盖哪些楼栋，预期开通多少用户，用户主要怎样使用，质量目标是什么？同时核查已有线路、端口和机房条件。这样才能判断缺口来自接入范围、共享容量，还是可靠性与维护条件。</p>
+<p><strong>覆盖</strong>回答用户能否接入；<strong>容量</strong>回答同时使用时能承载多少需求。固定网络需要可达线路与可用端口，移动网络则还要考虑建筑、位置和无线资源。下面先用宽带片区计算共享容量，再把正常使用与故障保障联系起来。</p>
+<h3>用忙时模型把用户数转换为容量</h3>
+<p>规划关注较繁忙的时段，简称<strong>忙时</strong>。本例规划团队用已有相似片区的忙时数据估计新需求：同时活跃比例在 30%—45% 之间，活跃用户平均需求在 10—20 Mbit/s 之间，首期模型选取 40% 和 15 Mbit/s。<strong>三个输入分别是订购用户数、同时活跃比例和活跃用户平均速率。</strong></p>
+<blockquote>
+<p>忙时聚合需求 = 订购用户数 × 同时活跃比例 × 活跃用户平均速率</p>
+<p>代入：<code>400 × 40% × 15 Mbit/s = 2,400 Mbit/s = 2.4 Gbit/s</code></p>
+</blockquote>
+<p>本方案将正常忙时负载目标定为 70%，为分钟平均值未反映的突发和交付期间的增长留出容量。<strong>目标由本项目的流量分布、质量要求和扩容周期确定，运行后继续校准。</strong></p>
+<blockquote>
+<p>所需容量 = 忙时聚合需求 ÷ 设计负载目标</p>
+<p>代入：<code>2.4 Gbit/s ÷ 70% ≈ 3.43 Gbit/s</code></p>
+<p>一年增长 25% 后：<code>2.4 × 1.25 ÷ 70% ≈ 4.29 Gbit/s</code></p>
+</blockquote>
+<p>因此，满足一年目标的候选方案至少提供约 4.29 Gbit/s，再按实际接口规格选型。若采用 5 Gbit/s，预测正常忙时负载为 60%。同时核算 30%—45% 活跃比例和 10—20 Mbit/s 需求所形成的范围，避免只依赖一个平均值；实际需求偏向上限时，提前启动下一期建设。</p>
+<h3>正常够用以后，还要看故障时够不够</h3>
+<p class="key-point"><strong>容量方案分别核算正常态和故障态，可靠性方案同时核查主备的共同失效条件。</strong></p>
+<p>第 07 章已经解释备用接管后的容量限制。设另一个候选方案有两条各 5 Gbit/s 的汇聚路径，忙时总需求 6 Gbit/s。正常均匀分担时，每条约 60%；一条失效后，剩余路径面对的需求达到其能力的 120%。方案必须继续确定故障态的服务目标，再选择足够容量或相应保障安排。</p>
+<p>这部分属于<strong>可靠性</strong>设计：指定故障发生后，服务怎样持续或恢复。路径能否独立存活也要核查。两条光纤若共用一段管道，就可能共同受损；可以把这类会一起失效的链路登记为<strong>共享风险链路组</strong> SRLG。比较主备风险组，再检查机房和电源，才能说明设计覆盖哪些故障。</p>
+<p><strong>可靠性目标随后转成验收任务，例如退出一条主路径，测量检测和恢复时间，再验证备用承载的质量</strong>。预先明确这些任务，建设完成后就有一致的判断依据。</p>
+<h3>怎样让方案具备建设和维护条件</h3>
+<p>技术能力还要能落到现场。线路是否有可用通道，机房是否具备供电，场地和施工条件是否落实，都会影响投入使用的时间。已有业务附近施工，还要识别会受影响的设施，把协调要求写入建设安排。</p>
+<p>投入运行以后，标识是否清晰、站点是否可进入、故障能否被观察，决定维护效率。这些条件称为<strong>可维护性</strong>。让维护团队在规划时参与，就可以把监控、备件和资料要求提前纳入交付，使网络在投入运行时已经具备相应维护条件。</p>
+<p>首期与远期也要连接起来。片区首期按楼栋安排接入，按当前模型安排汇聚容量，同时为后续入住保留线路和扩展位置。运行中的实际需求再推动下一期建设。这样，分期方案既能回应当前订单，也给增长留下实施条件。</p>
+<p>最终方案交给建设团队时，应包含明确的用户范围、资源选择依据和建设安排，并附正常态与故障态验收方法。下一章就以这些目标为输入，把规划变成客户能够使用的服务。</p>
+<h3>理解检查</h3>
+<p>为什么规划文档需要写明“建成后怎样验证”，而不能只写设备数量？</p>
+<details><summary>查看参考答案</summary><p>验收方法使设备投入能够对应客户需要的能力，并给交付各方提供一致的通过标准。</p><ol><li>用户能接入，要验证线路和端口；忙时能使用，要验证负载与质量；指定故障后能恢复，要测试检测、切换与备用容量。</li><li>若只核对设备数量，可能接收了无法承载需求或不能切换的网络。规划阶段明确端点与测试条件，建设完成后据此验收。</li></ol></details>
+<details><summary>计算练习：忙时需求为 4 Gbit/s，设计负载目标为 60%。至少需要多少容量？两条各 5 Gbit/s 的路径能否在单故障后保持同一目标？</summary><p>至少需要约 6.67 Gbit/s；两条各 5 Gbit/s 的路径在单故障后无法保持 60% 目标。</p><ol><li>所需容量 = 忙时需求 ÷ 设计负载目标。<br>代入：4 ÷ 60% ≈ 6.67 Gbit/s。</li><li>正常均匀分担时，每条承载 2 Gbit/s，负载为 40%；一条失效后，剩余路径承载 4 Gbit/s，负载为 4 ÷ 5 = 80%。</li><li>若故障态也要求 60%，每条独立存活的路径应提供至少约 6.67 Gbit/s；若允许故障态放宽目标，需另行明确质量及保障方案。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-09" aria-pressed="false">标记本章已学完</button><nav aria-label="09 章前后导航"><a href="#chapter-08" class="chapter-prev">← 上一章</a><a href="#chapter-10" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-10" aria-labelledby="heading-10" data-number="10">
+<div class="chapter-kicker">CHAPTER 10</div><h2 id="heading-10">建设、验收与开通：从设备可用到客户可用</h2>
+<div class="prose"><blockquote>
+<p>学习目标：沿一项宽带交付，解释建设验收、客户开通和异常处理怎样形成连续流程。</p>
+</blockquote>
+<h3>设计怎样成为可以接管的网络</h3>
+<p>上一章为新片区确定了接入范围、容量和故障保障目标。建设团队据此准备机房与线路，安装设备并完成连接和配置。维护团队随后要确认这些结果达到目标，而且能够被观察和管理，才能接管运行。</p>
+<p>验收按照设计目标分阶段推进。现场验收先确认实际线路、安装和标识与竣工资料一致；技术验收再确认服务映射与质量；故障测试检查备用承载；维护交接确认监控和接管资料。<strong>某阶段失败时，记录具体对象、差异和整改负责人，复验通过后再进入依赖它的后续阶段。</strong></p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>设计目标</th>
+<th>验收怎样验证</th>
+<th>留给运行维护的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指定地点可以接入</td>
+<td>核对实际线路、设备与连接</td>
+<td>竣工资料和资源标识</td>
+</tr>
+<tr>
+<td>连接达到质量要求</td>
+<td>在约定端点测量方向和负载</td>
+<td>测试条件、结果及配置版本</td>
+</tr>
+<tr>
+<td>故障后能够恢复</td>
+<td>受控退出路径，验证切换与质量</td>
+<td>检测和业务恢复时间、备用状态</td>
+</tr>
+<tr>
+<td>维护可以接管</td>
+<td>验证观测、访问和责任安排</td>
+<td>监控对象、维护资料与联系人</td>
+</tr>
+</tbody>
+</table></div>
+<h3>一次技术测试怎样覆盖目标</h3>
+<p>以 500 Mbit/s 专线为例，验收表先写明两个交接接口、计量层次和约定质量，再按以下顺序验证。</p>
+<ol>
+<li><strong>物理连接</strong>：光功率处于模块规格范围，测试期间接口错误没有异常增长。失败时检查光纤、连接器和模块。</li>
+<li><strong>逻辑服务</strong>：端口属于正确客户 VRF，对端前缀及可用下一跳已进入实际转发表。失败时检查业务映射、路由导入和下一跳可达性。</li>
+<li><strong>双向交付</strong>：在约定分组大小、持续时间和负载下，两个方向均达到吞吐量、时延及丢包要求。失败时沿对应方向观察队列、速率策略与分段测试结果。</li>
+<li><strong>故障承载</strong>：受控退出设计规定的主路径后，在约定恢复时间内完成切换，备用仍达到规定质量。失败时分别核查检测、路径调整与剩余容量。</li>
+</ol>
+<p>每次测试记录实际配置版本和结果。把合同速率与测试值比较前，先确认两者采用相同计量层次，例如都按以太网服务帧计量；协议头部所占空间会影响应用文件的有效速率。</p>
+<p>测试前记录分组大小、发送负载和持续时间，再逐步增加负载至约定值。双向服务分别测试，并观察同时传输的表现。第 02 章的测量口径在这里直接参与验收：同一组条件日后可以复测，当前结果也能与承诺比较。</p>
+<p>备用测试在获准范围内退出一条路径，记录发现故障、转发调整和业务恢复时间，并验证剩余路径的质量。恢复主路径后，再核对双路径与监控。把原有连接切换到新设备或路径称为<strong>割接</strong>；涉及运行服务的割接按第 15 章变更流程安排。</p>
+<h3>一户客户怎样获得已经建好的能力</h3>
+<p>网络验收形成可用资源，客户订单再把其中一部分交给具体用户。以一户宽带订单为例，先确认地址覆盖和套餐，核查可用接入端口并预留；现场安装入户线路和 ONT，系统落实用户信息与服务策略，然后沿第 04 章的过程验证上线和访问。</p>
+<div class="flow" role="img" aria-label="开通流程：确认订单后核查并预留资源，再安装与配置，通过业务验证后交付并同步资料。"><span>订单确认</span><b>→</b><span>资源核查／预留</span><b>→</b><span>现场安装</span><b>→</b><span>服务配置</span><b>→</b><span>业务验证</span><b>→</b><span>交付／资料同步</span></div>
+<p class="key-point"><strong>开通状态只在对应结果验证后推进：资源已预留、配置已落实、业务已通过、交接已完成。</strong></p>
+<p>预留确定资源属于本订单，配置完成确定规则已经执行，业务验证确定用户可以使用，交付确定客户与维护方收到结果。任务状态可以按 <code>待核查 → 已预留 → 待执行 → 配置完成 → 验证通过 → 已交付</code> 流转，推进条件如下。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>状态推进</th>
+<th>必须取得的结果</th>
+<th>不能推进时怎样处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核查到预留</td>
+<td>资源适用，预留记录绑定本订单</td>
+<td>资源不足则等待补充或选择可行方案</td>
+</tr>
+<tr>
+<td>执行到配置完成</td>
+<td>各设备实际配置均达到目标</td>
+<td>保留已完成部分，修复或补偿失败步骤</td>
+</tr>
+<tr>
+<td>配置完成到验证通过</td>
+<td>用户上线及实际服务测试通过</td>
+<td>按最后成功阶段定位，修正后复测</td>
+</tr>
+<tr>
+<td>验证通过到交付</td>
+<td>客户与维护方收到结果，映射和订单同步</td>
+<td>补齐交接资料及接收确认</td>
+</tr>
+</tbody>
+</table></div>
+<p>每个状态保存对应测试和记录，接手者据此从最后通过阶段继续；尚未达到目标的步骤保留为待处理任务。</p>
+<p>交付时，将服务标识关联到实际端口和路径，同步订单状态，给客户提供报障入口。这样，下一次投诉才能由客户服务直接找到网络对象。</p>
+<h3>并发与超时为什么需要专门处理</h3>
+<p>两个订单同时申请最后一个端口时，<strong>资源系统需要通过原子更新或锁定，让其中一个成功预留，另一个得到资源不足结果</strong>。预留记录保存订单和有效期；订单取消或超期后，先核对是否已经安装或配置，再释放相应资源。</p>
+<p class="key-point"><strong>配置接口超时后，先查原任务的执行记录和实际配置，再决定验证、重试或处理部分失败。</strong></p>
+<p>超时只确定调用方没有按时得到结果，请求可能未执行，也可能已完成。第 08 章的任务标识在此成为查询依据：已经达到目标就继续验证，尚未执行才按规则重试，部分完成则保留已执行结果并处理失败步骤。同一任务在相同目标和条件下重复请求，保持同一业务结果，称为<strong>幂等性</strong>。查询和幂等处理共同防止重复分配资源或重复创建服务。</p>
+<p>因此，任务标识还要与目标内容对应。已经使用同一标识创建服务后，修改目标再提交，需要按更新任务处理，避免把新的要求误当成此前已完成的请求。这样，状态与执行结果能够持续核对。</p>
+<h3>部分失败怎样回到可管理的状态</h3>
+<p>假设专线一端配置成功，另一端资源冲突，任务就保存已完成部分并进入异常处理。可以修复另一端后继续，也可以按规则撤销已完成动作，这称为<strong>补偿</strong>。<strong>补偿前确认资源仍属于原任务，再撤除相应配置，防止后续工作已经改变对象。</strong></p>
+<p>现场无法安装时，记录原因并暂停依赖安装的后续任务；客户撤单时，核对预留与实际执行，解除相应资源和配置。异常处理完成后再更新任务状态，接手者就能知道哪些事实仍然成立。</p>
+<p>最终，<strong>客户服务通过验证、订单状态与实际一致、服务和资源映射完整，交付才告结束</strong>。运行维修还会改变这些映射，下一章说明怎样让记录持续可信。</p>
+<h3>理解检查</h3>
+<p>某条企业专线的设备都已经安装成功，为什么订单还不能据此直接标记为交付完成？</p>
+<details><summary>查看参考答案</summary><p>不能直接标记交付完成。还需要配置、业务验证和客户及维护交接通过。</p><ol><li>读取两端客户 VRF、目标路由和速率策略，确认实际配置达到目标。</li><li>在交接点测试双向质量与保护能力，再由客户验证实际业务。</li><li>同步服务与资源映射，确认客户和维护方收到记录后，推进到已交付。</li></ol></details>
+<details><summary>判断练习：配置接口超时，订单系统准备重试。你会立即重发，还是先查询？怎样处理不同结果？</summary><p>先使用原任务标识查询执行记录，并读取实际配置与资源占用。</p><ol><li>已经达到原目标：进入验证；尚未执行：按重试规则执行；部分完成：修复失败步骤或按方案补偿。</li><li>重试保留同一任务标识和目标内容。若目标变化，按更新任务处理，避免将新要求误判为已完成。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-10" aria-pressed="false">标记本章已学完</button><nav aria-label="10 章前后导航"><a href="#chapter-09" class="chapter-prev">← 上一章</a><a href="#chapter-11" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-11" aria-labelledby="heading-11" data-number="11">
+<div class="chapter-kicker">CHAPTER 11</div><h2 id="heading-11">资源与配置：让记录与实际运行保持一致</h2>
+<div class="prose"><blockquote>
+<p>学习目标：用一次端口迁移，解释资源关系、配置版本与实际运行状态怎样保持一致。</p>
+</blockquote>
+<h3>服务恢复以后，为什么还要改记录</h3>
+<p>医院服务 S-101 在故障处理中从端口 P-A 迁到 P-B，客户已经恢复。若资源记录仍指向 P-A，下次故障就会查错路径，新订单也可能误用已被占用的 P-B。</p>
+<p class="key-point"><strong>资源记录必须反映服务当前实际使用的端口和路径，变更同时保留历史关系与生效时间。</strong></p>
+<p>实际关系让下次排查找到正确对象，历史关系让复盘能够还原故障时的路径。因此，一次操作完成后，需要把实际变化交给后续维护人员和系统。</p>
+<p>记录从不同目的观察同一设备。<strong>资产记录</strong>保存采购、位置和实物状态；<strong>资源记录</strong>保存端口、容量及分配情况；<strong>拓扑</strong>描述连接；<strong>配置</strong>决定实际运行规则。将它们用唯一标识关联起来，才能回答设备在哪里、服务使用什么、分组按什么规则走。</p>
+<p>例如，P-B 物理存在，只能说明设备有这个端口。能否给新订单使用，还要核对它处于空闲、预留还是占用状态，以及能力是否符合需求。资源可用性由实物与分配事实共同决定。</p>
+<h3>迁移后怎样查询当前与历史路径</h3>
+<p>沿用第 03 章的依赖图，S-101 使用逻辑路径 L-101，路径再关联端口和光缆。迁移后更新相应关系，并记录生效时间与工单依据。这样既能查询当前路径，也能还原故障发生时的路径。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>记录对象</th>
+<th>需要保存的事实</th>
+<th>能回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务</td>
+<td>客户、端点与质量约定</td>
+<td>S-101 要保障什么？</td>
+</tr>
+<tr>
+<td>资源</td>
+<td>类型与位置；运行和分配状态</td>
+<td>P-B 在哪里，能否再分配？</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>两端对象与关系类型；生效时间及依据</td>
+<td>服务现在依赖什么，何时改变？</td>
+</tr>
+<tr>
+<td>配置版本</td>
+<td>变更差异、执行记录与验证</td>
+<td>当前规则由哪次任务形成？</td>
+</tr>
+</tbody>
+</table></div>
+<p>从异常光缆向上查询，可以找受影响服务；从订单向下查找，可以选可分配资源；从待退网设备向上查找，可以确认全部使用者。这些查询采用同一份事实，但方向与目的不同。拓扑存在环路时，查询程序记录已访问对象；查询历史事件时，则使用当时有效的关系。</p>
+<p>一次迁移执行前核对原关系，执行后记录实际端口和路径，用业务验证确认生效，再检查旧端口有无残留服务。<strong>只有使用者已迁移、配置已解除，旧资源才进入可分配状态</strong>。紧急恢复的临时路径记录撤销条件和后续任务，值守据此继续观察与安排调整。</p>
+<h3>怎样识别配置漂移并决定是否纠正</h3>
+<p>资源关系记录服务在哪里，配置记录服务怎样运行。经过确认、可用于比较的配置称为<strong>基线</strong>。日常变更保留前后差异和验证，实际配置逐渐偏离预期则称为<strong>配置漂移</strong>。</p>
+<p>例如，批准速率是 500 Mbit/s，设备上却出现 300 Mbit/s。先核对变更记录与验证结果：<strong>已批准且验证通过的调整更新基线；没有对应授权，或已执行却未达到目标的修改，进入调查与纠正</strong>。若直接用旧基线覆盖设备，可能撤销有效业务调整，因此先确认当前认可状态再执行。</p>
+<p>配置管理接口可以支持这类核对。<strong>NETCONF</strong> 是网络配置管理协议，客户端先与设备交换支持的能力，再选择相应读取、修改和提交操作。<a href="https://www.rfc-editor.org/rfc/rfc6241.html">NETCONF RFC 6241</a>。下面用一次速率修改说明这些状态怎样衔接。</p>
+<h3>配置提交以后，怎样确认真正生效</h3>
+<p><strong>运行配置</strong>是当前生效的配置；支持相应能力的设备可提供<strong>候选配置</strong>，暂存待提交修改，以及<strong>启动配置</strong>，保存重启后所需状态。使用候选配置时，可以锁定范围、写入和校验，再提交到运行状态。</p>
+<p>支持相应能力的设备还可执行<strong>确认提交</strong>：先让修改生效，客户端在检查通过后再次提交确认；超时未确认，设备恢复此前配置。RFC 6241 的默认确认超时为 600 秒，也可按操作与验证耗时设置。修改管理路径时，先读取该能力及超时参数，再用确认提交为连接失去可达性提供自动恢复条件。<a href="https://www.rfc-editor.org/rfc/rfc6241.html">NETCONF RFC 6241，第 7、8 节</a>。</p>
+<p class="key-point"><strong>配置生效验证包括运行配置、实际转发和客户业务；验证通过后再确认提交并核对启动状态。</strong></p>
+<p>接口返回后，先读取运行配置与相关状态，再测试业务。速率策略修改检查实际吞吐量与丢弃；路由修改检查邻居、目标前缀及转发结果。使用确认提交时，在验证通过后完成确认。设备具有独立启动配置时，将认可的运行配置复制到启动配置，再读回核对；这样重启后仍使用已验证的规则。</p>
+<p>跨设备服务则记录每台设备的结果，按第 10 章的分阶段执行与异常处理推进。配置备份也通过恢复验证确认可用，并关联版本。至此，我们留下了服务位置和运行规则的可信记录。下一章在这些记录上持续采集状态，判断当前网络是否偏离正常运行。</p>
+<h3>理解检查</h3>
+<p>紧急故障处理把专线迁移到了另一端口。恢复后的工单还需要补充什么？</p>
+<details><summary>查看参考答案</summary><p>补齐新旧资源关系与实际配置，使下次排查能够找到当前路径。</p><ol><li>记录新旧端口、路径、生效时间和操作授权，更新服务到资源的映射与监控对象。</li><li>验证旧端口没有残留使用者或配置后再释放；临时路径记录后续调整任务、负责人和期限。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-11" aria-pressed="false">标记本章已学完</button><nav aria-label="11 章前后导航"><a href="#chapter-10" class="chapter-prev">← 上一章</a><a href="#chapter-12" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-12" aria-labelledby="heading-12" data-number="12">
+<div class="chapter-kicker">CHAPTER 12</div><h2 id="heading-12">监控与值守：怎样从海量信息中发现需要处理的事</h2>
+<div class="prose"><blockquote>
+<p>学习目标：从观测数据形成可信的异常判断，并交给有明确对象和责任的处理任务。</p>
+</blockquote>
+<h3>怎样判断观测数据是否有效</h3>
+<p>第 11 章留下了服务路径和认可配置，监控可以据此持续观察。假设同一汇聚区域的多个接入节点突然失联，值守首先要确定数据是否可信，再看这些现象是否共享依赖，最后判断有哪些服务受到影响。下面沿这三个判断说明观测怎样成为处理任务。</p>
+<p>系统记录到的状态或行为变化称为<strong>事件</strong>，满足异常条件后发出的通知称为<strong>告警</strong>。端口关闭是一条事件，高负载持续超过规则则可以产生告警。告警包含对象、时间和状态，值守据这些信息开始检查。</p>
+<p class="key-point"><strong>判断网络是否正常之前，先确认采集仍在更新、数据完整且时间能够对齐。</strong></p>
+<p>采集停止时，画面上的数值可能停在旧时刻，因此需要另有数据缺失状态。多个系统的时钟也要对应，才能把同一时刻的异常连成时间线。旧读数会掩盖新故障，时钟偏差则会打乱原因与结果的先后顺序。</p>
+<h3>从累计计数器得到当前负载</h3>
+<p>很多设备提供累计字节数、分组数和错误数，单次读数表示累积量。要知道最近一分钟有多忙，需要比较两次读数，并除以实际间隔。</p>
+<p>本例接口接收字节计数在 60 秒内增加 750,000,000 字节：</p>
+<blockquote>
+<p>平均方向速率 = 字节计数增量 × 8 ÷ 实际采样间隔</p>
+<p>代入：<code>750,000,000 × 8 ÷ 60 = 100,000,000 bit/s = 100 Mbit/s</code></p>
+<p>方向利用率 = 平均方向速率 ÷ 方向容量</p>
+<p>1 Gbit/s 接收能力下：<code>100 ÷ 1,000 = 10%</code></p>
+</blockquote>
+<p>这个结果表示最近一分钟接收方向平均使用了 10% 能力。<strong>发送方向另算，因为全双工接口两个方向各有传输能力</strong>。把两个方向直接相加再除以单方向容量，会误报利用率。</p>
+<p><strong>差值异常时，先核对设备重启、计数器重置或回绕，再使用实际采样时间计算</strong>。这样，采集延迟就不会被误读为流量骤变。平均值还要与第 01 章的队列机制结合，较短突发可能在平均负载不高时造成排队，第 16 章会进一步计算。</p>
+<p>错误计数则帮助判断异常发生在哪个处理阶段。<strong>循环冗余校验</strong> CRC 用于发现帧数据受损，相关错误持续增长时检查介质和接口；出队丢弃增长、物理错误计数没有新增时，继续检查队列竞争与策略。记录计数器名称和位置，才能知道测到了什么。</p>
+<h3>数值怎样成为需要关注的告警</h3>
+<p>本例每分钟生成一个样本，统计刚过去一分钟的平均利用率。本例运行方案将 80% 定为持续高负载的预警点，以便在接近满载前检查队列和需求；恢复点选 65%，让负载明显回落后再清除。规则为：连续三个样本超过 80% 时触发，连续三个样本低于 65% 时恢复。采用不同的触发和恢复边界，称为<strong>滞回</strong>，可减少数值在临界点波动时的反复通知。连续样本要求则过滤部分偶然变化。</p>
+<p><strong>该规则需要积累三个一分钟样本，适合发现持续高负载</strong>。采集缺失时中断连续样本判断，并单独提示数据不可用。短时突发则结合更细粒度的队列计数和业务探测：平均利用率仍低，队列丢弃与业务时延却同时上升时，转入第 16 章的突发分析。</p>
+<p>资源状态、性能趋势和业务测试提供互补证据：链路状态定位异常对象，负载趋势解释需求变化，业务探测验证实际交付。如果网络侧指标未见异常但客户访问失败，就沿具体服务补充探测；如果业务正常但备用路径失效，则记录保障能力下降并安排处理。</p>
+<h3>多条告警怎样组织成一件事</h3>
+<p>回到多个接入节点同时失联的场景。按第 03 章的依赖图查询，若它们都使用同一汇聚节点，而且起始时间接近，就可以先组织为共同事件，保留原始告警，再请专业团队确认共同资源。其他独立异常仍单独跟踪。</p>
+<p>值守需要完成的判断，可以按下面的顺序交接。这里形成的是调查入口，下一章从这份记录继续定位和恢复。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>判断</th>
+<th>需要核对什么</th>
+<th>交给处理团队的结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据有效吗？</td>
+<td>采集时间、对象和计划维护</td>
+<td>有效异常及原始证据</td>
+</tr>
+<tr>
+<td>哪些现象相关？</td>
+<td>起始时间、地点与依赖</td>
+<td>可疑共同环节和独立异常</td>
+</tr>
+<tr>
+<td>影响什么服务？</td>
+<td>服务映射、业务探测和反馈</td>
+<td>已确认影响与待核查对象</td>
+</tr>
+<tr>
+<td>怎样组织处理？</td>
+<td>服务重要性、影响规模及持续时间</td>
+<td>优先级、协调人与责任团队</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>客户影响决定怎样安排处理，告警等级则提供资源侧线索</strong>。计划维护可按对象与时段调整通知，但要继续保留记录和观察范围外异常；结束后恢复正常规则并验证采集与通知。</p>
+<h3>派发以后，值守继续观察什么</h3>
+<p class="key-point"><strong>告警清除后继续跟踪客户服务；事件结束以业务验证和后续任务交接为依据。</strong></p>
+<p>专业团队接手定位，值守持续维护事件视图，观察资源状态和服务表现，并按约定接收反馈。告警恢复时记录资源变化，再按服务路径确认实际使用是否恢复。例如，光口恢复而用户会话仍失败，就继续沿上线阶段调查。下一章将说明业务验证与后续任务怎样共同支持事件结束。<a href="https://www.rfc-editor.org/rfc/rfc8632.html">告警管理 RFC 8632</a> 分别表达了告警状态与人员处理状态。</p>
+<p>换班时，接班人员需要收到未完成事件、当前责任人和下次反馈时间，还要知道已批准变更及临时恢复安排。确认接收后，跟踪才能跨班持续。这样，监控将可信观测变成明确任务，事件处理再把任务推进到服务恢复。</p>
+<h3>理解检查</h3>
+<p>某设备告警已经清除，但客户仍反馈业务不通。值守人员应怎样处理？</p>
+<details><summary>查看参考答案</summary><p>继续跟踪服务事件，直到客户业务验证通过。</p><ol><li>按服务映射找到当前路径，读取目标路由和转发状态，执行上线、访问或双向连接测试。</li><li>业务仍失败时保存残留问题并交给责任团队；恢复后完成观察及必要客户确认，再处理事件结束与后续任务。</li></ol></details>
+<details><summary>计算练习：30 秒内接口发送字节增加 375,000,000，发送能力为 1 Gbit/s，平均速率和利用率各是多少？</summary><p>平均发送速率为 100 Mbit/s，发送方向平均利用率为 10%。</p><ol><li>平均速率 = 字节增量 × 8 ÷ 实际采样间隔。<br>代入：375,000,000 × 8 ÷ 30 = 100,000,000 bit/s = 100 Mbit/s。</li><li>方向利用率 = 方向速率 ÷ 方向容量。<br>代入：100 ÷ 1,000 = 10%。</li><li>先确认计数器没有重置或回绕。这是 30 秒平均结果，短时突发继续通过队列与更细粒度数据检查。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-12" aria-pressed="false">标记本章已学完</button><nav aria-label="12 章前后导航"><a href="#chapter-11" class="chapter-prev">← 上一章</a><a href="#chapter-13" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-13" aria-labelledby="heading-13" data-number="13">
+<div class="chapter-kicker">CHAPTER 13</div><h2 id="heading-13">事件与故障：恢复服务并交接后续任务</h2>
+<div class="prose"><blockquote>
+<p>学习目标：从已知影响出发设计定位测试，选择恢复措施，并确认服务恢复与后续任务交接。</p>
+</blockquote>
+<h3>接到一份事件记录后先做什么</h3>
+<p>青岚市多个小区突然无法上网，监控已确认起始时间，并关联告警与投诉。处理团队先核对当前影响和实际路径，建立统一时间线。资源或功能异常称为<strong>故障</strong>；需要组织处理的服务异常情况称为<strong>服务事件</strong>。一个资源故障可能影响多项服务，统一记录让各团队能够围绕共同影响协作。</p>
+<p class="key-point"><strong>事件处理优先恢复客户服务，按服务重要性、影响规模和中断时长分配恢复资源。</strong></p>
+<p>多个事件同时竞争人员和备用资源时，按上述顺序评估；医院关键连接中断、区域大面积无法接入，应优先组织恢复。单条备用失效而业务正常，则作为保障能力下降安排处理。</p>
+<p><strong>原资源修复需要时间、备用满足当前保障要求时，先切换备用并验证，再继续追踪原问题</strong>。备用无法承接全部流量时，按预定优先级限制或疏导低优先级需求，同时推进修复。定位由此服务于恢复选择，也保存后续原因调查所需的日志、测量和现场记录。</p>
+<h3>怎样把“多个小区不通”变成可验证的范围</h3>
+<p>先按时间找变化：异常何时开始，之前是否施工或变更；再按范围比较：哪些用户异常，哪些用户正常；最后查共用依赖：异常对象是否共同使用某节点、光路或平台。</p>
+<p>例如，同一汇聚节点下多个小区异常，邻近汇聚正常，就优先检查共同汇聚及其依赖。若已有用户能上网，新上线用户却失败，则沿第 04 章的认证与会话阶段调查。现象的差异决定测试对象，各专业据此分配检查范围，再共享结果。</p>
+<p><strong>每个测试都要事先写明支持或否定原因假设的结果</strong>。假设怀疑共用光分支，就比较同分支 ONT 与其他分支的状态；怀疑拥塞，就比较同时间负载、队列与业务时延。下面汇总几种可形成判断的组合。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>原因假设</th>
+<th>应出现的支持证据</th>
+<th>帮助区分的测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光接入共同分支异常</td>
+<td>多个 ONT 同时失联，光路状态变化</td>
+<td>同分支与其他分支对照</td>
+</tr>
+<tr>
+<td>共享链路拥塞</td>
+<td>负载、队列丢弃和时延同步上升</td>
+<td>相同时间比较相关与独立路径</td>
+</tr>
+<tr>
+<td>认证依赖异常</td>
+<td>新上线集中失败，认证交互异常</td>
+<td>新建与既有会话对照</td>
+</tr>
+<tr>
+<td>特定目标路径异常</td>
+<td>公共访问正常，指定目标失败</td>
+<td>不同目标和双向边界测试</td>
+</tr>
+</tbody>
+</table></div>
+<p>测试边界要对应客户服务。设备管理地址可达时，仍需读取客户 VRF 路由和测试业务流量，因为管理探测与客户连接可以使用不同地址及路径。每次记录测量对象、时间和结果，才能把正常与异常对照连成原因假设。</p>
+<h3>选择动作前，先保留什么</h3>
+<p>重启、清空会话和修改路径会改变日志、计数器及现有状态。<strong>执行前保存关键错误、配置与时间线，并标明所覆盖对象</strong>。之后，每个恢复动作写明目的和预期结果，观察人据此确认是否有效。</p>
+<p>例如，将流量切到备用后，客户恢复，原链路错误仍增长。记录同时说明备用恢复成功，以及原路径仍需调查。后续复盘可以沿这些事实分别解释恢复机制和异常来源。</p>
+<h3>怎样在恢复速度与当前条件之间选择</h3>
+<p>恢复措施可以是修复原资源、切换备用、纠正配置或重建特定状态。比较预计耗时、对仍正常用户的影响，以及恢复后的容量与质量，再选择可执行方案。备用容量不足时，要按既定保障安排承接流量，并继续推进原路径修复。</p>
+<p>执行前确认授权、对象和责任，规定成功与停止条件。一个动作未得到预期结果，就先检查实际状态再决定下一步。达到事件响应方案中的升级时限、影响扩大，或现有团队没有所需权限与能力时，协调人立即升级，说明已知影响、最后通过的检查点和所需支持。新接手团队沿现有记录继续，减少重复测试。</p>
+<h3>服务怎样验证到可以关闭</h3>
+<p class="key-point"><strong>事件关闭前，确认业务验证通过、资源变化已同步，未完成工作有接收人和期限。</strong></p>
+<p>动作执行后，回到用户使用过程验证。宽带重新上线并访问目标；移动网络注册、建立会话并传输双向数据；语音完成呼叫与双向媒体；专线检查两个方向和约定质量。第 04—06 章讲过的状态顺序，成为这里的验收条件。</p>
+<p>然后在规定时间内观察，核对客户反馈，补齐实际资源和配置变化。仍有原路径修复、临时措施撤销或保障能力恢复时，为它们建立后续任务，指定接收人和期限。原资源可以晚于客户服务完成修复，独立任务让维修与正常保障能力恢复得到持续跟踪。</p>
+<p>整个处理过程由此连起来：受理确认形成共同事实，影响评估决定优先级，定位支撑恢复选择，执行产生新状态，验证确认用户结果。下一章继续使用这份时间线，解释异常为什么发生，以及怎样减少重复事件。</p>
+<h3>理解检查</h3>
+<p>业务通过备用线路已经恢复，原线路尚未修复。怎样安排后续工作？</p>
+<details><summary>查看参考答案</summary><p>先确认备用上的业务恢复，再为原线路维修和正常保障能力恢复保留独立任务。</p><ol><li>记录当前路径、剩余容量与受影响服务，完成双向质量验证和观察。</li><li>原线路维修指定负责人及期限；修复通过后按变更方案回切或调整，再验证主备能力。</li><li>同步资源与配置，使接班人知道哪些业务仍在临时承载，以及下一步何时执行。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-13" aria-pressed="false">标记本章已学完</button><nav aria-label="13 章前后导航"><a href="#chapter-12" class="chapter-prev">← 上一章</a><a href="#chapter-14" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-14" aria-labelledby="heading-14" data-number="14">
+<div class="chapter-kicker">CHAPTER 14</div><h2 id="heading-14">问题管理与复盘：让同类事件更少发生</h2>
+<div class="prose"><blockquote>
+<p>学习目标：从事件证据建立原因链，把恢复经验转成有责任和验证标准的长期改进。</p>
+</blockquote>
+<h3>一次恢复怎样变成长期改进</h3>
+<p>某设备重启后用户恢复，几天后又出现同样异常。事件处理已经验证当前服务，长期维护还需要找出复发条件。<strong>问题管理</strong>持续调查原因并推动解决，<strong>复盘</strong>则回顾发生与处理过程，形成可执行的改进。一个问题可以关联多次事件，复杂事件也可能留下多个问题。</p>
+<p>先把事件时间线整理清楚：异常开始和首次发现分别对应哪条记录，恢复动作改变了什么，何时验证业务可用？日志、测量和现场记录用于确认过程；尚未验证的解释写为待验证假设。对异常机制及复发条件进行系统调查，称为<strong>根本原因分析</strong>（RCA，Root Cause Analysis）。</p>
+<h3>从配置差异走到用户影响</h3>
+<p>以一次 VPN 路由策略调整为例，新的导入规则阻止对端前缀进入客户 VRF，设备查不到目的网络的可用路由，跨站点访问因此失败。这里有连续的原因链：策略改变路由状态，路由状态改变转发能力，转发结果影响服务。</p>
+<p class="key-point"><strong>原因结论要由“具体变化 → 网络状态改变 → 用户影响”的连续证据支持。</strong></p>
+<p>确认时逐段核对：变更记录是否有对应差异，路由表是否少了该前缀，异常用户是否使用同一策略？再比较正常用户，或在测试环境复现，并观察恢复原规则后路由与业务怎样变化。每一段关系得到支持，才能解释为何该调整引发失败，并据此选择能消除复发条件的措施。</p>
+<p>重启后恢复也采用相同方法。保存状态和日志，寻找状态累积、依赖超时或软件错误等具体机制，再通过复现或持续观察验证。恢复动作提供线索，问题调查继续解释为何这个动作能改变异常状态。</p>
+<h3>为什么一个事件会留下多项治理任务</h3>
+<p>光缆施工损伤可能直接造成中断，主备共管道会扩大影响，客户映射缺失又会延长评估时间。三者发生在不同环节，改进也要分别对应：保护线路降低受损概率，分离路径减少共同失效，补齐映射提高处置效率。</p>
+<p>因此，<strong>复盘同时分析直接机制、影响放大条件与处理耗时</strong>。对于发现延迟，沿采集周期、通知链路和交接核查；对于恢复较慢，沿备用条件、备件和执行过程核查。结论最后落到具体可改变的对象上。</p>
+<p>一种常见分析方法是 <strong>5 Whys</strong>，即沿原因链连续追问“为什么”。例如，跨站点失败源于客户前缀缺失，前缀缺失源于 RT 导入规则错误，规则错误又源于模板未覆盖双站点场景。每一步都核对配置、日志或复现结果；调查最后形成模板修正和回归验证任务。遇到共同管道、备用不足等并行原因时，将它们分别列出，避免只处理单一路径而保留其他复发条件。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>已确认问题</th>
+<th>对应措施</th>
+<th>完成证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主备共用高风险管道</td>
+<td>实施分离路径</td>
+<td>现场与资料核对，故障切换验证</td>
+</tr>
+<tr>
+<td>服务影响难以查询</td>
+<td>补齐资源到客户的映射</td>
+<td>抽查关键服务的依赖查询</td>
+</tr>
+<tr>
+<td>异常通知较晚</td>
+<td>调整采集和通知</td>
+<td>受控场景下测量通知耗时</td>
+</tr>
+<tr>
+<td>交接遗漏后续任务</td>
+<td>明确交接字段和接收责任</td>
+<td>后续工单的责任与反馈记录</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>这些任务分别指定负责人、期限和验收方式</strong>。长期工程未完成时，保留适用的临时措施及阶段检查；知识库则保存已经验证的方法与适用条件，方便下次事件使用。</p>
+<h3>怎样知道改进发挥了作用</h3>
+<p>通知优化后，可以比较<strong>发现耗时</strong>，即异常开始到被识别的时间；恢复流程优化后，可以比较约定起点到业务恢复的<strong>恢复耗时</strong>。起止点、事件类型和影响范围保持一致，比较才有解释价值。</p>
+<p>长期措施还可以观察同类事件频次和客户影响，但要同时看业务量和样本变化。一次演练可以验证新通知有效，持续运行可以检查复发是否减少，两种证据分别覆盖执行能力和实际效果。</p>
+<p>已经确认的改进最终进入规划、监控或变更任务。例如，分离路径需要新的建设方案，软件修复需要发布，策略修正需要配置变更。下一章说明这些调整怎样在网络继续提供服务时实施。</p>
+<h3>理解检查</h3>
+<p>“以后加强巡检”为什么难以作为一项完整的复盘改进措施？</p>
+<details><summary>查看参考答案</summary><p>“加强巡检”还缺少检查对象、异常标准和行动责任，无法验收效果。</p><ol><li>若复盘确认接头进水导致光损耗，措施应针对该接头防水整改，并规定巡检观察内容和告警阈值。</li><li>以整改后的损耗测试、现场核查和后续巡检记录验收；异常再次出现时指定接收团队和处理要求。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-14" aria-pressed="false">标记本章已学完</button><nav aria-label="14 章前后导航"><a href="#chapter-13" class="chapter-prev">← 上一章</a><a href="#chapter-15" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-15" aria-labelledby="heading-15" data-number="15">
+<div class="chapter-kicker">CHAPTER 15</div><h2 id="heading-15">变更与发布：怎样在提供服务的同时调整网络</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把一次网络调整组织为有前置条件、阶段验证和回退时间的执行过程。</p>
+</blockquote>
+<h3>从改进目标走到运行中的调整</h3>
+<p>复盘确认需要修正路由策略，容量分析要求扩大承载，软件维护又可能需要升级。它们都改变正在提供服务的环境，因此要先确定改变什么、依赖哪些状态，以及怎样确认结果。<strong>变更管理</strong>将评估、授权、执行和验证组织为完整任务；<strong>发布</strong>侧重把软件版本或功能交付到运行环境，一次发布可以包含多项变更。</p>
+<p>以软件升级为例，执行团队先记录当前健康状态和目标版本，核查服务与资源依赖，确定执行人与观察人。对备用能力、版本兼容和备份恢复的检查，都在回答同一个问题：执行中出现偏差时，是否仍能维持或恢复服务？</p>
+<h3>在动手前确定继续、停止与回退的依据</h3>
+<p>安排操作的时间范围称为<strong>维护窗口</strong>，需要结合客户与业务条件选择。把系统恢复到可接受的已确认状态称为<strong>回退</strong>。方案明确每一步的预期结果，规定异常出现后停止继续执行的条件，以及需要启动回退的条件。</p>
+<p class="key-point"><strong>回退准备包括可恢复的版本与状态，以及在窗口内完成恢复和业务验证的时间。</strong></p>
+<p>配置备份能否恢复，旧版本能否读取已变化的数据，物理连接与用户状态怎样处理，都要提前验证。再估算执行和验证耗时，计算<strong>最晚决策时间</strong>，给回退及其验证留足窗口。</p>
+<p>设维护窗口为 01:00—02:00，正常执行需 20 分钟，升级验证需 10 分钟；回退执行需 15 分钟，回退验证需 5 分钟，另留 5 分钟余量：</p>
+<blockquote>
+<p>最晚决策时间 = 窗口结束时间 − 回退耗时 − 回退验证耗时 − 余量</p>
+<p>代入：<code>02:00 − 15 分钟 − 5 分钟 − 5 分钟 = 01:35</code></p>
+</blockquote>
+<p>因此，按计划在 01:30 完成升级验证后，只有五分钟额外调查空间。达到回退条件就立即决策；<strong>到 01:35 仍无法证明业务达到要求，也按方案启动回退</strong>。继续等待会侵占恢复时间。</p>
+<h3>有状态功能怎样分阶段升级</h3>
+<p>会话功能维护用户状态，升级需要处理已有与新增工作。先停止给目标实例分配新任务，由其他实例承接，再观察目标实例已有事务和会话。逐步移出服务的过程称为<strong>排空</strong>。其他实例需要足够容量，排空才能成为可用的前置条件。</p>
+<p>支持状态转移时，按机制迁移并核对结果；状态留在原实例时，等待结束或安排受控重建。达到规定条件后替换版本，完成健康检查，再让小部分新请求进入。这种先在部分对象实施、观察后扩大范围的方式称为<strong>灰度实施</strong>，先行对象还要覆盖本次改变涉及的代表性条件。</p>
+<p class="key-point"><strong>有状态功能升级要分别验证已有状态与新增操作，再决定是否扩大实施范围。</strong></p>
+<p>会话管理至少检查建立、修改和释放，以及用户面规则协调；用户面功能检查既有与新增流量、方向质量和规则更新。已有流量可以继续依赖旧规则，新请求却要经过升级后的控制能力，因此总流量接近正常时仍要单独检查新建成功率。先行对象还要与未升级组采用同一口径比较，确认差异是否集中于本次改变。</p>
+<p>本课程的会话升级案例以五分钟内已得到最终结果的请求计算失败率：原基线为 0.2%，停止扩大阈值定为 2%，相当于基线的十倍；未完成请求另列跟踪。阈值是该次变更评审为控制影响设定的决策条件，同时比较未升级组，确认差异是否集中于升级对象。若差异持续且检查点无法恢复，就在最晚决策时间前启动回退。</p>
+<p>新版本如果改了状态格式、数据库结构或接口，回退方案也要说明旧版本如何接续，并按实际版本路径演练。这样，最晚决策时间就能依据完整恢复过程确定，覆盖版本、状态与业务验证所需时间。</p>
+<h3>配置变更怎样设置连续检查点</h3>
+<p>路由策略修改也按状态逐步验证。先确认期望配置提交，接着看邻居交互，核对客户前缀与下一跳，再读实际转发表，最后测试客户业务。<strong>邻居正常而前缀缺失，就停在路由与策略层调查；路由存在而数据失败，则继续检查下一跳和实际转发。</strong></p>
+<p>管理通道纳入验证，并准备适用的独立接管方式。执行人操作，观察人核对业务，协调人根据检查点与时间作出继续或回退决定。紧急恢复也使用适用授权和记录，将实际状态留给后续人员。</p>
+<h3>怎样完成一次变更</h3>
+<p>预定能力验证通过后，在规定范围持续观察，再同步配置、资源和版本记录。若触发回退，恢复后同样执行完整业务验证，记录目标未达到及当前状态，将异常转入问题调查。</p>
+<p>因此，变更结果可以由明确事实评估：执行是否达到目标，客户服务是否满足要求，实际状态是否可追溯。第 16 章接着讨论另一类变更来源——业务持续增长时，怎样判断该调整什么，以及怎样证明调整有效。</p>
+<h3>理解检查</h3>
+<p>为什么“保存一份配置备份”仍不足以说明回退方案已经准备完成？</p>
+<details><summary>查看参考答案</summary><p>回退方案还必须证明备份可以恢复，并且恢复与验证能在窗口内完成。</p><ol><li>先验证配置、版本和数据格式兼容，确认旧系统可以接续已变化的状态。</li><li>写出执行步骤、对象和责任，检查物理连接、会话及资源映射怎样恢复。</li><li>估算回退及业务验证耗时，规定触发条件和最晚决策时间，并完成适用场景演练。</li></ol></details>
+<details><summary>计算练习：窗口 02:00 结束，回退需 15 分钟，回退验证需 10 分钟，余量为 5 分钟。最晚何时决定回退？</summary><p>最晚在 01:30 作出回退决定。</p><ol><li>最晚决策时间 = 窗口结束 − 回退耗时 − 验证耗时 − 余量。<br>代入：02:00 − 15 分钟 − 10 分钟 − 5 分钟 = 01:30。</li><li>达到触发条件时提前回退；到该时点仍无法证明达到目标，也按方案执行，避免恢复跨出窗口。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-15" aria-pressed="false">标记本章已学完</button><nav aria-label="15 章前后导航"><a href="#chapter-14" class="chapter-prev">← 上一章</a><a href="#chapter-16" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-16" aria-labelledby="heading-16" data-number="16">
+<div class="chapter-kicker">CHAPTER 16</div><h2 id="heading-16">性能与容量：怎样让网络适应持续增长</h2>
+<div class="prose"><blockquote>
+<p>学习目标：从忙时质量与资源限制找到容量问题，选择措施，并验证用户体验是否改善。</p>
+</blockquote>
+<h3>怎样知道调整哪个环节</h3>
+<p>某片区晚间视频变慢，团队准备扩容。第 15 章说明了调整怎样执行，现在还要回答：容量是否真是原因，瓶颈在哪里，增加哪种能力才有效？<strong>容量管理</strong>预测需求与能力的关系，<strong>性能管理</strong>观察已有资源能否提供预期质量，两者需要围绕同一业务时间与路径分析。</p>
+<p>需求超过某环节及时处理的能力时，分组排队并可能被丢弃，称为<strong>拥塞</strong>。这种限制可能在无线资源、共享接入或回传链路，也可能在平台的请求处理和会话规模上。调查因此要先区分现象：同位置仅忙时慢，比较负载与质量；某处全天难接入，比较覆盖与干扰；只有新会话失败，则观察控制处理与状态资源。</p>
+<h3>为什么平均利用率较低也会丢包</h3>
+<p>第 12 章用计数器差值计算平均速率，但平均区间可能比突发持续时间长。设 1 Gbit/s 链路在一秒中的前 100 毫秒收到均匀的 2 Gbit/s 流量，其余时间无新流量。一秒平均到达速率为 200 Mbit/s，相当于链路能力的 20%。</p>
+<p>这条链路起初队列为空。前 100 毫秒内，输入比输出每秒多 1 Gbit：</p>
+<blockquote>
+<p>突发积压需求 =（突发输入速率 − 输出速率）× 突发持续时间</p>
+<p>代入：<code>(2 − 1) Gbit/s × 0.1 s = 100 Mbit = 12.5 MB</code></p>
+<p>可用缓存为 4 MB 时，超出量为：<code>12.5 − 4 = 8.5 MB</code></p>
+</blockquote>
+<p class="key-point"><strong>平均利用率较低时，短时突发仍会超过链路与缓存能力，造成排队和丢包。</strong></p>
+<p>本例一秒平均负载只有 20%，前 100 毫秒的积压却超过缓存约 8.5 MB。调查要提高采样粒度，读取对应输出队列的丢弃与占用，定位突发来源。增加缓存可以缓冲更多数据，但也增加等待；实时业务更适合同时调整突发与调度。这个判断延续第 01 章的输入与输出关系，关键在于观察区间是否能够显示突发。</p>
+<p>能力单位也要对应处理机制。按分组长度计算，100 字节分组以 1 Gbit/s 传输，每秒约需处理 <code>1,000,000,000 ÷ (100 × 8) = 125 万</code>个；1,000 字节分组约为 12.5 万个。这里按分组长度换算，现场测量再计入实际链路开销。<strong>相同数据速率对设备的分组处理负担不同</strong>。控制平台则还受新建请求数、并发事务和会话数限制，有些设备或软件还按容量授权限制规模。报告记录实际瓶颈的单位，方案才能增加正确能力。</p>
+<h3>业务增长怎样决定扩容时间</h3>
+<p>确认忙时质量随共享资源限制变化后，再预测需求。本例 10 Gbit/s 链路当前忙时承载 6 Gbit/s，依据近期趋势按每月 5% 增长预测。规划把 80% 负载，即 8 Gbit/s，定为需要完成扩容的时点，为突发及需求偏差留出空间：</p>
+<blockquote>
+<p>第 n 个月需求 = 当前需求 ×（1 + 月增长率）ⁿ</p>
+<p>第六个月：<code>6 × 1.05⁶ ≈ 8.04 Gbit/s</code></p>
+</blockquote>
+<p class="key-point"><strong>扩容启动时间要从预测越过容量目标的时点，减去建设与交付周期。</strong></p>
+<p>第六个月将越过 8 Gbit/s。如果从启动到交付需要三个月，最迟在第三个月启动，并根据评审与交付偏差提前安排。等到第六个月才申请扩容，会让高负载继续持续约三个月。</p>
+<p>每月用实际数据校准增长率，活动峰值单独记录；备用路径也按故障态预测，避免主路径升级而备用停留在原能力。第 09 章建立的规划模型由持续观测更新，将新的需求交给下一次容量决策。</p>
+<h3>资源竞争期间，怎样安排不同业务</h3>
+<p>扩容需要时间，且故障切换也可能暂时降低容量。对于实时语音和批量文件这类不同需求，可以用<strong>服务质量机制</strong> QoS 安排转发待遇。设备先分类和标记流量，再按约定检查速率，最后放入相应队列，由调度器选择发送顺序。<a href="https://www.rfc-editor.org/rfc/rfc2475.html">差分服务 RFC 2475</a> 描述了这种组织方式。</p>
+<p>在 IP 网络中，可以用<strong>差分服务代码点</strong> DSCP 标记类别，后续节点按约定识别。<strong>优先队列可缩短某类数据的等待，也要配合该类流量约束，让其他业务获得预期资源</strong>。验证时分别观察队列和业务质量，并检查跨节点标记是否保留。</p>
+<p>限速处理还要区分两种动作。<strong>整形</strong>先缓存超过发送节奏的数据，使输出平缓；<strong>监管</strong>判断是否符合约定，并对超出部分丢弃或重新标记。因此，吞吐量受限时，核查实际策略及其位置；等待增长时，核查缓存与调度。它们都使用现有能力，容量方案同时评估正常与故障态需求。</p>
+<h3>用令牌桶解释短时突发</h3>
+<p>测量流量是否符合约定，常用<strong>令牌桶</strong>模型：令牌按一定速率补充，数据消耗相应令牌，桶的容量允许一定突发。本例补充速率为 100 Mbit/s，桶容量为 10 Mbit，初始满桶，均匀输入为 200 Mbit/s：</p>
+<blockquote>
+<p>满桶耗尽时间 = 桶容量 ÷（输入速率 − 补充速率）</p>
+<p>代入：<code>10 Mbit ÷ (200 − 100) Mbit/s = 0.1 s</code></p>
+</blockquote>
+<p>这表示本例能在约 100 毫秒内接受 200 Mbit/s 的突发。此后只有持续补充的令牌可用：<strong>整形会缓存等待令牌的分组，监管会按配置丢弃或重新标记超出部分</strong>。桶容量由可接受的突发长度和后续缓存能力确定；桶越大，可放行的瞬间流量越多，下游排队压力也越大。排查速率突然回落时，读取实际补充速率、桶容量和策略计数，再与输入突发比较。</p>
+<h3>怎样证明优化达到了目的</h3>
+<p>选择流量调整、策略优化或扩容方案后，按变更流程实施。<strong>优化结果以相同用户、目标和忙时时段的端到端质量复测为依据</strong>。复测比较吞吐量、时延和丢包，同时看上下游负载。新增资源可能让用户能够完成更多传输，瓶颈也可能移到其他位置，因此要沿实际路径核对质量和客户反馈，确认新增能力解除了哪些限制。</p>
+<p>若质量改善并符合观察要求，就更新预测与维护资料；若投诉继续，重新核对受影响业务和路径。长期闲置与能耗也可以纳入优化，但调整资源安排时仍检查忙时和故障承载，并验证实际效果。下一章专门从客户反馈进入调查，让网络侧分析与用户的实际使用对应起来。</p>
+<h3>理解检查</h3>
+<p>扩容后链路利用率下降，但晚间投诉继续出现，下一步怎样判断？</p>
+<details><summary>查看参考答案</summary><p>先确认投诉对应的流量是否经过新增资源，再重新划分剩余瓶颈。</p><ol><li>固定投诉用户、时段和目标，读取实际转发路径，并比较新增资源前后的流量与队列。</li><li>新增资源正常且流量确已经过时，沿无线接入、其他承载和目标平台继续测量。</li><li>以业务成功率、时延和丢包判断优化结果；利用率降低后投诉仍持续，需要修正原原因假设或调查新瓶颈。</li></ol></details>
+<details><summary>计算练习：2 Gbit/s 链路起初队列为空，连续 50 毫秒均匀收到 4 Gbit/s 流量，可用缓存为 8 MB，能否容纳新增积压？</summary><p>不能。新增积压需求为 12.5 MB，超过缓存约 4.5 MB。</p><ol><li>积压需求 =（输入速率 − 输出速率）× 持续时间。<br>代入：(4 − 2) Gbit/s × 0.05 s = 100 Mbit = 12.5 MB。</li><li>超出量 = 12.5 − 8 = 4.5 MB。按本题单队列模型，这部分无法容纳而被丢弃。</li><li>增加缓存会增加可等待数据量，也可能加长时延。实际措施结合突发来源、队列分配与业务质量选择。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-16" aria-pressed="false">标记本章已学完</button><nav aria-label="16 章前后导航"><a href="#chapter-15" class="chapter-prev">← 上一章</a><a href="#chapter-17" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-17" aria-labelledby="heading-17" data-number="17">
+<div class="chapter-kicker">CHAPTER 17</div><h2 id="heading-17">客户投诉与服务质量：把用户语言转为可处理的问题</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把客户现象变成可复现的调查条件，设计对照测试，并验证实际使用结果。</p>
+</blockquote>
+<h3>“每天晚上开会断续”怎样成为调查入口</h3>
+<p>第 16 章从负载与质量找瓶颈，客户反馈则告诉我们谁在什么操作中受影响。用户说“每天晚上视频会议断续”，受理人员先记录时段、地点和服务标识，再询问终端与连接方式。声音间断、画面停顿和无法加入会议，分别对应不同阶段，需要保留具体描述。</p>
+<p>接着确认范围：其他设备是否一样，其他应用是否一样，现象从何时开始？这些信息让专业团队能够选择对应路径，也让客户知道后续需要配合什么测试。调查沿客户侧、接入与上线，再到目标服务逐步展开，并关联同时间的网络观测。</p>
+<h3>用对照测试逐次缩小范围</h3>
+<p class="key-point"><strong>对照测试保持终端、服务与时段等关键条件一致，每次改变一个主要条件来划分原因。</strong></p>
+<p>同终端、同会议、相近时段比较有线与 Wi-Fi，判断家庭无线是否增加等待或丢包；同接入比较两台终端，判断终端处理是否造成差异；同连接比较不同服务，判断问题是否集中在目标服务及其路径。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>对照方式</th>
+<th>保持的条件</th>
+<th>主要划分的范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有线与 Wi-Fi</td>
+<td>同终端、同服务、相近时段</td>
+<td>家庭无线与后续接入</td>
+</tr>
+<tr>
+<td>两台终端</td>
+<td>同连接、同服务、相近时段</td>
+<td>终端自身与共同路径</td>
+</tr>
+<tr>
+<td>两个目标</td>
+<td>同终端、同连接、相近时段</td>
+<td>特定服务与共用网络</td>
+</tr>
+<tr>
+<td>忙时与非忙时</td>
+<td>同位置、同终端、同服务</td>
+<td>随负载变化与持续异常</td>
+</tr>
+</tbody>
+</table></div>
+<p>例如，同一会议改用有线后恢复，就优先检查 Wi-Fi 频段、信道占用和终端距离；有线仍在晚间断续，其他终端也相同，则继续观察接入后的共享资源。只有一个服务异常时，记录其实际目标、内容节点和连接建立过程。移动网络与宽带也能作对照，同时记录两条不同路径，专业团队再按各自范围补证据。</p>
+<h3>探测工具怎样服务于这些问题</h3>
+<p><strong>ping</strong> 通常通过<strong>互联网控制消息协议</strong> ICMP 的请求与响应检查往返可达性。得到结果以后，可以继续将应用请求拆成 DNS、连接建立、加密协商和服务器响应等阶段。这样，同一现象中的网络等待与服务处理就有分别可观察的位置。</p>
+<p><strong>traceroute</strong> 逐步增加探测分组允许经过的跳数。路由器在跳数耗尽时返回消息，工具据此观察沿途节点。转发业务与生成探测响应属于不同处理，中间节点可能限制探测响应。<strong>若某跳无响应，而后续和目标能正常响应，继续核对目标业务；若从某处开始，后续与目标同时失败，则在该边界两侧补充探测，结合接口、路由和业务分组计数定位</strong>。直接把中间一跳的超时判为线路中断，会把调查引向仍在正常转发的节点。</p>
+<p>文件测速需要记录服务器位置、连接数量和方向。多连接可以同时保持更多在途数据，单连接则明显受第 02 章的窗口与往返时延影响。会议调查采用实际会议或相近传输特征的测试，才能验证连续上传与下载体验。</p>
+<h3>专业处理怎样回到客户结果</h3>
+<p>测试得到疑似范围后，责任团队沿事件流程处理或安排优化。多位客户共享同一异常时，将投诉关联到统一事件，减少重复调查，并分别保留客户特有现象，恢复后检查残留问题。</p>
+<p>阶段反馈说明已确认影响、正在检查什么和下一次更新时间。涉及内容平台或其他网络时，用明确目标与测试证据组织协作。<strong>修复后在用户原有条件下回访和复测，再记录是否达到预期体验</strong>。无法立即完成的事项也有责任人与处理安排。</p>
+<p>最后归类投诉，观察相同时间与区域是否重复出现，必要时进入问题管理或容量规划。处理记录使用任务所需的客户信息，技术与沟通资料相互关联。下一章进一步说明，完成这些查询和操作需要怎样安排权限与记录。</p>
+<h3>理解检查</h3>
+<p>用户说“每天晚上只有某个视频平台卡顿”。受理时应记录什么，调查时怎样比较？</p>
+<details><summary>查看参考答案</summary><p>先在用户原有时段固定终端与连接，再比较实际视频目标和其他平台。</p><ol><li>受理记录发生时间和服务标识，补充终端与连接方式，并区分无法播放、起播缓慢与播放中断。</li><li>同时间同连接比较两个平台；只有该平台异常，读取实际内容节点及路径，再核查互联和平台响应。</li><li>有线与 Wi-Fi、其他终端作为后续对照，每次尽量只改变一个主要条件。修复后按原场景回访复测。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-17" aria-pressed="false">标记本章已学完</button><nav aria-label="17 章前后导航"><a href="#chapter-16" class="chapter-prev">← 上一章</a><a href="#chapter-18" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-18" aria-labelledby="heading-18" data-number="18">
+<div class="chapter-kicker">CHAPTER 18</div><h2 id="heading-18">安全与权限：让网络可控、工作可追溯</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把访问权限与具体任务关联，并根据异常消耗的资源组织安全处置。</p>
+</blockquote>
+<h3>为一项排查提供怎样的访问</h3>
+<p>外部支持人员要排查一个核心网功能。任务先明确对象和需要的动作：查看日志与状态，还是修改配置？只给予完成任务所需的能力，称为<strong>最小权限</strong>。这个原则让访问范围与工作对象和所需动作一致，减少误操作或凭据泄露时能够触及的资源。</p>
+<p>账号可以关联角色，角色再规定动作与资源范围。值守角色读取所负责网元状态，变更执行角色在获准任务中修改指定对象，外部支持角色在限定时间进入相关实例。个人、接口和自动化账号都有可识别归属，任务结束或岗位变化时同步调整权限。</p>
+<p>管理访问可先通过<strong>多因素认证</strong>核验身份，例如同时使用密码和独立验证码，降低单一凭据泄露后被利用的风险。访问入口再由<strong>堡垒机</strong>集中控制和记录。系统先验证身份、对象与动作权限，再关联工单执行；<strong>审计</strong>保存并检查谁在何时对什么对象做了什么。临时授权撤销后，保留必要记录用于核查。</p>
+<p class="key-point"><strong>外部支持从有期限、可追踪的只读访问开始，需要修改时再按工单授权具体对象与动作。</strong></p>
+<p>只读访问满足状态调查，修改授权则对应已经确认的操作需要。任务结束后撤销临时权限，审计记录继续关联执行人和工单。共享管理员账号会使操作归属难以确认，应使用个人账号或可追踪到具体任务的自动化账号。</p>
+<h3>权限怎样与网络访问边界配合</h3>
+<p>账号能够执行动作，还要有受控制的管理路径。管理访问可以使用独立网络或逻辑范围，限制来源和入口；客户业务按自己的转发策略处理。网络访问控制限制流量能从哪里到达管理入口，账号权限决定能执行什么，审计保存操作对象与结果。三项分别核查：管理地址只允许规定来源访问，账号只能操作授权资源，关键动作可关联到个人及工单。</p>
+<p>日志、备份和客户标识也属于访问对象。调查时按任务使用所需字段，适合汇总时使用汇总或脱敏结果；保存安排覆盖后续追踪。建设、变更和退网分别落实、更新或撤销这些能力，使访问生命周期与资源生命周期对应。</p>
+<h3>安全异常怎样影响客户服务</h3>
+<p><strong>拒绝服务攻击</strong>消耗网络或系统资源，让正常用户难以获得服务；多个来源共同发起时，称为<strong>分布式拒绝服务攻击</strong> DDoS。异常数据量、新连接或应用请求会耗尽不同资源，因此安全团队与网络团队要按用户失败阶段共同调查。</p>
+<p>大量数据可能占满带宽，大量新连接可能占满状态表，复杂请求可能耗尽应用处理。第 16 章的容量单位在这里继续有用：分别看比特速率、分组速率和请求速率，再比较来源分布、请求内容及正常业务成功率。正常活动峰值也会增加流量，安全团队需要结合访问模式与攻击特征确认处置对象，网络团队同步确认被耗尽的资源。</p>
+<h3>为什么处置位置要在瓶颈之前</h3>
+<p>设异常流量已占满客户接入链路。客户侧设备收到后再丢弃，流量仍先使用了这段容量，正常请求继续受到竞争。</p>
+<p class="key-point"><strong>保护被占满的链路，要在异常流量进入该瓶颈之前过滤或清洗。</strong></p>
+<p>协调较上游过滤或引导到清洗设施，才能减少进入接入链路的流量，为正常请求恢复传输空间。</p>
+<p>状态表或应用处理耗尽时，则结合连接策略与服务端控制。措施明确匹配对象和生效范围，执行中同时看正常业务是否改善。<strong>匹配条件过宽会连正常客户一起阻断，因此先在限定对象上验证过滤效果，再按影响扩大</strong>。临时规则有生效时间和撤销安排，恢复后核对路径、服务与安全状态。</p>
+<h3>安全处置怎样恢复到正常运行</h3>
+<p>安全处置沿第 13 章的事件流程组织：确认影响并保存证据，专业团队分析，按授权执行治理，验证结果并追踪整改。网络团队负责路径与服务观测，安全团队负责相应攻击证据和处置判断，协调人维护统一状态。</p>
+<p><a href="https://www.nist.gov/cyberframework">NIST 网络安全框架</a> 将治理与识别、保护与检测、响应与恢复连接起来。具体任务可以沿这条关系检查准备和处置是否完整。下一章转向另一类保障条件变化：线路、能源或机房受损后，怎样把远程判断、现场资源和替代能力组织起来。</p>
+<h3>理解检查</h3>
+<p>外部维护人员需要协助排查一个核心网功能，怎样安排访问更合理？</p>
+<details><summary>查看参考答案</summary><p>采用有期限、可追踪的任务授权，先提供只读能力，再按需要批准修改。</p><ol><li>明确功能实例、日志范围和有效期，使用个人身份及受管理入口，限制可访问资源。</li><li>修改关联工单与具体动作，执行中保留审计，完成后验证服务并撤销临时权限。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-18" aria-pressed="false">标记本章已学完</button><nav aria-label="18 章前后导航"><a href="#chapter-17" class="chapter-prev">← 上一章</a><a href="#chapter-19" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-19" aria-labelledby="heading-19" data-number="19">
+<div class="chapter-kicker">CHAPTER 19</div><h2 id="heading-19">现场维护、应急与容灾：当正常保障条件受到破坏</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把现场定位、备用能源和异地恢复转成可执行安排，并测量实际恢复能力。</p>
+</blockquote>
+<h3>远程发现异常以后，现场要接到什么</h3>
+<p>光缆中断或设备硬件损坏时，恢复需要人员到现场。远程团队先把异常时间、对象位置和相关路径交给现场，并说明需要检查的范围。现场反馈实际连接与测量，专业团队据此继续判断，协调人维护客户影响与下一步安排。</p>
+<p>道路、天气和进站条件会决定何时能够实施。用电、登高等专业作业由具备相应资质的人员按规定执行，调度同时核查物料和备件状态。维修完成后，现场测量与远程业务验证对应，连接或设备变化同步到资源记录。</p>
+<h3>光缆现场定位怎样结合远程证据</h3>
+<p>光路异常时，先核对两端接口、光模块和相关分支，再测接收功率。<strong>光时域反射仪</strong> OTDR 向光纤发送脉冲，通过返回的散射和反射观察沿途损耗变化，帮助找到疑似损伤位置。<a href="https://www.itu.int/rec/T-REC-G.650.3/en">单模光纤链路测试 G.650.3</a>。</p>
+<p>设反射事件往返时间为 40 微秒，光纤传播速度取约每秒 200,000 千米：</p>
+<blockquote>
+<p>疑似事件距离 = 传播速度 × 往返时间 ÷ 2</p>
+<p>代入：<code>200,000 km/s × 40 × 10⁻⁶ s ÷ 2 = 4 km</code></p>
+</blockquote>
+<p>除以二是因为测到了去程与返回。这个结果表示光纤长度约 4 千米处出现变化。现场用仪器设置的折射率核对距离，再与光缆路由、接头和两端测试结果对应；<strong>光缆盘留等因素会使光纤长度与道路距离不同，因此按台账找到具体检查位置。</strong></p>
+<p>维修后核对接续损耗、光功率和接口错误，远程再检查路由与客户业务。两个层次记录在同一任务中，才能完整说明物理修复怎样带来服务恢复。</p>
+<h3>供电保障怎样转化为可行动的时间</h3>
+<p>停电后，蓄电池让设备继续运行，但它能支撑多久决定了调度时点。本例电池在当前温度与健康条件下可输出 12 kWh，供电环节效率按 90% 计算，实际负载为 3 kW：</p>
+<blockquote>
+<p>预计支撑时间 = 电池可输出能量 × 供电效率 ÷ 实际负载</p>
+<p>代入：<code>12 kWh × 90% ÷ 3 kW = 3.6 小时</code></p>
+</blockquote>
+<p class="key-point"><strong>供电应急按剩余支撑时间倒推调度时点，为设备到达、接入和执行偏差留出时间。</strong></p>
+<p>预计支撑时间为 3 小时 36 分钟。若送达并接入需两小时，另留 30 分钟余量，最迟在停电后 <code>3.6 − 2 − 0.5 = 1.1 小时</code>，即 66 分钟内启动。负载增加到 4 kW 时，支撑缩短为 2.7 小时，应立即重算时点。电池可输出能量与效率依据巡检、放电测试和当前负载校准。多站同时停电时，将支撑时间、重要服务与资源到达时间一起用于排序。供电恢复以后，再核对设备启动、邻居和业务状态，继续追踪尚未恢复的环节。</p>
+<p>巡检也可以从这些机制倒推：检查电池衰减、制冷和线路条件，在它们造成中断前形成整改。大型活动则提前预测集中需求，核查临时容量、能源与现场支持；活动中持续观测，结束后撤销临时安排并复盘。准备工作因此直接回应可能发生的故障与需求。</p>
+<h3>整个机房不可用时，还缺哪些恢复条件</h3>
+<p>单条线路或设备故障可以使用<strong>冗余</strong>替代资源。配置和数据损坏时，<strong>备份</strong>提供可恢复状态。整个机房失去运行条件，则需要<strong>容灾</strong>，在其他地点具备计算、连接和状态副本，让关键服务能够接续。</p>
+<p>以维护用户状态的平台为例，异地除了服务器和数据，还需要访问身份、DNS 与策略等依赖。用第 03 章的依赖图逐项核查，才能确认恢复条件齐全。目标也要同时描述时间和数据：<strong>恢复时间目标</strong>（RTO，Recovery Time Objective）规定从中断到服务恢复可接受的时长；<strong>恢复点目标</strong>（RPO，Recovery Point Objective）规定相对中断时点可接受的数据损失时间范围。</p>
+<p class="key-point"><strong>容灾分别验收 RTO 对应的业务恢复耗时和 RPO 对应的数据损失范围，并核查完整服务依赖。</strong></p>
+<p>设要求一小时内恢复，最多接受十五分钟数据缺口。方案就安排异地启动与连接在一小时内完成，并通过复制或备份达到相应数据目标。业务及时启动与数据足够新分别依赖恢复流程和数据副本，两项都由演练测量；下一节用具体时点分别计算。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>保障机制</th>
+<th>演练或验证要回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>备份</td>
+<td>内容和版本能否恢复到可用状态？</td>
+</tr>
+<tr>
+<td>冗余</td>
+<td>指定故障后能否切换，剩余质量与容量如何？</td>
+</tr>
+<tr>
+<td>容灾</td>
+<td>异地能否在时间与数据目标内接续完整服务？</td>
+</tr>
+</tbody>
+</table></div>
+<h3>怎样测量一次真正的恢复</h3>
+<p>本例 10:00 中断，可恢复数据对应 09:50，10:40 业务验证通过：</p>
+<blockquote>
+<p>实际数据损失时间范围 = 中断时点 − 恢复数据对应时点</p>
+<p>代入：<code>10:00 − 09:50 = 10 分钟</code></p>
+<p>实际恢复耗时 = 业务可用时点 − 中断时点</p>
+<p>代入：<code>10:40 − 10:00 = 40 分钟</code></p>
+</blockquote>
+<p>前文目标分别为 RPO 15 分钟与 RTO 60 分钟，这次两项均达标。恢复时还要核对业务数据一致性，例如最后一笔已确认交易是否存在。<strong>实际损失超过 RPO 时，改进复制或备份间隔；恢复超过 RTO 时，沿启动、依赖接续和业务验证分别找耗时。</strong></p>
+<p>迁往异地时，安排唯一有效写入位置，防止两站同时接受冲突状态；回到主站也要核对数据、切换路径并验证业务。演练采用明确场景，例如整机房不可用，记录发现、决策与恢复过程，把未达到目标的依赖和能力转为整改。</p>
+<p>灾害预警时就核查站点、物资和联系方式；发生后先确认人员与现场条件，建立服务影响全景，再组织备用承载、供电和抢修。资源有限时按既定保障策略调度。临时恢复后持续观察能源和负载，回到正常条件后按变更方案撤销安排。最后，部分受损或老旧资源可能需要正式退出，下一章完成这一段生命周期。</p>
+<h3>理解检查</h3>
+<p>数据库已有备份，为什么一个城市机房完全不可用时，仍可能无法迅速恢复服务？</p>
+<details><summary>查看参考答案</summary><p>备份之外，还需要异地计算、完整网络依赖和可执行恢复流程，才能在目标时间内接续服务。</p><ol><li>核查异地服务器、状态副本、网络连接及身份和控制依赖，让恢复平台具备完整运行条件。</li><li>演练分别测量数据损失时间范围与业务恢复耗时，对照 RPO 和 RTO 找出复制或接续过程的缺口。</li></ol></details>
+<details><summary>计算练习：10:00 中断，恢复数据对应 09:40，10:50 服务可用。目标为 RPO 15 分钟、RTO 60 分钟，演练是否达标？</summary><p>RTO 达标，RPO 未达标，需要改进数据复制或备份恢复安排。</p><ol><li>实际数据损失时间范围 = 中断时点 − 恢复数据时点。<br>代入：10:00 − 09:40 = 20 分钟，超过 RPO 15 分钟。</li><li>实际恢复耗时 = 业务可用时点 − 中断时点。<br>代入：10:50 − 10:00 = 50 分钟，满足 RTO 60 分钟。</li><li>将数据副本推进到更接近中断的时点，并验证一致性；时间指标分别验收，整改后的演练继续覆盖完整业务。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-19" aria-pressed="false">标记本章已学完</button><nav aria-label="19 章前后导航"><a href="#chapter-18" class="chapter-prev">← 上一章</a><a href="#chapter-20" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-20" aria-labelledby="heading-20" data-number="20">
+<div class="chapter-kicker">CHAPTER 20</div><h2 id="heading-20">迁移、退网与持续改进：怎样完成生命周期的最后一段</h2>
+<div class="prose"><blockquote>
+<p>学习目标：沿一台旧设备的退出，核查依赖、安排迁移，并将结果反馈到下一轮建设。</p>
+</blockquote>
+<h3>没有流量的旧设备还承担什么</h3>
+<p>一台旧路由器连续一周没有客户流量，团队准备拆除。沿第 03 章的依赖图查询，却发现它仍为新设备提供管理通道，还在某条备用路径上。</p>
+<p class="key-point"><strong>旧资源撤除前，客户服务、管理通道和备用职责都要完成接管并通过验证。</strong></p>
+<p>当前没有客户流量时，管理访问或备用可能仍在使用该设备。退出判断要沿依赖图找到全部使用者，确认每项能力由谁接管。</p>
+<p>把服务或数据转到新资源称为<strong>迁移</strong>，把旧资源正式撤出运行网络称为<strong>退网</strong>。设备年限、能力变化或旧业务替代都可能触发这项工作。先确定范围和使用者，再准备目标能力，才能安排有顺序的退出。</p>
+<h3>从依赖图确定迁移顺序</h3>
+<p>以旧 PE 为例，先核查客户 VPN、管理访问及其他连接。为客户准备新 PE，验证接入能力和目标路由；为管理功能准备独立路径，再测试可达；备用职责也要迁到具备相应容量和独立依赖的资源。</p>
+<p>执行时按变更方案逐项转移，记录新旧关系与验证结果。路由节点先调整流量和通告，观察实际转发表及业务走向，再解除原连接。通告改变会影响其他节点选择，所以测试覆盖计划内外相关业务。</p>
+<p>新资源接管后进入观察，核对客户服务、控制功能和管理访问，同时查询旧资源残留依赖。旧设备无客户流量、资源映射清空，管理与备用职责均已接管，三类结果共同支持撤除。<strong>观察期间再受控停用旧设备，验证新路径和全部职责；通过后按方案解除连接</strong>。需要回退的旧资源保留到规定阶段，拆除条件由验证与观察确认。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>形成什么结果，供下一步使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>依赖评估</td>
+<td>完整使用者和待迁能力清单</td>
+</tr>
+<tr>
+<td>迁移准备</td>
+<td>目标资源、客户配合与回退方案</td>
+</tr>
+<tr>
+<td>分阶段迁移</td>
+<td>新资源承载结果及业务验证</td>
+</tr>
+<tr>
+<td>观察确认</td>
+<td>观察期业务达标、旧职责已接管的验证</td>
+</tr>
+<tr>
+<td>正式撤除</td>
+<td>旧连接、配置与访问解除结果</td>
+</tr>
+<tr>
+<td>资料同步</td>
+<td>资源、资产和维护记录与实际一致</td>
+</tr>
+</tbody>
+</table></div>
+<h3>撤除连接以后，还要处理什么</h3>
+<p>客户可能需要调整设备、地址或应用，迁移前明确时间和配合责任，验证时覆盖这些依赖。退役设备还可能保留凭据、配置或客户数据，按适用要求完成留存、清除与介质处理，撤销账户和接口访问，并核对证书与密钥。</p>
+<p>资源和资产分别更新：端口释放、设备退役、备件归属都有准确状态。监控对象与告警规则同步撤除，避免继续把已经退出的对象当作运行故障。记录完整后，后续团队能够解释资源去了哪里，以及客户现在使用什么。</p>
+<h3>一轮生命周期怎样推动下一轮</h3>
+<p>退网通常伴随新资源投入，运行期间的经验就成为新规划输入。故障复盘指出可靠性缺口，容量趋势说明增长，投诉显示体验差异，退出记录反映资源使用情况。将这些证据连接到具体服务目标，可以调整建设优先级和维护标准。</p>
+<p>改进实施后，再在相同范围观察结果，决定继续调整或扩大使用。至此，课程已经从信息传递走过了服务交付、日常保障和资源退出。下一章将这些判断放进四个完整场景，请你先根据事实作出判断，再对照处理过程。</p>
+<h3>理解检查</h3>
+<p>某旧路由器连续一周没有业务流量，是否可以直接拆除？应先核查什么？</p>
+<details><summary>查看参考答案</summary><p>不能直接拆除。先确认客户、备用和管理等全部职责已经接管。</p><ol><li>查询资源依赖，核对备用路径、控制与管理连接及残留客户服务。</li><li>迁移到新资源后完成业务与职责验证，并在观察期内受控停用旧设备验证接管。</li><li>达到撤除条件后解除连接、配置与访问，再同步资产和资源记录。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-20" aria-pressed="false">标记本章已学完</button><nav aria-label="20 章前后导航"><a href="#chapter-19" class="chapter-prev">← 上一章</a><a href="#chapter-21" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-21" aria-labelledby="heading-21" data-number="21">
+<div class="chapter-kicker">CHAPTER 21</div><h2 id="heading-21">综合案例：把服务、网络与流程连接起来</h2>
+<div class="prose"><blockquote>
+<p>学习目标：根据完整场景组织证据、解释判断，并确定行动和验证结果。</p>
+</blockquote>
+<p>前面的章节逐步建立了网络路径与运维方法。现在把它们放进四个场景：医院连接经历完整生命周期，光缆中断需要跨专业恢复，晚间视频缓慢需要找到瓶颈，软件升级则要在状态差异出现后作出回退决定。阅读每个案例时，先停在已知事实处思考下一步，再对照团队采用的证据和行动。</p>
+<h3>案例一：医院专线从需求到退网</h3>
+<p>青岚市北院要连接数据中心，用于业务系统访问和影像传输。客户提出 500 Mbit/s 的双向能力，并希望主路径故障后仍能在约定时间内使用业务。规划团队于是要同时确定两端交接点、正常质量，以及故障后路径和容量。</p>
+<p class="key-point"><strong>医院专线按指定故障验收保障能力：主路径失效后，业务转到完整备用路径并达到约定质量。</strong></p>
+<p>核查发现，两条计划进线经过同一路边管道，一次施工就可能使两条都失效。团队改用另一管道安排备用进线，并继续检查骨干和供电依赖。完整路径确定后，选择 IP VPN，将医院网段 10.20.1.0/24 和数据中心网段 10.20.2.0/24 放入相应客户 VRF。这项服务记为 S-101。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>路径</th>
+<th>医院侧接入</th>
+<th>骨干运输</th>
+<th>数据中心侧接入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主路径 A</td>
+<td>CE-H1 → 进线 A → PE-A1</td>
+<td>运输路径 T-A</td>
+<td>PE-B1 → 进线 A → CE-D1</td>
+</tr>
+<tr>
+<td>备用路径 B</td>
+<td>CE-H2 → 进线 B → PE-A2</td>
+<td>运输路径 T-B</td>
+<td>PE-B2 → 进线 B → CE-D2</td>
+</tr>
+</tbody>
+</table></div>
+<p>两端进线、骨干与供电分别登记到依赖图，设计评审核查共同失效条件。PE 分发客户路由，运输标签把数据送到对端 PE，VPN 标签帮助它交给医院的转发关系。客户路由与底层路径由此都有明确记录。</p>
+<p>本方案还把 PE 的客户路由与骨干运输按两组关联：A 组 PE 导入对端 A 组的客户路由，通过 T-A 运输；B 组 PE 导入对端 B 组的客户路由，通过 T-B 运输。这样，选择 B 侧接入后，分组在 PE 上也会按对应规则进入备用骨干，并从对端 B 侧离开。</p>
+<p>主备选择由两端客户侧的业务网关承担。医院业务网关 GW-H 分别连接 CE-H1 与 CE-H2，数据中心业务网关 GW-D 分别连接 CE-D1 与 CE-D2。网关上配置到对端业务网段的 A、B 出口路由，优先使用 A，B 作为备用。</p>
+<p>两个业务网关每秒沿 A、B 各进行一次端到端往返探测，探测的去程与回程都绑定到相应完整路径。某个网关的 A 探测连续三次失败、B 探测成功时，该网关停止选用 A 路由，改用 B 路由。探测继续沿各自路径发送，使团队能够持续观察主备状态。</p>
+<p>模拟 A 失效后，两端的 A 探测都达到失败条件，GW-H 选择 CE-H2，GW-D 选择 CE-D2，两个方向通过完整路径 B。测试分别核查两个业务网关的出口路由选择结果，同时读取 PE 的目标路由、运输标签及对端 PE，确认双向流量实际经过 T-B 和两端 B 侧接入。</p>
+<p>建设完成后，验收先核对实际光缆走向和接入连接与设计是否一致，读取两端 VRF 的对端前缀，再在交接点测量双向质量。接着<strong>分别模拟 A 的医院进线、T-A 和数据中心进线失效，观察检测、出口调整和业务恢复时间，并验证 B 能提供约定 500 Mbit/s</strong>。测试后恢复主备状态，整改项复验通过，再把网络能力交给开通流程。</p>
+<p>开通任务绑定客户配置与资源，客户在约定的两端交接点之间验证质量，并实际访问业务系统。交付记录把 S-101 与端口、VRF 和完整路径关联起来，维护团队得到监控与责任资料，客户得到报障方式。日后查询同一服务标识，就能找到两端和底层依赖。</p>
+<p>半年后，影像业务增长。忙时测量中，在医院至数据中心方向，业务系统平均占用 80 Mbit/s，影像传输平均占用 320 Mbit/s，合计为该方向原能力的 80%；影像突发期间队列与应用等待同步增加。团队结合需求预测，预计同一方向下一阶段忙时达到 600 Mbit/s。沿用为突发和增长预留空间的规划方式，本项目将正常负载目标定为 70%：</p>
+<blockquote>
+<p>所需服务能力 = 预测同方向忙时需求 ÷ 设计负载目标</p>
+<p>代入：<code>600 Mbit/s ÷ 70% ≈ 857 Mbit/s</code></p>
+</blockquote>
+<p>团队据此<strong>选择 1 Gbit/s 方案，并同步升级备用能力</strong>。只升级主路径会使故障后的需求继续受原备用容量限制。</p>
+<p>按变更方案调整两端接口、速率策略与承载后，在相同忙时复测。预测需求对应新服务约 60% 负载，实际质量与队列继续核对；正常和备用测试都达到更新目标，再同步服务约定、订单及资源记录。这次扩容由业务需求与质量证据共同推动，也由用户结果完成验证。</p>
+<p>后来数据中心搬迁，团队沿 S-101 查出全部业务与依赖，为新连接准备验证和回退。迁移通过观察后，旧配置撤除，端口与路径释放，访问授权和数据按要求处理，最后同步资产及资源状态。一项服务的各阶段因此连接起来：需求决定目标，设计建立能力，交付留下事实，运行推动调整，依赖核查支持退出。</p>
+<details><summary>练习：验收时 A、B 两条路径均能连通，客户建议省去主路径故障测试。你是否接受？</summary><p>不接受省去故障测试。应完成主路径失效后的切换与质量验证，再接收该保护方案。</p><ol><li>分别连通确认两条路径可用；受控退出 A，才能检查探测、出口路由和实际流量是否转到完整路径 B。</li><li>在 B 上测试约定负载与质量，再核查两端进线、骨干和供电的共同依赖。省去故障测试，会留下切换规则或备用容量不足的交付缺口。</li></ol></details>
+<h3>案例二：一条光缆中断引发多业务异常</h3>
+<p>14:05，三个片区共 24 个基站失联，部分宽带和企业服务中断，其中包括企业连接 S-208。异常集中在同一汇聚区域，相邻区域正常。此时，时间和范围提示共同依赖；具体原因仍需沿路径验证。</p>
+<p>监控中心关联告警与投诉，建立事件 E-204。资源查询发现异常对象共用一段承载光路，传输团队核对相关链路同时失效，接入团队核对用户范围。独立备用光路仍可用，于是恢复与现场调查可以同时推进。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>时点</th>
+<th>新取得的事实</th>
+<th>据此采取的行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14:07</td>
+<td>多类业务起始时间与区域接近</td>
+<td>建立统一事件，组织共同调查</td>
+</tr>
+<tr>
+<td>14:10</td>
+<td>异常对象共用一段承载光路</td>
+<td>核查两端与备用，派现场检查</td>
+</tr>
+<tr>
+<td>14:14</td>
+<td>备用可用，全部恢复需求超过其容量</td>
+<td>按预定保障顺序安排可迁移流量</td>
+</tr>
+<tr>
+<td>14:20</td>
+<td>获准迁移的业务在备用上恢复</td>
+<td>验证质量，继续追踪未恢复对象</td>
+</tr>
+<tr>
+<td>14:40</td>
+<td>现场确认对应光缆被施工损伤</td>
+<td>记录原因证据，组织接续维修</td>
+</tr>
+<tr>
+<td>16:10</td>
+<td>原光路修复并通过测试</td>
+<td>验证服务，安排正常路径调整</td>
+</tr>
+</tbody>
+</table></div>
+<p class="key-point"><strong>备用容量不足时，按预定服务优先级恢复，并持续保留未恢复对象的清单。</strong></p>
+<p>备用有 10 Gbit/s 可用容量，全部可迁移需求约 12 Gbit/s。直接迁入全部需求会使备用过载，现场修复又无法立即完成。团队按预定策略先承接关键业务 2 Gbit/s，再承接受控的其他流量 6 Gbit/s，总计 8 Gbit/s；保留 2 Gbit/s 用于突发，剩余约 4 Gbit/s 需求继续限制或等待恢复。团队按业务类别持续检查队列和丢弃，同时保留未恢复清单。客户反馈也对应这些状态，说明哪些已恢复、哪些仍在处理。</p>
+<p>现场 OTDR 测得事件约在测试点外 4 千米，台账对应道路施工区。人员到达后确认该光缆损伤，使测量、路由记录和实物位置连接起来。最初的共同依赖假设由此得到具体原因支持，维修对象也得到确认。</p>
+<p>光缆修复后，先核对光功率与接口，再验证原路径的路由和质量；受影响对象分别验证移动注册与数据、宽带上线与访问，以及企业双向连接。临时承载已恢复的服务也纳入后续调整，直到正常主备能力重新建立。</p>
+<p>16:30 的交接记录写明：原光路已修复，<strong>S-208 当前仍经备用承载，正常路径调整待维护窗口执行</strong>。之后在变更 C-031 中完成回切，再写入新的资源关系与验证。不同记录反映各自时点，接班人员能够据此确定当前任务，而不会把计划状态当成已经执行。</p>
+<p>复盘继续发现部分备用路径靠近高风险施工区域，团队据此安排线路保护和物理路径改进，分别指定负责人及验收证据。恢复解决当前中断，复盘再把事件中的共同风险转为长期行动。</p>
+<details><summary>练习：14:14 时备用容量为 10 Gbit/s，迁移需求为 12 Gbit/s。你会全部迁入，还是按保障顺序迁移？原因调查怎样继续？</summary><p>按保障顺序迁移，同时推进现场原因调查。</p><ol><li>全部迁入会超过备用容量，造成排队和丢包。本例先承接关键 2 Gbit/s 与受控其他 6 Gbit/s，保留突发空间，持续跟踪剩余约 4 Gbit/s 需求。</li><li>共同光路异常用于确定调查对象；两端状态、OTDR 距离、台账与现场损伤相互对应后，确认施工损伤原因。</li><li>按各类业务分别验证恢复结果，客户反馈区分已恢复与待恢复对象。</li></ol></details>
+<h3>案例三：晚间手机满信号，但视频缓慢</h3>
+<p>一个住宅片区每天 20:00—22:00 多个平台视频变慢，白天同位置正常，部分用户改用家庭宽带也正常。无线接入成功率接近该区域非忙时基线。调查要在优化无线、扩容回传和检查目标平台之间选择，先比较这些环节在同一时段的测量，确定资源投入方向。</p>
+<p>受理人员固定终端、地点和目标，安排忙时复测；无线团队检查参考信号、干扰和资源占用；承载团队检查共同回传，核心与业务团队检查后续路径。把同一时段的结果并列，才能看出哪项变化与体验同步。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>观测对象</th>
+<th>非忙时</th>
+<th>投诉忙时</th>
+<th>扩容后的相同忙时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同一测点的 RSRP／SINR</td>
+<td>−84 dBm／18 dB</td>
+<td>−85 dBm／17 dB</td>
+<td>−84 dBm／18 dB</td>
+</tr>
+<tr>
+<td>小区无线资源占用</td>
+<td>35%</td>
+<td>55%</td>
+<td>56%</td>
+</tr>
+<tr>
+<td>共享回传口</td>
+<td>1 Gbit/s 口承载 250 Mbit/s</td>
+<td>接近 980 Mbit/s，并有突发</td>
+<td>2 Gbit/s 口承载约 1.1 Gbit/s</td>
+</tr>
+<tr>
+<td>回传出口队列丢弃</td>
+<td>10 分钟新增 0</td>
+<td>10 分钟新增 18,000 个</td>
+<td>10 分钟新增 0</td>
+</tr>
+<tr>
+<td>同目标往返时延 95 分位</td>
+<td>35 毫秒</td>
+<td>180 毫秒</td>
+<td>38 毫秒</td>
+</tr>
+</tbody>
+</table></div>
+<p class="key-point"><strong>本例优先扩容共同回传，依据是负载、队列丢弃与用户时延同步恶化，且疏导后质量改善。</strong></p>
+<p>在扩容前的调查中，无线条件变化较小，共同回传的负载、队列和端到端时延同时上升，后续其他路径正常。团队再受控调整部分流量，相关质量改善，进一步支持回传能力限制的假设。于是，短期调整持续核查替代路径容量，长期方案扩容共同回传。</p>
+<p>变更后使用同一组用户与目标复测，得到表中“扩容后的相同忙时”一列的结果。<strong>流量有所增加，丢弃和时延却改善，说明新增能力能够支持更多实际使用</strong>。随后连续七天晚间观察，多目标质量回到参考范围，重复投诉下降，上游没有新增拥塞，团队据此完成优化任务。</p>
+<p>最后，将新住宅入住和视频需求纳入预测，并检查上游汇聚增长空间。这次处理从用户时间与目标开始，经对照和受控动作找到瓶颈，又回到相同使用条件验证，随后成为新规划的输入。</p>
+<details><summary>练习：根据案例观测，你会优先改善无线覆盖、扩容回传，还是联系视频平台？还需要什么验证？</summary><p>优先处理共同回传的容量限制。</p><ol><li>RSRP 与 SINR 在忙时变化较小，多平台均慢；回传负载、队列丢弃和同目标时延同时上升，且受控疏导后改善，支持回传瓶颈。</li><li>扩容后在相同用户、目标和忙时时段复测，观察丢弃与时延，并检查上下游和备用容量。</li><li>流量增加而质量改善，说明新增能力承接了实际需求；继续用忙时观察与投诉回访确认效果。</li></ol></details>
+<h3>案例四：核心网软件升级触发回退</h3>
+<p>团队在 01:00—02:00 升级部分 SMF 会话管理实例，先选择一组灰度。本次评审以原失败率 0.2% 为基线，将十倍基线即 2% 定为停止扩大阈值。确认异常集中于升级组且检查点未能恢复时启动回退；最晚 01:35 作出继续或回退决定。回退及验证按二十分钟准备。</p>
+<p>执行前检查当前健康、其他实例承接能力和版本恢复，安排执行人与观察人。目标实例按方案移出服务，处理已有状态后升级。01:18 完成版本替换，再小范围接入新请求。观察发现总流量接近正常，但新会话失败上升。</p>
+<p>团队暂停扩大，保存日志，并在同一五分钟区间比较升级组与对照组。计数仅含按相同规则归类、已得到终态的请求，未完成请求另列追踪。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>验证项</th>
+<th>升级组</th>
+<th>对照组</th>
+<th>对当前判断的作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新会话</td>
+<td>1,000 次请求，成功 850 次</td>
+<td>1,000 次请求，成功 998 次</td>
+<td>失败率 15% 对比 0.2%，达到停止条件</td>
+</tr>
+<tr>
+<td>既有会话双向数据</td>
+<td>抽测正常</td>
+<td>抽测正常</td>
+<td>既有转发仍可使用</td>
+</tr>
+<tr>
+<td>修改与释放</td>
+<td>部分修改超时，释放抽测正常</td>
+<td>抽测正常</td>
+<td>异常涉及新的控制处理</td>
+</tr>
+<tr>
+<td>用户面总流量</td>
+<td>接近变更前</td>
+<td>接近变更前</td>
+<td>继续按新建与既有状态分别观察</td>
+</tr>
+</tbody>
+</table></div>
+<p>第 05 章解释过，SMF 安排会话，UPF 按已安装规则传递数据。已有规则仍在工作时，总流量可以正常，新增控制请求却失败。团队因此保存 SMF 日志与依赖响应，继续核查规则协调。升级组失败率为 <code>(1,000 − 850) ÷ 1,000 × 100% = 15%</code>，明显超过 2% 决策阈值；继续扩大将使更多新用户失败，等待完整原因调查则会占用回退时间。</p>
+<p class="key-point"><strong>升级组达到回退条件时，先在最晚决策时间前恢复已验证版本，原因调查利用已保存证据继续进行。</strong></p>
+<p>本次回退恢复版本与状态，再重新验证新建、修改、释放和双向数据，才能确认升级引入的用户影响已经解除。</p>
+<p>01:25，异常仍集中于升级组，协调人按方案启动回退，恢复已确认版本和状态。01:45 同口径 1,000 次新会话成功 998 次，修改、释放及双向数据验证通过，持续观察到窗口结束。</p>
+<p>变更记录保存目标未达到、回退完成和当前验证结果，问题管理继续调查软件、配置与兼容性。再次升级前，将已确认原因转为修复和补充验证。停止条件控制影响，最晚决策时间保留恢复空间，而状态验证确保判断覆盖了正在改变的能力。</p>
+<details><summary>练习：01:25 时总流量正常，新会话失败率仍为 15%。你会继续调查到原因完全确定，还是启动回退？</summary><p>按方案启动回退，原因调查继续使用已保存的日志和状态。</p><ol><li>新会话失败率超过 2% 停止阈值，且异常集中在升级组；既有流量仍依赖已安装规则，新增用户已经受影响。</li><li>距最晚 01:35 决策只有十分钟，继续等待会消耗回退空间。恢复旧版本及状态后，重新验证新建、修改、释放和双向数据。</li></ol></details>
+<h3>用记录把下一步交给接手者</h3>
+<p>案例二中，定位、临时恢复与正常路径调整发生在不同时间。记录将这些状态连起来，让接手者知道当前事实和待办事项。下面按产生时点展示 E-204 的相关记录。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>记录及产生时点</th>
+<th>示例内容</th>
+<th>接手者据此做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事件记录，14:20 更新</td>
+<td>三个片区受影响；部分业务经备用恢复；未恢复对象仍在清单</td>
+<td>继续验证、沟通及跟踪维修</td>
+</tr>
+<tr>
+<td>资源变动，14:20</td>
+<td>S-208 从原路径转到备用；依据 E-204；双向验证通过</td>
+<td>按备用路径查当前服务与容量</td>
+</tr>
+<tr>
+<td>交接记录，16:30</td>
+<td>原光路修复；临时承载待调整；接班人 18:00 反馈窗口安排</td>
+<td>继续观察并准备路径调整</td>
+</tr>
+<tr>
+<td>变更记录，后续窗口</td>
+<td>C-031 完成回切；主备及业务验证通过</td>
+<td>更新正式资源关系和基线</td>
+</tr>
+<tr>
+<td>复盘行动，事件复盘后</td>
+<td>高风险路径调整由规划团队负责，30 天内以现场核对和切换测试验收</td>
+<td>跟踪长期措施与完成证据</td>
+</tr>
+</tbody>
+</table></div>
+<h3>结课任务：独立组织一次跨专业处理</h3>
+<p>青岚市西区从 09:00 起有用户无法拨打电话，但移动上网正常。问题集中在同一组用户，其他用户通话正常；前一晚相关服务平台做过配置调整。</p>
+<p>先写清当前事实，再提出需要补充的证据。随后说明参与团队怎样协调，哪些恢复选择可以考虑，以及每种选择怎样验证。最后确定事件结束和后续整改条件，让接手者能够沿你的记录继续工作。</p>
+<details><summary>查看参考解题路径</summary><p>先把调查集中到受影响用户的 IMS 注册与呼叫过程，再用配置差异验证前一晚调整是否相关。</p><ol><li>受理与对照：记录主被叫、失败时点和互联场景，比较同区域正常用户；移动数据正常，继续补充 IMS 与 SIP 结果。</li><li>跨专业分析：语音团队查注册与呼叫，核心网团队查相应数据路径，配置团队比较策略与签约，协调人统一时间线并安排客户反馈。</li><li>恢复选择：确认调整造成异常且旧规则可恢复时，按授权回退；确认是局部配置错误时，修正具体对象。执行前保存日志与差异。</li><li>恢复验收：重新注册，覆盖实际主被叫与互联场景拨通，并验证双向媒体；完成观察与回访，同步配置，再为确认原因建立有责任和验收标准的整改任务。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-21" aria-pressed="false">标记本章已学完</button><nav aria-label="21 章前后导航"><a href="#chapter-20" class="chapter-prev">← 上一章</a><a href="#chapter-22" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-22" aria-labelledby="heading-22" data-number="22">
+<div class="chapter-kicker">CHAPTER 22</div><h2 id="heading-22">术语索引与流程速查</h2>
+<div class="prose"><blockquote>
+<p>学习目标：把名称放回职责与场景，在复习时快速定位相关章节。</p>
+</blockquote>
+<p>复习时先回想一项完整服务，再用下面的索引寻找还解释不清的环节。例如，想不清“会话已建立为何数据不通”，就回到第 05 章的状态与规则；想不清“恢复后为何还要更新路径”，就回到第 11 和第 13 章。</p>
+<p class="key-point"><strong>复习每个术语时，要说明它改变哪项网络状态、影响哪种用户体验，以及怎样验证。</strong></p>
+<p>术语表帮助找到位置，正文中的过程和案例帮助重新建立理解。以 SMF 为例，它协调会话与用户面规则；新增会话失败时，按请求、规则和双向数据检查，才能把名称转成调查依据。</p>
+<h3>通信与质量</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文含义与作用</th>
+<th>回看章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信号／介质</td>
+<td>信息的物理表现／传播环境</td>
+<td>01</td>
+</tr>
+<tr>
+<td>分组</td>
+<td>携带一部分数据及处理信息的小块</td>
+<td>01</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>互联网协议，支持网络层地址与转发</td>
+<td>01</td>
+</tr>
+<tr>
+<td>以太网交换／IP 路由</td>
+<td>按链路层地址选择端口／按目的地址与路由前缀选择下一跳</td>
+<td>01</td>
+</tr>
+<tr>
+<td>带宽／吞吐量</td>
+<td>可提供的传输能力／实际传输速率</td>
+<td>02</td>
+</tr>
+<tr>
+<td>时延／抖动</td>
+<td>传递所需时间／时延变化程度</td>
+<td>02</td>
+</tr>
+<tr>
+<td>丢包率／可用性</td>
+<td>未收到分组比例／服务可用时间比例</td>
+<td>02</td>
+</tr>
+<tr>
+<td>SLA</td>
+<td>服务等级协议，明确范围、质量及责任</td>
+<td>02</td>
+</tr>
+<tr>
+<td>QoS</td>
+<td>服务质量机制，对不同类别流量安排处理</td>
+<td>16</td>
+</tr>
+</tbody>
+</table></div>
+<h3>固定、移动与业务</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文含义与作用</th>
+<th>回看章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTTH</td>
+<td>光纤到户，光纤铺设到用户家庭</td>
+<td>04</td>
+</tr>
+<tr>
+<td>PON／GPON</td>
+<td>无源光网络／吉比特无源光网络</td>
+<td>04</td>
+</tr>
+<tr>
+<td>OLT／ONT</td>
+<td>局端光线路终端／用户侧光网络终端</td>
+<td>04</td>
+</tr>
+<tr>
+<td>BNG</td>
+<td>宽带网络网关，处理宽带用户接入与策略</td>
+<td>04</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>域名系统，使名称可以对应到服务信息</td>
+<td>04</td>
+</tr>
+<tr>
+<td>基站／小区</td>
+<td>无线接入设施／无线服务与配置单位</td>
+<td>05</td>
+</tr>
+<tr>
+<td>SIM／eSIM</td>
+<td>用户身份凭据的载体／嵌入式形式</td>
+<td>05</td>
+</tr>
+<tr>
+<td>EPC／5GC</td>
+<td>4G 演进分组核心网／5G 核心网</td>
+<td>05</td>
+</tr>
+<tr>
+<td>SA／NSA</td>
+<td>5G 独立组网／非独立组网</td>
+<td>05</td>
+</tr>
+<tr>
+<td>AMF</td>
+<td>5G 接入与移动性管理功能</td>
+<td>05</td>
+</tr>
+<tr>
+<td>SMF</td>
+<td>5G 会话管理功能</td>
+<td>05</td>
+</tr>
+<tr>
+<td>UPF</td>
+<td>5G 用户面功能，转发用户数据</td>
+<td>05</td>
+</tr>
+<tr>
+<td>注册／会话</td>
+<td>接入与身份等状态建立／数据通信的状态关系</td>
+<td>05</td>
+</tr>
+<tr>
+<td>基站回传</td>
+<td>连接基站与后续网络的传输连接</td>
+<td>05</td>
+</tr>
+<tr>
+<td>切换／寻呼</td>
+<td>转移无线连接／通知终端响应业务</td>
+<td>05</td>
+</tr>
+<tr>
+<td>漫游</td>
+<td>用户通过其他运营商网络获得服务</td>
+<td>05</td>
+</tr>
+<tr>
+<td>信令／媒体</td>
+<td>协调通信的控制信息／声音或视频等内容</td>
+<td>06</td>
+</tr>
+<tr>
+<td>IMS</td>
+<td>IP 多媒体子系统，组织多媒体会话及业务</td>
+<td>06</td>
+</tr>
+<tr>
+<td>VoLTE／VoNR</td>
+<td>基于 4G LTE／5G 新无线接入的 IMS 语音</td>
+<td>06</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>虚拟专用网络，在共享设施上组织逻辑隔离连接</td>
+<td>06</td>
+</tr>
+<tr>
+<td>CDN／IPTV</td>
+<td>内容分发网络／基于管理 IP 网络的电视服务</td>
+<td>06</td>
+</tr>
+</tbody>
+</table></div>
+<h3>网络与组织</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文含义与作用</th>
+<th>回看章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接入网／承载网</td>
+<td>连接用户／运输节点间信息</td>
+<td>03</td>
+</tr>
+<tr>
+<td>用户面／控制面／管理面</td>
+<td>传递业务数据／协调连接行为／支持运维管理</td>
+<td>03</td>
+</tr>
+<tr>
+<td>汇聚／骨干／城域</td>
+<td>集中接入流量／区域间主要运输／城市范围网络组织</td>
+<td>07</td>
+</tr>
+<tr>
+<td>波分复用／OTN</td>
+<td>多波长使用光纤／光传送网</td>
+<td>07</td>
+</tr>
+<tr>
+<td>BGP</td>
+<td>边界网关协议，交换网络可达性的路由信息</td>
+<td>06</td>
+</tr>
+<tr>
+<td>对等互联／互联网转接</td>
+<td>双方交换相应流量／提供更广互联网可达性</td>
+<td>07</td>
+</tr>
+<tr>
+<td>MPLS</td>
+<td>多协议标签交换，以标签组织转发</td>
+<td>07</td>
+</tr>
+<tr>
+<td>NFV</td>
+<td>网络功能虚拟化，以软件形式部署网络功能</td>
+<td>07</td>
+</tr>
+<tr>
+<td>动环监控</td>
+<td>动力与环境监控，观察供电和机房环境</td>
+<td>07</td>
+</tr>
+<tr>
+<td>NOC</td>
+<td>网络运行中心，负责集中监控与事件协调</td>
+<td>08</td>
+</tr>
+<tr>
+<td>OSS／BSS</td>
+<td>运营支撑系统／业务支撑系统</td>
+<td>08</td>
+</tr>
+<tr>
+<td>网元／网管</td>
+<td>网络管理对象／管理网元的系统</td>
+<td>08</td>
+</tr>
+<tr>
+<td>FCAPS</td>
+<td>管理职能分类：故障与配置；计量与性能；安全</td>
+<td>08</td>
+</tr>
+<tr>
+<td>eTOM</td>
+<td>面向服务运营的业务流程框架</td>
+<td>08</td>
+</tr>
+</tbody>
+</table></div>
+<h3>维护与生命周期</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文含义与作用</th>
+<th>回看章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>验收／开通</td>
+<td>验证交付能力／为具体客户落实服务</td>
+<td>10</td>
+</tr>
+<tr>
+<td>割接</td>
+<td>把业务或连接切换到新安排</td>
+<td>10</td>
+</tr>
+<tr>
+<td>台账／拓扑</td>
+<td>资源事实记录／对象连接关系</td>
+<td>11</td>
+</tr>
+<tr>
+<td>基线／配置漂移</td>
+<td>已确认参考状态／实际配置偏离预期</td>
+<td>11</td>
+</tr>
+<tr>
+<td>NETCONF</td>
+<td>网络配置管理协议</td>
+<td>11</td>
+</tr>
+<tr>
+<td>事件／告警</td>
+<td>可记录的状态或行为变化／提示关注的异常通知</td>
+<td>12</td>
+</tr>
+<tr>
+<td>服务事件／故障</td>
+<td>需要处理的服务异常情况／资源或功能异常</td>
+<td>13</td>
+</tr>
+<tr>
+<td>问题管理／复盘</td>
+<td>持续治理原因／回顾事实并形成改进</td>
+<td>14</td>
+</tr>
+<tr>
+<td>RCA／5 Whys</td>
+<td>根本原因分析／沿原因链连续追问并核对证据</td>
+<td>14</td>
+</tr>
+<tr>
+<td>维护窗口／回退</td>
+<td>安排操作的时间范围／恢复到可接受状态</td>
+<td>15</td>
+</tr>
+<tr>
+<td>灰度实施</td>
+<td>先实施部分对象，验证后扩大范围</td>
+<td>15</td>
+</tr>
+<tr>
+<td>忙时／拥塞</td>
+<td>较繁忙时段／需求超过及时处理能力</td>
+<td>16</td>
+</tr>
+<tr>
+<td>最小权限／审计</td>
+<td>完成任务所需的访问能力／操作记录及检查</td>
+<td>18</td>
+</tr>
+<tr>
+<td>多因素认证／堡垒机</td>
+<td>用独立因素核验身份／集中控制并记录管理访问</td>
+<td>18</td>
+</tr>
+<tr>
+<td>DDoS</td>
+<td>分布式拒绝服务攻击，消耗资源影响正常服务</td>
+<td>18</td>
+</tr>
+<tr>
+<td>RTO／RPO</td>
+<td>可接受恢复时长／可接受数据损失的时间范围</td>
+<td>19</td>
+</tr>
+<tr>
+<td>迁移／退网</td>
+<td>将服务转到新资源／撤除旧运行资源</td>
+<td>20</td>
+</tr>
+</tbody>
+</table></div>
+<h3>技术机制与分析入口</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>术语或机制</th>
+<th>核心含义</th>
+<th>回看章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>调制／纠错</td>
+<td>数据映射为信号状态／利用冗余恢复部分错误</td>
+<td>01</td>
+</tr>
+<tr>
+<td>封装／MTU</td>
+<td>添加各层处理信息／链路可承载的网络层分组最大长度</td>
+<td>01</td>
+</tr>
+<tr>
+<td>TCP／UDP</td>
+<td>组织可靠字节流／提供数据报交付</td>
+<td>01</td>
+</tr>
+<tr>
+<td>发送窗口／带宽时延积（BDP）</td>
+<td>允许的未确认数据规模／目标速率与 RTT 的乘积</td>
+<td>02</td>
+</tr>
+<tr>
+<td>RTT／95 分位时延</td>
+<td>往返传递时间／约 95% 样本不超过的时延值</td>
+<td>02</td>
+</tr>
+<tr>
+<td>DBA／光功率预算</td>
+<td>动态分配上行容量／核算沿途损耗与接收条件</td>
+<td>04</td>
+</tr>
+<tr>
+<td>PPPoE／IPoE</td>
+<td>两类以太网宽带接入方式</td>
+<td>04</td>
+</tr>
+<tr>
+<td>AAA／RADIUS</td>
+<td>认证、授权与计量／一种认证授权交互协议</td>
+<td>04</td>
+</tr>
+<tr>
+<td>DHCP／租约</td>
+<td>分配网络参数／规定地址分配有效期</td>
+<td>04</td>
+</tr>
+<tr>
+<td>NAT／CGN</td>
+<td>网络地址转换／运营商级地址转换</td>
+<td>04</td>
+</tr>
+<tr>
+<td>RSRP／SINR</td>
+<td>参考信号接收功率／信号与干扰加噪声比</td>
+<td>05</td>
+</tr>
+<tr>
+<td>PDU 会话／GTP-U</td>
+<td>移动数据网络连接状态／用户面隧道协议</td>
+<td>05</td>
+</tr>
+<tr>
+<td>SIP／RTP／RTCP</td>
+<td>组织会话／传递实时媒体／反馈交付质量</td>
+<td>06</td>
+</tr>
+<tr>
+<td>CE／PE／P</td>
+<td>客户边缘／运营商边缘／骨干内部转发设备</td>
+<td>06</td>
+</tr>
+<tr>
+<td>VRF／RD／RT</td>
+<td>独立客户路由表／区分 VPN 路由／控制路由导入</td>
+<td>06</td>
+</tr>
+<tr>
+<td>前缀／最长前缀匹配</td>
+<td>表达地址范围／优先选择更具体的适用路由</td>
+<td>07</td>
+</tr>
+<tr>
+<td>OSPF／BFD／收敛</td>
+<td>交换内部链路状态／检测转发路径／形成新转发状态</td>
+<td>07</td>
+</tr>
+<tr>
+<td>SRLG</td>
+<td>记录可能共同失效的链路资源</td>
+<td>09</td>
+</tr>
+<tr>
+<td>幂等／补偿</td>
+<td>重复请求保持相同结果／按规则撤销已完成动作</td>
+<td>10</td>
+</tr>
+<tr>
+<td>候选配置／确认提交</td>
+<td>暂存修改／提交后等待确认并具备超时恢复</td>
+<td>11</td>
+</tr>
+<tr>
+<td>CRC／滞回</td>
+<td>检测数据受损／用不同触发和恢复边界减少反复通知</td>
+<td>12</td>
+</tr>
+<tr>
+<td>排空</td>
+<td>逐步移出服务，处理已有状态后执行维护</td>
+<td>15</td>
+</tr>
+<tr>
+<td>DSCP／整形／监管</td>
+<td>标记服务类别／缓存平滑输出／处理超约定流量</td>
+<td>16</td>
+</tr>
+<tr>
+<td>令牌桶</td>
+<td>用补充速率与桶容量衡量合规速率和突发</td>
+<td>16</td>
+</tr>
+<tr>
+<td>ICMP／ping／traceroute</td>
+<td>控制消息／往返探测／逐跳路径观察</td>
+<td>17</td>
+</tr>
+<tr>
+<td>OTDR</td>
+<td>用光脉冲与返回信号观察沿途损耗与异常位置</td>
+<td>19</td>
+</tr>
+</tbody>
+</table></div>
+<h3>从工作问题找到流程</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>你要回答的问题</th>
+<th>应进入的流程</th>
+<th>首要输入</th>
+<th>结束时必须留下什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新服务需要什么能力？</td>
+<td>需求与规划</td>
+<td>用户、场景和目标</td>
+<td>方案及验收标准</td>
+</tr>
+<tr>
+<td>资源可以投入运行吗？</td>
+<td>建设与验收</td>
+<td>设计与工程结果</td>
+<td>验收证据和维护交接</td>
+</tr>
+<tr>
+<td>怎样让客户开始使用？</td>
+<td>业务开通</td>
+<td>订单与可用资源</td>
+<td>可用服务及准确映射</td>
+</tr>
+<tr>
+<td>网络现在是否正常？</td>
+<td>监控与值守</td>
+<td>状态、质量和反馈</td>
+<td>事件判断及明确责任</td>
+</tr>
+<tr>
+<td>服务受到影响怎么办？</td>
+<td>事件处理</td>
+<td>影响与异常证据</td>
+<td>恢复验证和后续任务</td>
+</tr>
+<tr>
+<td>为什么反复发生？</td>
+<td>问题管理</td>
+<td>多次事件与证据</td>
+<td>原因及可验证改进</td>
+</tr>
+<tr>
+<td>怎样调整运行网络？</td>
+<td>变更管理</td>
+<td>目标、对象和当前状态</td>
+<td>执行结果及资料同步</td>
+</tr>
+<tr>
+<td>怎样应对业务增长？</td>
+<td>性能与容量管理</td>
+<td>趋势和质量目标</td>
+<td>优化结果及更新预测</td>
+</tr>
+<tr>
+<td>旧资源怎样退出？</td>
+<td>迁移与退网</td>
+<td>资源依赖与迁移需求</td>
+<td>新服务验证和旧资源关闭</td>
+</tr>
+</tbody>
+</table></div>
+<h3>十道复习题</h3>
+<ol>
+<li>描述一张照片从手机到网站的主要网络环节，以及每个环节的作用。</li>
+<li>用自己的语言解释带宽、吞吐量与时延，并举一个体验例子。</li>
+<li>为什么家庭 Wi-Fi 可连接时，互联网访问仍可能失败？</li>
+<li>为什么已有移动数据连接正常时，新会话仍可能失败？</li>
+<li>两条专线需要核查哪些共同依赖？</li>
+<li>网络验收与客户开通各自确认什么？</li>
+<li>故障已通过备用路径恢复时，还要保留哪些后续任务？</li>
+<li>一份变更方案怎样保证有时间完成回退？</li>
+<li>怎样证明容量优化改善了用户体验？</li>
+<li>怎样确认旧设备可以退网？</li>
+</ol>
+<details><summary>查看答题检查点</summary><p>逐题说明路径、机制和决策依据，再与以下检查点对照。</p><ol><li>照片经手机无线接入进入承载，再经核心网用户面与互联网互联到达网站；基站调度无线资源，承载运输隧道分组，UPF 按会话规则转发。</li><li>带宽描述能力，吞吐量描述实际速率，时延描述传递时间。100 Mbit/s 路径传输 100 MB 内容，在充分使用能力时约需八秒；会议还要求各段声音及时连续到达。</li><li>Wi-Fi 后面还有光接入、用户认证、地址与 DNS。按最后成功阶段向后检查，避免只围绕家庭连接反复处理。</li><li>已有会话按已安装规则转发，新会话还需控制功能安排地址、策略与用户面。分别测试已有数据和新建过程。</li><li>主备先核查进线、光缆和管道，再核查骨干、设备与供电；故障时剩余容量还要承接规定需求。</li><li>验收确认设计能力与维护准备；开通为具体客户配置服务，验证实际使用并完成客户与维护交接。</li><li>备用恢复后继续追踪原资源修复、临时措施撤销和正常保障能力恢复，同步当前路径及后续任务。</li><li>计算窗口结束减去回退、验证和余量，形成最晚决策时间；到点仍不能证明达标就按方案回退。</li><li>在相同用户、目标和时段比较吞吐量、时延与丢包，检查上下游和客户反馈，确认瓶颈是否解除。</li><li>查询全部使用者，迁移客户、备用和管理职责，受控停用并观察通过，再撤除连接与配置，处理访问和数据，更新记录。</li></ol></details>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-22" aria-pressed="false">标记本章已学完</button><nav aria-label="22 章前后导航"><a href="#chapter-21" class="chapter-prev">← 上一章</a><a href="#chapter-23" class="chapter-next">下一章 →</a></nav></footer></section>
+<section class="chapter" id="chapter-23" aria-labelledby="heading-23" data-number="23">
+<div class="chapter-kicker">CHAPTER 23</div><h2 id="heading-23">参考资料：带着问题继续学习</h2>
+<div class="prose"><blockquote>
+<p>学习目标：根据待解决的协议或运维问题选择一手资料，并定位相关章节继续推导。</p>
+</blockquote>
+<h3>怎样使用这些资料</h3>
+<p>先用课程建立职责与流程的整体认识，再带着具体问题查阅资料。阅读架构图时，先识别用户路径和功能分工；阅读流程框架时，先识别输入、输出及流程关系；阅读管理协议时，先识别它管理的对象和状态。</p>
+<p class="key-point"><strong>带着具体协议阶段或运维判断查资料，并把查到的机制画成时序、状态或依赖关系。</strong></p>
+<p>先选一个需要深化的问题，再使用下表的建议入口。例如，已经能解释 5G 会话的基本过程，需要查明每条消息与状态如何衔接，就先读 TS 23.502 的第 4.3 节，并对照第 05 章画出自己的时序。下表收录标准组织与行业组织的一手材料，带版本号的规范按表中版本阅读，先核对目录，再定位建议章节。</p>
+<h3>网络架构与业务</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>资料</th>
+<th>适合继续研究的问题</th>
+<th>建议入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.etsi.org/deliver/etsi_ts/123500_123599/123501/18.09.00_60/ts_123501v180900p.pdf">3GPP TS 23.501 / ETSI TS 123 501 V18.9.0</a></td>
+<td>5G 核心网如何划分功能与连接关系？</td>
+<td>第 4 章架构，第 6 章功能</td>
+</tr>
+<tr>
+<td><a href="https://www.etsi.org/deliver/etsi_ts/123200_123299/123228/18.07.00_60/ts_123228v180700p.pdf">3GPP TS 23.228 / ETSI TS 123 228 V18.7.0</a></td>
+<td>IMS 如何组织呼叫与多媒体服务？</td>
+<td>架构与功能描述</td>
+</tr>
+<tr>
+<td><a href="https://www.itu.int/rec/T-REC-G.984.1/en">ITU-T G.984.1</a></td>
+<td>GPON 的整体接入特点是什么？</td>
+<td>总体特性与架构</td>
+</tr>
+<tr>
+<td><a href="https://www.broadband-forum.org/pdfs/tr-101-2-0-0.pdf">Broadband Forum TR-101 Issue 2</a></td>
+<td>接入汇聚和宽带网关怎样协作？</td>
+<td>参考架构与 BNG 职责</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc1034.html">IETF RFC 1034</a></td>
+<td>DNS 如何组织名称与服务信息？</td>
+<td>概念、名称空间和解析</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc4364.html">IETF RFC 4364</a></td>
+<td>共享网络怎样提供企业 IP VPN？</td>
+<td>概述与 VPN 路由组织</td>
+</tr>
+<tr>
+<td><a href="https://www.etsi.org/technologies/ict-infrastructure-operations/">ETSI 网络功能虚拟化资料</a></td>
+<td>网络功能与计算基础设施如何分工？</td>
+<td>NFV 概览</td>
+</tr>
+</tbody>
+</table></div>
+<h3>协议过程与底层机制</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>资料</th>
+<th>适合继续研究的问题</th>
+<th>建议入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc791.html">IETF RFC 791</a></td>
+<td>IP 与上下层怎样配合，网络分组怎样组织？</td>
+<td>第 2 章模型与协议关系</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc9293.html">IETF RFC 9293</a></td>
+<td>TCP 怎样组织序号、确认和发送窗口？</td>
+<td>第 3.4、3.8 节</td>
+</tr>
+<tr>
+<td><a href="https://www.itu.int/rec/T-REC-G.984.3/en">ITU-T G.984.3</a></td>
+<td>GPON 怎样协调上行发送与带宽分配？</td>
+<td>传输汇聚、带宽分配与测距</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc2516.html">IETF RFC 2516</a></td>
+<td>PPPoE 怎样经过发现和会话两个阶段？</td>
+<td>第 5、6 节</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc2865.html">IETF RFC 2865</a></td>
+<td>接入设备怎样与认证系统交互？</td>
+<td>基本操作与请求响应</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc2131.html">IETF RFC 2131</a></td>
+<td>IPv4 地址怎样分配和续租？</td>
+<td>第 3、4 章</td>
+</tr>
+<tr>
+<td><a href="https://www.etsi.org/deliver/etsi_ts/123500_123599/123502/18.09.00_60/ts_123502v180900p.pdf">3GPP TS 23.502 / ETSI TS 123 502 V18.9.0</a></td>
+<td>5G 注册和 PDU 会话具体经过哪些过程？</td>
+<td>第 4.2、4.3 节</td>
+</tr>
+<tr>
+<td><a href="https://www.etsi.org/deliver/etsi_ts/138200_138299/138215/18.04.00_60/ts_138215v180400p.pdf">3GPP TS 38.215 / ETSI TS 138 215 V18.4.0</a></td>
+<td>无线参考信号功率与干扰比怎样定义？</td>
+<td>第 5 章</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc3261.html">IETF RFC 3261</a></td>
+<td>SIP 怎样组织呼叫与对话状态？</td>
+<td>第 4、13 节</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc3550.html">IETF RFC 3550</a></td>
+<td>实时媒体怎样使用序号、时间戳与质量反馈？</td>
+<td>第 5、6 节</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc2328.html">IETF RFC 2328</a></td>
+<td>网络内部怎样据链路状态形成路由？</td>
+<td>第 2、16 章</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc4271.html">IETF RFC 4271</a></td>
+<td>BGP 怎样分发前缀与路径属性？</td>
+<td>协议消息与决策过程</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc5880.html">IETF RFC 5880</a></td>
+<td>BFD 怎样检测双向转发路径异常？</td>
+<td>第 3、6 节</td>
+</tr>
+<tr>
+<td><a href="https://www.itu.int/rec/T-REC-G.650.3/en">ITU-T G.650.3</a></td>
+<td>安装后的单模光纤链路怎样测试？</td>
+<td>链路测试与 OTDR 方法</td>
+</tr>
+</tbody>
+</table></div>
+<h3>运维管理与质量</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="课程表格"><table>
+<thead>
+<tr>
+<th>资料</th>
+<th>适合继续研究的问题</th>
+<th>建议入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.itu.int/rec/T-REC-M.3400/en">ITU-T M.3400</a></td>
+<td>网络管理需要覆盖哪些职能？</td>
+<td>管理职能分类</td>
+</tr>
+<tr>
+<td><a href="https://www.tmforum.org/open-digital-architecture/process-framework-etom/">TM Forum eTOM</a></td>
+<td>服务交付和保障流程怎样组织？</td>
+<td>框架概览</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc8345.html">IETF RFC 8345</a></td>
+<td>服务与不同网络层的依赖怎样表达？</td>
+<td>引言与模型结构</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc8632.html">IETF RFC 8632</a></td>
+<td>告警状态与操作人员处理状态怎样区分？</td>
+<td>术语与告警模型</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc6241.html">IETF RFC 6241</a></td>
+<td>系统接口怎样支持配置管理？</td>
+<td>概述、配置对象与操作</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc7679.html">IETF RFC 7679</a></td>
+<td>单向时延怎样定义与比较？</td>
+<td>测量定义与误差来源</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc7680.html">IETF RFC 7680</a></td>
+<td>丢包测量需要明确哪些条件？</td>
+<td>单向丢包定义</td>
+</tr>
+<tr>
+<td><a href="https://www.rfc-editor.org/rfc/rfc2475.html">IETF RFC 2475</a></td>
+<td>流量分类与转发待遇怎样组织？</td>
+<td>差分服务架构</td>
+</tr>
+<tr>
+<td><a href="https://www.nist.gov/cyberframework">NIST 网络安全框架</a></td>
+<td>安全治理与检测、响应和恢复如何相连？</td>
+<td>框架核心职能</td>
+</tr>
+</tbody>
+</table></div>
+<h3>根据工作任务选择下一项练习</h3>
+<p>完成基础课程后，可以按即将参与的工作选择实践方向：</p>
+<ol>
+<li><strong>服务保障</strong>：选一项投诉，画出服务路径，设计能区分原因的对照测试，再对照实际工单检查责任与交接。</li>
+<li><strong>建设与资源管理</strong>：从一项需求写出正常态和故障态验收目标，把交接端点与主备资源关联起来，再检查共同失效条件。</li>
+<li><strong>自动化开发</strong>：把一次开通写成状态流转，为每步定义推进条件、重复执行和部分失败处理，再研究 NETCONF 等管理接口。</li>
+</ol>
+<p>完成课程后，尝试画出一项真实业务的服务路径，并逐项说明它的资源依赖、观察方法、责任团队和恢复验证方式。能够把这些内容连贯解释出来，就形成了继续学习专业技术与实际操作的基础。</p>
+</div>
+<footer class="chapter-footer"><button class="complete-button" type="button" data-complete="chapter-23" aria-pressed="false">标记本章已学完</button><nav aria-label="23 章前后导航"><a href="#chapter-22" class="chapter-prev">← 上一章</a></nav></footer></section></div><footer class="site-footer"><p>运营商网络运维全流程教程</p><a href="#top">回到课程首页 ↑</a><span>参考资料核对：2026 年 10 月</span></footer>
+<section id="annotation-print-notes" aria-label="个人注释"></section>
+</main></div>
+<div id="annotation-feedback" class="annotation-feedback js-tools" aria-hidden="true" hidden></div>
+<div id="annotation-toolbar" class="annotation-toolbar js-tools" role="toolbar" aria-label="文字标注操作" hidden><select id="annotation-target" aria-label="选择标注文字范围" title="选择标注文字范围" hidden></select><button type="button" data-annotation-action="underline">下划线</button><button type="button" data-annotation-action="wave">波浪线</button><button type="button" data-annotation-action="emphasis">强调</button><button type="button" data-annotation-action="comment">注释</button><button type="button" id="close-annotation-toolbar" aria-label="关闭标注工具">×</button></div>
+<section id="annotation-preview" class="annotation-preview js-tools" role="dialog" aria-modal="false" aria-labelledby="annotation-preview-title" hidden><div class="annotation-preview-heading"><h2 id="annotation-preview-title">我的注释</h2><button type="button" id="close-annotation-preview" aria-label="关闭注释">×</button></div><blockquote id="annotation-preview-quote"></blockquote><p id="annotation-preview-note"></p><div class="annotation-preview-actions"><button id="edit-annotation-preview" type="button">编辑</button><button id="delete-annotation-preview" type="button">删除</button></div></section>
+<dialog id="annotation-editor" class="annotation-dialog js-tools" aria-labelledby="annotation-editor-title"><form id="annotation-form"><div class="annotation-dialog-heading"><h2 id="annotation-editor-title">添加注释</h2><button type="button" data-close-editor aria-label="关闭注释编辑">×</button></div><blockquote id="annotation-quote"></blockquote><label for="annotation-note">我的注释</label><textarea id="annotation-note" rows="6" maxlength="2000" placeholder="记下你的理解、疑问或补充资料" required></textarea><p id="annotation-editor-error" class="annotation-error" role="alert"></p><div class="annotation-dialog-actions"><button type="button" data-close-editor>取消</button><button type="submit" class="annotation-primary">保存注释</button></div></form></dialog>
+<dialog id="annotation-library" class="annotation-dialog annotation-library js-tools" aria-labelledby="annotation-library-title"><div class="annotation-dialog-heading"><h2 id="annotation-library-title">我的标注</h2><button type="button" id="close-annotation-library" aria-label="关闭我的标注">×</button></div><p class="annotation-library-intro">在这里查看摘录与注释，或回到原文继续阅读。</p><div class="annotation-file-tools"><button id="export-annotations" type="button">导出标注</button><button id="import-annotations" type="button">导入标注</button><input id="annotation-file" type="file" accept=".json,application/json" hidden></div><p id="annotation-library-status" role="status" aria-live="polite"></p><div id="annotation-list"></div></dialog>
+<noscript><style>.js-tools,.complete-button{display:none!important}</style></noscript></body></html>
